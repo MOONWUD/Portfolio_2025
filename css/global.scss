@@ -1,0 +1,49 @@
+/***** font *****/
+// 던파 비트체 
+@font-face{
+  font-family:'DNFBitBitv2';
+  font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+}
+// pretendard
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/***** color *****/
+$color-primary-dark : #DE300D;
+$color-primary-normal : #F56242;
+$color-primary-light : #F7917D;
+$color-primary-alpha80 : rgba(245, 99, 66, 0.8);
+$color-primary-alpha50 : rgba(245, 99, 66, 0.5);
+$color-primary-alpha20 : rgba(245, 99, 66, 0.2);
+
+$color-white-normal : #FBF6F3 ;
+$color-white-alpha80 : rgba(251, 246, 243, 0.8) ;
+$color-white-alpha50 : rgba(251, 246, 243, 0.5) ;
+$color-white-alpha20 : rgba(251, 246, 243, 0.2) ;
+
+$color-black-normal : #111210;
+$color-black-darkmode : #303131;
+$color-black-alpha80 : rgba(17, 18, 16, 0.8);
+$color-black-alpha50 : rgba(17, 18, 16, 0.5);
+$color-black-alpha20 : rgba(17, 18, 16, 0.2);
+
+/***** txet style *****/
+$font-dntbit : 'DNFBitBitv2', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+$font-pretendard : "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+$line-height : 1.4 ;
+
+$font-weight-sm : 500 ;
+$font-weight-md : 700 ;
+
+$font-size-56 : 3.5rem;
+$font-size-32 : 2rem;
+$font-size-24 : 1.5rem;
+$font-size-20 : 1.25rem;
+$font-size-18 : 1.125rem;
+$font-size-16 : 1rem;
+$font-size-14 : 0.875rem;
