@@ -202,18 +202,43 @@ main .margin #work .work_wrapper {
 }
 main .margin #work .work_wrapper .work_item {
   width: 100%;
+}
+main .margin #work .work_wrapper .work_item a {
+  overflow: hidden;
+  width: 100%;
   aspect-ratio: 6/5;
   display: grid;
 }
-main .margin #work .work_wrapper .work_item .projectimg {
-  grid-column: 1/2;
-  grid-row: 1/2;
-  background-color: #3b44cb;
-}
-main .margin #work .work_wrapper .work_item a {
+main .margin #work .work_wrapper .work_item a .hover_dim {
+  aspect-ratio: 6/5;
+  width: 100%;
   z-index: 999;
   grid-column: 1/2;
   grid-row: 1/2;
+  padding: 18px;
+  background-color: rgba(245, 99, 66, 0.8);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: grid;
+  grid-template-rows: 24px 1fr 24px;
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .icon_wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .contents {
+  padding: 24px;
+  color: #FBF6F3;
+}
+main .margin #work .work_wrapper .work_item a .workitem_img {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+main .margin #work .work_wrapper .work_item a .workitem_img img {
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
