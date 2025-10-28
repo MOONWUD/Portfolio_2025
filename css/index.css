@@ -19,10 +19,11 @@ body {
 /***** border *****/
 main {
   /********** sec01 - about **********/
+  /********** sec02 - work **********/
 }
 main #about .video {
   width: 100%;
-  height: 70vh;
+  aspect-ratio: 2/1;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
@@ -61,8 +62,45 @@ main #about .beliefs .beliefs_contents .icon_crros {
 }
 main #about .beliefs .beliefs_contents .beliefs_text {
   font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: 1.4;
+  line-height: 1.1;
   font-size: 3.5rem;
   font-weight: normal;
   color: #F56242;
+}
+main #about .introduction {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #F56242;
+  width: 100%;
+  padding: 32px;
+}
+main #about .introduction .marksimg {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: start;
+  justify-self: end;
+}
+main #about .introduction h5 {
+  grid-column: 2/5;
+  grid-row: 1/4;
+  align-self: center;
+  padding-left: 32px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.1;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #F56242;
+  color: #FBF6F3;
+  line-height: 150%;
+}
+main #about .introduction h5 span {
+  display: block;
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.1;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #F56242;
+  color: #FBF6F3;
+  padding-bottom: 18px;
 }/*# sourceMappingURL=index.css.map */
