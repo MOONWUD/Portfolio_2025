@@ -1,0 +1,272 @@
+/***** font *****/
+// 던파 비트체 
+@font-face{
+  font-family:'DNFBitBitv2';
+  font-style:normal;font-weight:400;src:url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
+}
+// pretendard
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/***** color *****/
+$color-primary-dark : #DE300D;
+$color-primary-normal : #F56242;
+$color-primary-light : #F7917D;
+$color-primary-alpha80 : rgba(245, 99, 66, 0.8);
+$color-primary-alpha50 : rgba(245, 99, 66, 0.5);
+$color-primary-alpha20 : rgba(245, 99, 66, 0.2);
+
+$color-white-normal : #FBF6F3 ;
+$color-white-alpha80 : rgba(251, 246, 243, 0.8) ;
+$color-white-alpha50 : rgba(251, 246, 243, 0.5) ;
+$color-white-alpha20 : rgba(251, 246, 243, 0.2) ;
+
+$color-black-normal : #111210;
+$color-black-darkmode : #303131;
+$color-black-alpha80 : rgba(17, 18, 16, 0.8);
+$color-black-alpha50 : rgba(17, 18, 16, 0.5);
+$color-black-alpha20 : rgba(17, 18, 16, 0.2);
+
+
+
+/***** txet style *****/
+$font-dntbit : 'DNFBitBitv2', -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+$font-pretendard : "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+$line-height : 1.4 ;
+
+$font-weight-sm : 500 ;
+$font-weight-md : 700 ;
+
+$font-size-56 : 3.5rem;
+$font-size-32 : 2rem;
+$font-size-24 : 1.5rem;
+$font-size-20 : 1.25rem;
+$font-size-18 : 1.125rem;
+$font-size-16 : 1rem;
+$font-size-14 : 0.875rem;
+
+@mixin textstyle-bit-56 {
+  font-family: $font-dntbit;
+  line-height: $line-height;
+  font-size: $font-size-56;
+  font-weight: normal;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-bit-32 {
+  font-family: $font-dntbit;
+  line-height: $line-height;
+  font-size: $font-size-32;
+  font-weight: normal;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-bit-24 {
+  font-family: $font-dntbit;
+  line-height: $line-height;
+  font-size: $font-size-24;
+  font-weight: normal;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-bit-20 {
+  font-family: $font-dntbit;
+  line-height: $line-height;
+  font-size: $font-size-20;
+  font-weight: normal;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-bit-18 {
+  font-family: $font-dntbit;
+  line-height: $line-height;
+  font-size: $font-size-18;
+  font-weight: normal;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-md-20  {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-20;
+  font-weight: $font-weight-md;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-md-18  {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-18;
+  font-weight: $font-weight-md;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-sm-16  {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-16;
+  font-weight: $font-weight-md;
+  color: $color-primary-normal;
+}
+@mixin textstyle-pr-sm-18  {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-18;
+  font-weight: $font-weight-sm;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-sm-16  {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-16;
+  font-weight: $font-weight-sm;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-sm-14  {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-14;
+  font-weight: $font-weight-sm;
+  color: $color-primary-normal;
+}
+
+/***** padding *****/
+$padding-pc-lg : 36px; 
+$padding-pc-md : 32px; 
+$padding-pc-sm : 24px; 
+$padding-pc-xs : 18px; 
+$padding-pc-xxs : 4px; 
+
+$padding-mo-xl : 60px; 
+$padding-mo-lg : 40px; 
+$padding-mo-md : 20px; 
+$padding-mo-sm : 12px; 
+$padding-mo-xs : 8px; 
+$padding-mo-xxs : 4px;
+
+@mixin media-lg-margin {
+  width: 100%;
+  padding: 0 $padding-pc-md;
+}
+@mixin media-lg-padding {
+  width: 100%;
+  padding: $padding-pc-md;
+}
+@mixin media-md-margin {
+  width: 100%;
+  padding: 0 $padding-pc-sm;
+}
+@mixin media-md-padding {
+  width: 100%;
+  padding: $padding-pc-sm;
+}
+@mixin media-sm-margin {
+  width: 100%;
+  padding: 0;
+}
+
+/***** radius *****/
+$radius : 999px;
+
+/****** transition ******/
+$transition : 0.3s;
+
+
+/***** btn *****/
+@mixin ghost-btn {
+  height: 36px;
+  padding: 0 $padding-pc-xs;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: $color-white-normal 1px solid;
+  @include textstyle-bit-18();
+  transition: $transition;
+
+  &:hover {
+    border: $color-primary-normal 1px solid;
+    border-radius: $radius;
+  }
+}
+
+@mixin noraml-btn {
+  height: 36px;
+  padding: 0 $padding-pc-xs;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary-normal;
+  border: $color-primary-normal 1px solid;
+  border-radius: $radius;
+  @include textstyle-bit-18();
+  color: $color-white-normal;
+  transition: $transition;
+
+  &:hover {
+    border: $color-primary-normal 1px solid;
+    background-color: $color-white-normal;
+    color: $color-primary-normal;
+  }
+}
+
+/***** border *****/
+@mixin border {
+  border-style: solid;
+  border-color: $color-primary-normal;
+}
+
+main {
+  /********** sec01 - about **********/
+  #about {
+    .video {
+      width: 100%;
+      height: 70vh;
+      @include border();
+      border-width: 0 0 1px 0;
+    }
+
+    .beliefs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @include border();
+      border-width: 0 0 1px  0;
+
+      .arrowimg {
+        @include media-lg-padding();
+        align-self: center;
+        justify-self: center;
+        
+        img {
+          width: 100%;
+        }
+      }
+      
+      .beliefs_contents {
+        @include media-lg-padding();
+        @include border();
+        border-width: 0 0 0 1px;
+        grid-column: 2 / 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: $padding-mo-md;
+        
+        .icon_crros {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .beliefs_text {
+          @include textstyle-bit-56()
+        }
+      }
+    }
+  }
+}

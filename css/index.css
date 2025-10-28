@@ -1,1 +1,68 @@
-/*# sourceMappingURL=index.css.map */
+/***** font *****/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@font-face {
+  font-family: "DNFBitBitv2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf") format("opentype");
+}
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/***** color *****/
+/***** txet style *****/
+/***** padding *****/
+/***** radius *****/
+/****** transition ******/
+/***** btn *****/
+/***** border *****/
+main {
+  /********** sec01 - about **********/
+}
+main #about .video {
+  width: 100%;
+  height: 70vh;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
+}
+main #about .beliefs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
+}
+main #about .beliefs .arrowimg {
+  width: 100%;
+  padding: 32px;
+  align-self: center;
+  justify-self: center;
+}
+main #about .beliefs .arrowimg img {
+  width: 100%;
+}
+main #about .beliefs .beliefs_contents {
+  width: 100%;
+  padding: 32px;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 0 1px;
+  grid-column: 2/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+main #about .beliefs .beliefs_contents .icon_crros {
+  display: flex;
+  justify-content: space-between;
+}
+main #about .beliefs .beliefs_contents .beliefs_text {
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 3.5rem;
+  font-weight: normal;
+  color: #F56242;
+}/*# sourceMappingURL=index.css.map */
