@@ -17,6 +17,7 @@ body {
 /****** transition ******/
 /***** btn *****/
 /***** border *****/
+/***** animation *****/
 main {
   /********** sec01 - about **********/
   /********** sec02 - work **********/
@@ -64,7 +65,7 @@ main #about .beliefs .beliefs_contents .icon_crros {
 }
 main #about .beliefs .beliefs_contents .beliefs_text {
   font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
   font-size: 3.5rem;
   font-weight: normal;
   color: #F56242;
@@ -89,7 +90,7 @@ main #about .introduction h5 {
   align-self: center;
   padding-left: 32px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
   font-size: 1.125rem;
   font-weight: 700;
   color: #F56242;
@@ -99,7 +100,7 @@ main #about .introduction h5 {
 main #about .introduction h5 span {
   display: block;
   font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
   font-size: 2rem;
   font-weight: normal;
   color: #F56242;
@@ -142,14 +143,14 @@ main #skill .skill_wrapper .skill_item .header_area {
 }
 main #skill .skill_wrapper .skill_item .header_area .title {
   font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
   font-size: 1.25rem;
   font-weight: normal;
   color: #F56242;
 }
 main #skill .skill_wrapper .skill_item .contents {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  line-height: 1.1;
+  line-height: 1.4;
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
@@ -159,4 +160,129 @@ main #skill .skill_wrapper .skill_item .contents {
 }
 main #skill .skill_wrapper .skill_item:last-child {
   border-bottom: none;
+}
+main #contact .contact_warpper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
+}
+main #contact .contact_warpper .contact_message {
+  width: 100%;
+  padding: 32px;
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 0 0;
+}
+main #contact .contact_warpper .contact_message .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+main #contact .contact_warpper .contact_message .header .text h6 {
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #F56242;
+  margin-bottom: 24px;
+}
+main #contact .contact_warpper .contact_message .header .text p {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F56242;
+  line-height: 150%;
+}
+main #contact .contact_warpper .contact_message .header img {
+  transform: rotate(90deg);
+  width: 80px;
+}
+main #contact .contact_warpper .link_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding: 32px;
+  gap: 32px;
+}
+main #contact .contact_warpper .link_wrapper .link_contents .title {
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #F56242;
+  margin-bottom: 24px;
+}
+main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #F56242;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #F56242;
+  padding: 8px 4px 8px 4px;
+}
+main #contact .contact_warpper .link_wrapper img {
+  grid-column: 1/-1;
+  justify-self: end;
+}
+main #contact .sns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+main #contact .sns .email {
+  width: 100%;
+  padding: 32px;
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #F56242;
+  line-height: 140%;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 0 0;
+}
+main #contact .sns .snsicon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main #contact .sns .snsicon li {
+  width: 100%;
+}
+main #contact .sns .snsicon li a {
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 32px;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 0 0;
+}
+main #contact .sns .snsicon li a img {
+  height: 56px;
+}
+main #contact .sns .snsicon li:last-child a {
+  border-right: none;
+}
+main #contact .sns .snsicon li:hover {
+  background-color: #F56242;
 }/*# sourceMappingURL=index.css.map */

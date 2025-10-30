@@ -26,6 +26,7 @@ $color-white-normal : #FBF6F3;
 $color-white-alpha80 : rgba(251, 246, 243, 0.8);
 $color-white-alpha50 : rgba(251, 246, 243, 0.5);
 $color-white-alpha20 : rgba(251, 246, 243, 0.2);
+$color-white-alpha00 : rgba(251, 246, 243, 0);
 
 $color-black-normal : #111210;
 $color-black-darkmode : #303131;
@@ -67,7 +68,7 @@ Roboto,
 "Segoe UI Symbol",
 sans-serif;
 
-$line-height : 1.1;
+$line-height : 1.4;
 
 $font-weight-sm : 500;
 $font-weight-md : 700;
@@ -136,7 +137,7 @@ $font-size-14 : 0.875rem;
   color: $color-primary-normal;
 }
 
-@mixin textstyle-pr-sm-16 {
+@mixin textstyle-pr-md-16 {
   font-family: $font-pretendard;
   line-height: $line-height;
   font-size: $font-size-16;
@@ -211,8 +212,20 @@ $padding-mo-xxs : 4px;
 $radius : 999px;
 
 /****** transition ******/
-$transition : 0.3s;
+$transition-time-slow : 0.5s;
+$transition-time-normal : 0.35s;
+$transition-time-fast : 0.2s;
+$transition-motion : ease-in-out;
 
+@mixin transition-normal {
+  transition: all $transition-time-normal $transition-motion;
+}
+@mixin transition-slow {
+  transition: all $transition-time-slow $transition-motion;
+}
+@mixin transition-fast {
+  transition: all $transition-time-fast $transition-motion;
+}
 
 /***** btn *****/
 @mixin ghost-btn {
@@ -222,8 +235,8 @@ $transition : 0.3s;
   justify-content: center;
   align-items: center;
   border: $color-white-normal 1px solid;
-  @include textstyle-bit-18();
-  transition: $transition;
+  @include textstyle-pr-sm-18();
+  @include transition-normal();
 
   &:hover {
     border: $color-primary-normal 1px solid;
@@ -240,9 +253,9 @@ $transition : 0.3s;
   background-color: $color-primary-normal;
   border: $color-primary-normal 1px solid;
   border-radius: $radius;
-  @include textstyle-bit-18();
+  @include textstyle-pr-sm-18();
   color: $color-white-normal;
-  transition: $transition;
+  @include transition-normal();
 
   &:hover {
     border: $color-primary-normal 1px solid;
@@ -256,6 +269,10 @@ $transition : 0.3s;
   border-style: solid;
   border-color: $color-primary-normal;
 }
+
+/***** animation *****/
+
+
 
 main {
 
@@ -394,6 +411,123 @@ main {
 
   /********** sec04 - contact **********/
   #contact {
-    
+    .contact_warpper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @include border();
+      border-width: 0 0 1px 0;
+
+      .contact_message {
+        @include media-lg-padding();
+        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include border();
+        border-width: 0 1px 0 0;
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: start;
+
+          .text {
+            h6 {
+              @include textstyle-bit-24();
+              margin-bottom: $padding-pc-sm;
+            }
+            p {
+              @include textstyle-pr-sm-16();
+              line-height: 150%;
+            }
+          }
+
+          img {
+            transform: rotate(90deg);
+            width: 80px;
+          }
+        }
+      }
+
+      .link_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include media-lg-padding();
+        gap: $padding-pc-md;
+
+        .link_contents {
+          .title {
+            @include textstyle-bit-20();
+            margin-bottom: $padding-pc-sm;
+          }
+
+          .list_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: $padding-pc-xs;
+            a {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px dashed $color-primary-normal;
+              @include textstyle-pr-sm-18();
+              padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
+            }
+          }
+        }
+        img {
+          grid-column: 1 / -1;
+          justify-self: end;
+        }
+      }
+    }
+
+    .sns {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .email {
+        @include media-lg-padding();
+        @include textstyle-bit-20();
+        line-height: 140%;
+        @include border();
+        border-width: 0 1px 0 0;
+      }
+
+      .snsicon {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+          width: 100%;
+          a {
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            @include media-lg-padding();
+            @include border();
+            border-width: 0 1px 0 0;
+
+            img {
+              height: 56px;
+            }
+
+          }
+
+          &:last-child {
+            a {
+              border-right: none;
+            }
+          }
+
+          &:hover {
+            background-color: $color-primary-normal;
+          }
+        }
+      }
+    }
   }
 }
