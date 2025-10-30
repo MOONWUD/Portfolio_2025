@@ -21,6 +21,7 @@ main {
   /********** sec01 - about **********/
   /********** sec02 - work **********/
   /********** sec03 - skill **********/
+  /********** sec04 - contact **********/
 }
 main #about .video {
   width: 100%;
@@ -138,7 +139,6 @@ main #skill .skill_wrapper .skill_item {
 main #skill .skill_wrapper .skill_item .header_area {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
 }
 main #skill .skill_wrapper .skill_item .header_area .title {
   font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -154,7 +154,9 @@ main #skill .skill_wrapper .skill_item .contents {
   font-weight: 500;
   color: #F56242;
   line-height: 150%;
+  margin-top: 24px;
+  display: none;
 }
-main #skill .skill_wrapper:last-child() {
+main #skill .skill_wrapper .skill_item:last-child {
   border-bottom: none;
 }/*# sourceMappingURL=index.css.map */

@@ -235,7 +235,7 @@ $transition-motion : ease-in-out;
   justify-content: center;
   align-items: center;
   border: $color-white-normal 1px solid;
-  @include textstyle-pr-md-20();
+  @include textstyle-pr-sm-18();
   @include transition-normal();
 
   &:hover {
@@ -253,7 +253,7 @@ $transition-motion : ease-in-out;
   background-color: $color-primary-normal;
   border: $color-primary-normal 1px solid;
   border-radius: $radius;
-  @include textstyle-pr-md-20();
+  @include textstyle-pr-sm-18();
   color: $color-white-normal;
   @include transition-normal();
 
@@ -269,6 +269,8 @@ $transition-motion : ease-in-out;
   border-style: solid;
   border-color: $color-primary-normal;
 }
+
+/***** animation *****/
 
 
 /********** header **********/

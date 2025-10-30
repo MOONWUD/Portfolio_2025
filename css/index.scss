@@ -372,7 +372,6 @@ main {
         .header_area {
           display: flex;
           justify-content: space-between;
-          margin-bottom: $padding-pc-sm;
 
           .title {
             @include textstyle-bit-20();
@@ -382,12 +381,19 @@ main {
         .contents {
           @include textstyle-pr-sm-16();
           line-height: 150%;
+          margin-top: $padding-pc-sm;
+          display: none;
+        }
+        &:last-child {
+          border-bottom: none; 
         }
       }
-      &:last-child() {
-        border-bottom: none;
-      }
-
     }
+  }
+
+
+  /********** sec04 - contact **********/
+  #contact {
+    
   }
 }

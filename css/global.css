@@ -17,6 +17,7 @@ body {
 /****** transition ******/
 /***** btn *****/
 /***** border *****/
+/***** animation *****/
 /********** header **********/
 header {
   position: fixed;
@@ -61,8 +62,8 @@ header nav .gnb .ghostbtn {
   border: #FBF6F3 1px solid;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: #F56242;
   transition: all 0.35s ease-in-out;
 }
@@ -81,8 +82,8 @@ header nav .gnb .normalbtn {
   border-radius: 999px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 500;
   color: #F56242;
   color: #FBF6F3;
   transition: all 0.35s ease-in-out;
