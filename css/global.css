@@ -28,7 +28,7 @@ header {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
 }
 header nav {
   width: 100%;
@@ -39,7 +39,7 @@ header nav {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 0 1px;
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
 }
 header nav h1 a {
   height: 36px;
@@ -59,12 +59,12 @@ header nav .gnb .ghostbtn {
   justify-content: center;
   align-items: center;
   border: #FBF6F3 1px solid;
-  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.125rem;
-  font-weight: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #F56242;
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
 }
 header nav .gnb .ghostbtn:hover {
   border: #F56242 1px solid;
@@ -79,13 +79,13 @@ header nav .gnb .normalbtn {
   background-color: #F56242;
   border: #F56242 1px solid;
   border-radius: 999px;
-  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.125rem;
-  font-weight: normal;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: #F56242;
   color: #FBF6F3;
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
 }
 header nav .gnb .normalbtn:hover {
   border: #F56242 1px solid;
@@ -119,14 +119,13 @@ main .margin {
   width: 100%;
   padding: 0 32px;
   padding-top: 76px;
-  transition: 0.3s;
-  /********** work **********/
+  transition: all 0.35s ease-in-out;
 }
 main .margin section {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 0 1px;
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
 }
 main .margin section .slider {
   overflow: hidden;
@@ -191,6 +190,11 @@ main .margin section .article_title a {
   font-weight: 500;
   color: #F56242;
 }
+main .margin #work {
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 1px 1px;
+}
 main .margin #work .work_wrapper {
   width: 100%;
   padding: 32px;
@@ -208,6 +212,7 @@ main .margin #work .work_wrapper .work_item a {
   width: 100%;
   aspect-ratio: 6/5;
   display: grid;
+  transition: all 0.2s ease-in-out;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim {
   aspect-ratio: 6/5;
@@ -221,6 +226,9 @@ main .margin #work .work_wrapper .work_item a .hover_dim {
   -webkit-backdrop-filter: blur(2px);
   display: grid;
   grid-template-rows: 24px 1fr 24px;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim .icon_wrapper {
   display: flex;
@@ -229,6 +237,38 @@ main .margin #work .work_wrapper .work_item a .hover_dim .icon_wrapper {
 main .margin #work .work_wrapper .work_item a .hover_dim .contents {
   padding: 24px;
   color: #FBF6F3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .contents .information h6 {
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #F56242;
+  color: inherit;
+  margin-bottom: 8px;
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .contents .information div {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F56242;
+  color: inherit;
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .contents .view_btn {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #F56242;
+  color: inherit;
 }
 main .margin #work .work_wrapper .work_item a .workitem_img {
   grid-column: 1/2;
@@ -239,6 +279,10 @@ main .margin #work .work_wrapper .work_item a .workitem_img {
 }
 main .margin #work .work_wrapper .work_item a .workitem_img img {
   width: 100%;
+}
+main .margin #work .work_wrapper .work_item a:hover .hover_dim {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media (max-width: 1200px) {
@@ -260,7 +304,7 @@ main .margin #work .work_wrapper .work_item a .workitem_img img {
 footer {
   width: 100%;
   background-color: #FBF6F3;
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
 }
 footer .nameWrapper {
   width: 100%;
@@ -268,7 +312,7 @@ footer .nameWrapper {
   padding: 0 32px;
 }
 footer .nameWrapper .name {
-  transition: 0.3s;
+  transition: all 0.35s ease-in-out;
   width: 100%;
   width: 100%;
   padding: 32px;

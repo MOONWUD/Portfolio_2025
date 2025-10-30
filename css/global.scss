@@ -137,7 +137,7 @@ $font-size-14 : 0.875rem;
   color: $color-primary-normal;
 }
 
-@mixin textstyle-pr-sm-16 {
+@mixin textstyle-pr-md-16 {
   font-family: $font-pretendard;
   line-height: $line-height;
   font-size: $font-size-16;
@@ -212,8 +212,20 @@ $padding-mo-xxs : 4px;
 $radius : 999px;
 
 /****** transition ******/
-$transition : 0.3s;
+$transition-time-slow : 0.5s;
+$transition-time-normal : 0.35s;
+$transition-time-fast : 0.2s;
+$transition-motion : ease-in-out;
 
+@mixin transition-normal {
+  transition: all $transition-time-normal $transition-motion;
+}
+@mixin transition-slow {
+  transition: all $transition-time-slow $transition-motion;
+}
+@mixin transition-fast {
+  transition: all $transition-time-fast $transition-motion;
+}
 
 /***** btn *****/
 @mixin ghost-btn {
@@ -223,8 +235,8 @@ $transition : 0.3s;
   justify-content: center;
   align-items: center;
   border: $color-white-normal 1px solid;
-  @include textstyle-bit-18();
-  transition: $transition;
+  @include textstyle-pr-md-20();
+  @include transition-normal();
 
   &:hover {
     border: $color-primary-normal 1px solid;
@@ -241,9 +253,9 @@ $transition : 0.3s;
   background-color: $color-primary-normal;
   border: $color-primary-normal 1px solid;
   border-radius: $radius;
-  @include textstyle-bit-18();
+  @include textstyle-pr-md-20();
   color: $color-white-normal;
-  transition: $transition;
+  @include transition-normal();
 
   &:hover {
     border: $color-primary-normal 1px solid;
@@ -268,7 +280,7 @@ header {
   background-color: $color-white-normal;
   @include border;
   border-width: 0 0 1px 0;
-  transition: $transition;
+  @include transition-normal();
 
   nav {
     width: 100%;
@@ -278,7 +290,7 @@ header {
     justify-content: space-between;
     @include border;
     border-width: 0 1px 0 1px;
-    transition: $transition;
+    @include transition-normal();
 
     h1 {
       a {
@@ -335,12 +347,12 @@ main {
   .margin {
     @include media-lg-margin();
     padding-top: 76px;
-    transition: $transition;
+    @include transition-normal();
 
     section {
       @include border();
       border-width: 0 1px 0 1px;
-      transition: $transition;
+      @include transition-normal();
 
       .slider {
         overflow: hidden;
@@ -405,8 +417,10 @@ main {
       }
     }
 
-    /********** work **********/
     #work {
+      @include border();
+      border-width: 0 1px 1px 1px;
+
       .work_wrapper {
         @include media-lg-padding();
         display: grid;
@@ -417,13 +431,14 @@ main {
 
         .work_item {
           width: 100%;
-          
+
           a {
             overflow: hidden;
             width: 100%;
             aspect-ratio: 6 / 5;
             display: grid;
-            
+            @include transition-fast();
+
             .hover_dim {
               aspect-ratio: 6 / 5;
               width: 100%;
@@ -432,10 +447,14 @@ main {
               grid-row: 1 / 2;
               padding: $padding-pc-xs;
               background-color: $color-primary-alpha80;
-              backdrop-filter: blur(2px); 
-              -webkit-backdrop-filter: blur(2px); 
+              backdrop-filter: blur(2px);
+              -webkit-backdrop-filter: blur(2px);
               display: grid;
               grid-template-rows: 24px 1fr 24px;
+              @include transition-fast();
+              transform: translateX(-100%);
+
+              opacity: 0;
 
               .icon_wrapper {
                 display: flex;
@@ -445,7 +464,31 @@ main {
               .contents {
                 padding: $padding-pc-sm;
                 color: $color-white-normal;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
 
+                .information {
+                  h6 {
+                    @include textstyle-bit-24();
+                    color: inherit;
+                    margin-bottom: $padding-mo-xs;
+                  }
+
+                  div {
+                    @include textstyle-pr-sm-16();
+                    color: inherit;
+                  }
+                }
+
+                .view_btn {
+                  width: 100%;
+                  display: flex;
+                  align-self: center;
+                  justify-content: space-between;
+                  @include textstyle-pr-md-16();
+                  color: inherit;
+                }
               }
             }
 
@@ -455,8 +498,16 @@ main {
               display: grid;
               align-items: center;
               justify-content: center;
+
               img {
                 width: 100%;
+              }
+            }
+
+            &:hover {
+              .hover_dim {
+                opacity: 1;
+                transform: translateX(0);
               }
             }
           }
@@ -491,14 +542,14 @@ main {
 footer {
   width: 100%;
   background-color: $color-white-normal;
-  transition: $transition;
+  @include transition-normal();
 
   .nameWrapper {
     width: 100%;
     @include media-lg-margin();
 
     .name {
-      transition: $transition;
+      @include transition-normal();
       width: 100%;
       @include media-lg-padding();
       @include border();

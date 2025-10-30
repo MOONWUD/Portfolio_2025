@@ -340,6 +340,54 @@ main {
 
 
   /********** sec02 - work **********/
-  #work {
+  #work {}
+
+
+  /********** sec03 - skill **********/
+  #skill {
+    @include border();
+    border-width: 0 1px 1px 1px;
+    .article_title {
+      @include border();
+      border-width: 0 0 1px 0;
+    }
+    .skill_wrapper {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
+      .null {
+        grid-column: 1;
+        grid-row: 1 / 7;
+        @include border();
+        border-width: 0 1px 0 0;
+      }
+      
+      .skill_item {
+        grid-column: 2;
+        @include media-lg-padding();
+        @include border();
+        border-width: 0 0 1px 0;
+        
+        .header_area {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: $padding-pc-sm;
+
+          .title {
+            @include textstyle-bit-20();
+          }
+        }
+
+        .contents {
+          @include textstyle-pr-sm-16();
+          line-height: 150%;
+        }
+      }
+      &:last-child() {
+        border-bottom: none;
+      }
+
+    }
   }
 }

@@ -20,6 +20,7 @@ body {
 main {
   /********** sec01 - about **********/
   /********** sec02 - work **********/
+  /********** sec03 - skill **********/
 }
 main #about .video {
   width: 100%;
@@ -103,4 +104,57 @@ main #about .introduction h5 span {
   color: #F56242;
   color: #FBF6F3;
   padding-bottom: 18px;
+}
+main #skill {
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 1px 1px;
+}
+main #skill .article_title {
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
+}
+main #skill .skill_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+main #skill .skill_wrapper .null {
+  grid-column: 1;
+  grid-row: 1/7;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 0 0;
+}
+main #skill .skill_wrapper .skill_item {
+  grid-column: 2;
+  width: 100%;
+  padding: 32px;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
+}
+main #skill .skill_wrapper .skill_item .header_area {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+main #skill .skill_wrapper .skill_item .header_area .title {
+  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.1;
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: #F56242;
+}
+main #skill .skill_wrapper .skill_item .contents {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F56242;
+  line-height: 150%;
+}
+main #skill .skill_wrapper:last-child() {
+  border-bottom: none;
 }/*# sourceMappingURL=index.css.map */
