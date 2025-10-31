@@ -74,10 +74,10 @@
                     </article>
 
                     <article class="introduction">
-                         <div class="marksimg">
+                         <div class="marksimg" data-aos="fade-down">
                               <img src="./assets/img_marks.svg" alt="큰따옴표">
                          </div>
-                         <h5>
+                         <h5 data-aos="fade-left">
                               <span>성공은 작은 노력이 날마다 반복된 결과이다.</span>
                               안녕하세요! 날마다 꾸준히 나아가고 있는 문지영입니다. <br>
                               안주하지 않는 삶을 지양하며,<br>
@@ -90,11 +90,11 @@
 
                <section id="work">
                     <div class="article_title">
-                         <h3>
+                         <h3 data-aos="fade-up">
                               Work - <br>
                               Highlights
                          </h3>
-                         <a href="#">
+                         <a href="#" data-aos="fade-left">
                               <div>View All</div>
                               <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
                          </a>
@@ -264,7 +264,7 @@
 
                <section id="skill">
                     <div class="article_title">
-                         <h3>
+                         <h3 data-aos="fade-up">
                               My Skills -<br>
                               Used Tools
                          </h3>
@@ -435,10 +435,11 @@
                // AOS 초기화
                AOS.init({
                     startEvent: 'DOMContentLoaded',
-                    once: true,
+                    once: false,
+                    // once: true,
                     duration: 400,
                     easing: 'ease-in-out',
-                    offset: 0,
+                    offset: 116,
                });
 
                // header 불러오기

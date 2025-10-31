@@ -162,7 +162,6 @@ main .margin section .slider .slider_gradient1 {
 }
 main .margin section .slider .slider_gradient2 {
   grid-column: 3/4;
-  grid-row: 1/2;
   justify-content: end;
   background: linear-gradient(to left, #FBF6F3, rgba(251, 246, 243, 0));
 }
@@ -428,7 +427,7 @@ main {
 }
 main #about .video {
   width: 100%;
-  aspect-ratio: 3/1.5;
+  aspect-ratio: 3/1.2;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
@@ -475,25 +474,26 @@ main #about .beliefs .beliefs_contents .beliefs_text {
 main #about .introduction {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 60px 1fr 60px;
   background-color: #F56242;
   width: 100%;
   padding: 32px;
+  overflow: hidden;
 }
 main #about .introduction .marksimg {
   grid-column: 1/2;
-  grid-row: 1/2;
+  grid-row: 2/3;
   align-self: start;
   justify-self: end;
 }
 main #about .introduction h5 {
   grid-column: 2/5;
-  grid-row: 1/4;
+  grid-row: 2/3;
   align-self: center;
   padding-left: 32px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #F56242;
   color: #FBF6F3;
