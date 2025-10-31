@@ -18,17 +18,14 @@ body {
 /***** btn *****/
 /***** border *****/
 /***** animation *****/
-[data-aos=fade-up] {
-  transform: translateY(1px);
-  opacity: 0;
-  transition: all 0.2s ease-in-out;
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
-
-[data-aos=fade-up].aos-animate {
-  transform: translateY(0);
-  opacity: 1;
-}
-
 /********** header **********/
 header {
   position: fixed;
@@ -41,8 +38,10 @@ header {
   border-color: #F56242;
   border-width: 0 0 1px 0;
   transition: all 0.35s ease-in-out;
+  overflow: hidden;
 }
 header nav {
+  overflow: hidden;
   width: 100%;
   padding: 18px 32px;
   background-color: #FBF6F3;
@@ -73,7 +72,7 @@ header nav .gnb .ghostbtn {
   border: #FBF6F3 1px solid;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #F56242;
   transition: all 0.35s ease-in-out;
@@ -93,7 +92,7 @@ header nav .gnb .normalbtn {
   border-radius: 999px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #F56242;
   color: #FBF6F3;
@@ -144,40 +143,48 @@ main .margin section .slider {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
-  padding: 32px 0 32px 0;
+  padding: 32px 0;
   display: grid;
   grid-template-columns: 150px 1fr 150px;
+  position: relative;
 }
 main .margin section .slider .slider_gradient {
-  z-index: 999;
+  z-index: 2;
   width: 120px;
   height: 50px;
-  display: grid;
   align-self: center;
 }
 main .margin section .slider .slider_gradient1 {
   grid-column: 1/2;
-  grid-row: 1/2;
-  justify-self: start;
-  background-image: linear-gradient(to right, #FBF6F3, rgba(251, 246, 243, 0));
+  background: linear-gradient(to right, #FBF6F3, rgba(251, 246, 243, 0));
 }
 main .margin section .slider .slider_gradient2 {
   grid-column: 3/4;
-  grid-row: 1/2;
-  justify-self: end;
-  background-image: linear-gradient(to left, #FBF6F3, rgba(251, 246, 243, 0));
+  background: linear-gradient(to left, #FBF6F3, rgba(251, 246, 243, 0));
 }
-main .margin section .slider .slider_wrapper {
-  display: flex;
-  gap: 60px;
+main .margin section .slider .slider_aera {
   grid-column: 1/4;
   grid-row: 1/2;
+  overflow: hidden;
   align-self: center;
   justify-self: center;
-  height: 50px;
+  width: 100%;
+  display: flex;
+  gap: 60px;
 }
-main .margin section .slider .slider_wrapper img {
+main .margin section .slider .slider_aera .slider_wrapper {
+  display: flex;
+  gap: 60px;
+  height: 50px;
+  flex-shrink: 0;
+  animation: slideMove 25s linear infinite;
+}
+main .margin section .slider .slider_aera .slider_wrapper li {
+  flex-shrink: 0;
+}
+main .margin section .slider .slider_aera .slider_wrapper img {
   height: 100%;
+  display: block;
 }
 main .margin section .article_title {
   width: 100%;

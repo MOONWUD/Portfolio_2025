@@ -11,7 +11,7 @@ header {
   border-width: 0 0 1px 0;
   @include transition-normal();
   overflow: hidden;
-  
+
   nav {
     overflow: hidden;
     width: 100%;
@@ -89,43 +89,53 @@ main {
         overflow: hidden;
         @include border();
         border-width: 0 0 1px 0;
-        padding: $padding-pc-md 0 $padding-pc-md 0;
+        padding: $padding-pc-md 0;
         display: grid;
         grid-template-columns: 150px 1fr 150px;
+        position: relative;
 
         .slider_gradient {
-          z-index: 999;
+          z-index: 2;
           width: 120px;
           height: 50px;
-          display: grid;
           align-self: center;
         }
 
         .slider_gradient1 {
           grid-column: 1 / 2;
-          grid-row: 1 / 2;
-          justify-self: start;
-          background-image: linear-gradient(to right, $color-white-normal, $color-white-alpha00);
+          background: linear-gradient(to right, $color-white-normal, $color-white-alpha00);
         }
 
         .slider_gradient2 {
           grid-column: 3 / 4;
-          grid-row: 1 / 2;
-          justify-self: end;
-          background-image: linear-gradient(to left, $color-white-normal, $color-white-alpha00);
+          background: linear-gradient(to left, $color-white-normal, $color-white-alpha00);
         }
 
-        .slider_wrapper {
-          display: flex;
-          gap: $padding-mo-xl;
+        .slider_aera {
           grid-column: 1 / 4;
           grid-row: 1 / 2;
+          overflow: hidden;
           align-self: center;
           justify-self: center;
-          height: 50px;
+          width: 100%;
+          display: flex; 
+          gap: $padding-mo-xl;
 
-          img {
-            height: 100%;
+          .slider_wrapper {
+            display: flex;
+            gap: $padding-mo-xl;
+            height: 50px;
+            flex-shrink: 0;
+            animation: slideMove 25s linear infinite;
+
+            li {
+              flex-shrink: 0;
+            }
+
+            img {
+              height: 100%;
+              display: block;
+            }
           }
         }
       }
