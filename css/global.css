@@ -18,6 +18,17 @@ body {
 /***** btn *****/
 /***** border *****/
 /***** animation *****/
+[data-aos=fade-up] {
+  transform: translateY(1px);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+[data-aos=fade-up].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 /********** header **********/
 header {
   position: fixed;

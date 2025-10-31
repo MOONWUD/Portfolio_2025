@@ -29,10 +29,17 @@
      <script src="./js/jquery-3.7.1.min.js"></script>
      <script src="./js/jquery-ui.min.js"></script>
 
+
+     <!--===== plugin =====-->
+     <!--=== AOS ===-->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 </head>
 
 <body>
-     <header>
+     <header data-aos="fade-down" data-aos-duration="480">
      </header>
 
 
@@ -424,31 +431,58 @@
      </footer>
 
      <script>
-          fetch('header.html')
-               .then(response => response.text())
-               .then(data => {
-                    document.querySelector('header').innerHTML = data;
-
-                    // var script = document.createElement('script');
-                    // script.src = '../js/global.js';
-                    // script.type = 'text/javascript';
-
-                    // // <head>에 추가
-                    // document.head.appendChild(script);
+          document.addEventListener('DOMContentLoaded', () => {
+               // AOS 초기화
+               AOS.init({
+                    startEvent: 'DOMContentLoaded',
+                    once: true,
+                    duration: 400,
+                    easing: 'ease-in-out',
+                    offset: 0,
                });
 
-          fetch('footer.html')
-               .then(response => response.text())
-               .then(data => {
-                    document.querySelector('footer').innerHTML = data;
-               });
-          fetch('slider.html')
-               .then(r => r.text())
-               .then(html => {
-                    document.querySelectorAll('.slider').forEach(el => {
-                         el.innerHTML = html;
+               // header 불러오기
+               fetch('header.html')
+                    .then(r => r.text())
+                    .then(html => {
+                         document.querySelector('header').innerHTML = html;
+                         AOS.refresh();
+
+              
+                         const logo = document.querySelector('header .logo');
+                         if (logo) {
+                              setTimeout(() => {
+                                   logo.classList.add('aos-animate');
+                              }, 20); 
+                         }
+
+                         const gnbItems = document.querySelectorAll('header .gnb li');
+                         gnbItems.forEach((item, i) => {
+                              setTimeout(() => {
+                                   item.classList.add('aos-animate');
+                              }, 30 + i * 20);
+                         });
                     });
-               });
+
+               // footer 불러오기
+               fetch('footer.html')
+                    .then(r => r.text())
+                    .then(html => {
+                         document.querySelector('footer').innerHTML = html;
+                         AOS.refresh();
+                    });
+
+               // slider 불러오기
+               fetch('slider.html')
+                    .then(r => r.text())
+                    .then(html => {
+                         document.querySelectorAll('.slider').forEach(el => {
+                              el.innerHTML = html;
+                         });
+                         AOS.refresh();
+                    });
+          });
+
      </script>
 </body>
 
