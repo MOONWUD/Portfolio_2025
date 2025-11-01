@@ -291,6 +291,7 @@ footer {
   .nameWrapper {
     width: 100%;
     @include media-lg-margin();
+    overflow: hidden;
 
     .name {
       @include transition-normal();
@@ -299,8 +300,9 @@ footer {
       @include border();
       border-width: 0 1px 1px 1px;
 
-      img {
+      svg {
         width: 100%;
+        object-fit: contain;
       }
     }
 
@@ -309,10 +311,10 @@ footer {
     }
 
     .firstname {
+      display: flex;
+      align-items: flex-end; 
       padding-bottom: 0;
-      display: grid;
-      align-items: end;
-      border-bottom: none
+      border-bottom: none;
     }
   }
 
@@ -344,6 +346,75 @@ footer {
       p {
         @include textstyle-pr-sm-14();
 
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: $color-white-normal;
+  @include transition-normal();
+  overflow: visible;
+
+  .nameWrapper {
+    width: 100%;
+    @include media-lg-margin();
+
+    .name {
+      @include transition-normal();
+      width: 100%;
+      @include media-lg-padding();
+      @include border();
+      border-width: 0 1px 1px 1px;
+
+      svg {
+        width: 100%;
+        height: auto; 
+        object-fit: contain;
+        // display: block;
+      }
+    }
+
+    .fullname {
+      border-width: 1px;
+    }
+
+    .firstname {
+      padding-bottom: 0;
+      display: flex; // grid → flex
+      align-items: flex-end; // end 유지
+      border-bottom: none;
+    }
+  }
+
+  .copyrightWrapper {
+    width: 100%;
+    @include media-lg-margin();
+    @include border();
+    border-width: 1px 0 0 0;
+
+    .copyright {
+      width: 100%;
+      padding: $padding-pc-xs $padding-pc-md;
+      @include border();
+      border-width: 0 1px 0 1px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        width: 36px;
+        height: 36px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      p {
+        @include textstyle-pr-sm-14();
       }
     }
   }
