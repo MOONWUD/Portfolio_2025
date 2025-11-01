@@ -72,8 +72,12 @@ $line-height : 1.4;
 
 $font-weight-sm : 500;
 $font-weight-md : 700;
+$font-weight-lg : 800;
+$font-weight-xl : 900;
 
+$font-size-72 : 4.5rem;
 $font-size-56 : 3.5rem;
+$font-size-36 : 2.25rem;
 $font-size-32 : 2rem;
 $font-size-24 : 1.5rem;
 $font-size-20 : 1.25rem;
@@ -121,6 +125,67 @@ $font-size-14 : 0.875rem;
   color: $color-primary-normal;
 }
 
+/***** font-weight-xl *****/
+@mixin textstyle-pr-xl-36 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-36;
+  font-weight: $font-weight-xl;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-xl-24 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-24;
+  font-weight: $font-weight-xl;
+  color: $color-primary-normal;
+}
+
+
+/***** font-weight-lg *****/
+@mixin textstyle-pr-lg-72 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-72;
+  font-weight: $font-weight-lg;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-lg-24 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-24;
+  font-weight: $font-weight-lg;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-lg-20 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-20;
+  font-weight: $font-weight-lg;
+  color: $color-primary-normal;
+}
+
+
+/***** font-weight-md *****/
+@mixin textstyle-pr-md-36 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-36;
+  font-weight: $font-weight-md;
+  color: $color-primary-normal;
+}
+
+@mixin textstyle-pr-md-32 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-32;
+  font-weight: $font-weight-md;
+  color: $color-primary-normal;
+}
+
 @mixin textstyle-pr-md-20 {
   font-family: $font-pretendard;
   line-height: $line-height;
@@ -145,6 +210,8 @@ $font-size-14 : 0.875rem;
   color: $color-primary-normal;
 }
 
+
+/***** font-weight-sm *****/
 @mixin textstyle-pr-sm-18 {
   font-family: $font-pretendard;
   line-height: $line-height;
@@ -281,4 +348,25 @@ $transition-motion : ease-in-out;
   100% {
     transform: translateX(-100%);
   }
+}
+
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+$iconSpin_animation: iconSpin $transition-time-fast ease-in-out forwards;
+
+@mixin iconSpin {
+  transform-origin: center center;
+  animation: $iconSpin_animation;
 }

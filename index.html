@@ -35,6 +35,10 @@
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+     <!--=== copy ===-->
+     <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
 
 </head>
 
@@ -54,9 +58,11 @@
                               <img src="./assets/img_arrow.svg" alt="화살표 ->">
                          </div>
                          <ul class="beliefs_contents">
-                              <li class="icon_crros" data-aos="fade-down" data-aos-delay="200">
-                                   <img src="./assets/icon_cross.svg" alt="별아이콘">
-                                   <img src="./assets/icon_cross.svg" alt="별아이콘">
+                              <li class="icon_crros">
+                                   <img data-aos="fade-down-right" data-aos-delay="200" src="./assets/icon_cross.svg"
+                                        alt="별아이콘">
+                                   <img data-aos="fade-down-left" data-aos-delay="200" src="./assets/icon_cross.svg"
+                                        alt="별아이콘">
                               </li>
                               <li class="beliefs_text" data-aos="fade-up" data-aos-delay="200">
                                    Success is the sum <br>
@@ -64,8 +70,10 @@
                                    repeated day in and day out.
                               </li>
                               <li class="icon_crros" data-aos="fade-up" data-aos-delay="200">
-                                   <img src="./assets/icon_cross.svg" alt="별아이콘">
-                                   <img src="./assets/icon_cross.svg" alt="별아이콘">
+                                   <img data-aos="fade-up-right" data-aos-delay="200" src="./assets/icon_cross.svg"
+                                        alt="별아이콘">
+                                   <img data-aos="fade-up-left" data-aos-delay="200" src="./assets/icon_cross.svg"
+                                        alt="별아이콘">
                               </li>
                          </ul>
                     </article>
@@ -75,14 +83,16 @@
 
                     <article class="introduction">
                          <div class="marksimg" data-aos="fade-down">
-                              <img src="./assets/img_marks.svg" alt="큰따옴표">
+                              <svg viewBox="0 0 150 116" xmlns="http://www.w3.org/2000/svg">
+                                   <path d="M67.2854 83.6363C67.2854 92.8388 64.1778 100.417 57.9627 106.372C52.0178 112.327 44.0462 115.304 34.048 115.304C25.4009 115.304 18.1049 112.868 12.16 107.996C6.21512 102.853 2.70222 96.3572 1.62133 88.5083C0.540445 83.9068 0 79.0348 0 73.8923C0 61.4413 3.24267 49.8026 9.72803 38.976C14.8622 30.044 21.3476 22.0593 29.184 15.022C37.0204 7.98463 44.1814 2.97733 50.6667 0L63.232 16.24C57.0169 20.8413 51.7476 26.39 47.424 32.886C43.1004 39.1113 39.9929 45.7426 38.1014 52.78C47.0187 53.8627 54.0444 57.246 59.1787 62.93C64.5831 68.614 67.2854 75.5163 67.2854 83.6363ZM149.162 83.6363C149.162 92.8388 146.055 100.417 139.84 106.372C133.895 112.327 125.924 115.304 115.925 115.304C107.279 115.304 99.9825 112.868 94.0372 107.996C88.0925 102.853 84.5799 96.3572 83.4985 88.5083C82.4178 83.9068 81.8772 79.0348 81.8772 73.8923C81.8772 61.4413 85.1198 49.8026 91.6051 38.976C96.7399 30.044 103.225 22.0593 111.061 15.022C118.898 7.98463 126.058 2.97733 132.544 0L145.109 16.24C138.895 20.8413 133.625 26.39 129.301 32.886C124.978 39.1113 121.871 45.7426 119.978 52.78C128.896 53.8627 135.922 57.246 141.056 62.93C146.461 68.614 149.162 75.5163 149.162 83.6363Z"
+                                        fill="currentColor"></path>
+                              </svg>
                          </div>
                          <h5 data-aos="fade-left">
-                              <span>성공은 작은 노력이 날마다 반복된 결과이다.</span>
-                              안녕하세요! 날마다 꾸준히 나아가고 있는 문지영입니다. <br>
-                              안주하지 않는 삶을 지양하며,<br>
-                              포기하지 않고 나아가는 끈기로 매 순간 최선을 다하고 있습니다.<br>
-                              소통이 잘 통하는 동료, 피드백을 수용할 줄 아는 동료가 되겠습니다.<br>
+                              날마다 꾸준히 성장하고 있는 문지영입니다. <br>
+                              쉽게 안주하고 포기하지 않는 삶을 지양합니다.<br>
+                              매 순간 최선을 다하려고 노력합니다.<br>
+                              소통이 잘 되는 동료, 피드백을 수용할 줄 아는 동료가 되겠습니다.<br>
                          </h5>
                     </article>
                </section>
@@ -358,68 +368,116 @@
                     <article class="contact_warpper">
                          <ul class="contact_message">
                               <li class="header">
-                                   <div class="text">
+                                   <div class="text" data-aos="fade-right">
                                         <h6>똑똑, 함께 일할 사람을 찾고 계신가요?</h6>
                                         <p>
                                              저에게 궁금하신 점이 있으시다면 편하게 연락주세요.<br>
                                              빠른 시일내에 답장 드리겠습니다.
                                         </p>
                                    </div>
-                                   <img src="./assets/logo.svg" alt="logo">
+                                   <img src="./assets/logo.svg" alt="logo" data-aos="fade-up">
                               </li>
-                              <li class="icon"><img src="./assets/icon_cross.svg" alt="icon"></li>
+                              <li class="icon" data-aos="fade-up"><img src="./assets/icon_cross.svg" alt="icon"></li>
                          </ul>
                          <div class="link_wrapper">
                               <div class="link_contents">
-                                   <h6 class="title">Contact</h6>
-                                   <div class="list_wrapper">
+                                   <h6 class="title" data-aos="fade-down">Contact</h6>
+                                   <div class="list_wrapper" data-aos="fade-up">
                                         <a href="#">
                                              <div>GitHub</div>
-                                             <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z"
+                                                       fill="#F56242" />
+                                             </svg>
                                         </a>
                                         <a href="#">
                                              <div>Notefolio</div>
-                                             <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z"
+                                                       fill="#F56242" />
+                                             </svg>
                                         </a>
                                         <a href="#">
                                              <div>Resume</div>
-                                             <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z"
+                                                       fill="#F56242" />
+                                             </svg>
                                         </a>
                                    </div>
                               </div>
                               <div class="link_contents">
-                                   <h6 class="title">Log</h6>
-                                   <div class="list_wrapper">
+                                   <h6 class="title" data-aos="fade-down">Log</h6>
+                                   <div class="list_wrapper" data-aos="fade-up">
                                         <a href="#">
                                              <div>GitHub 작업일지</div>
-                                             <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z"
+                                                       fill="#F56242" />
+                                             </svg>
                                         </a>
                                         <a href="#">
                                              <div>GitHub 공부일지</div>
-                                             <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z"
+                                                       fill="#F56242" />
+                                             </svg>
                                         </a>
                                         <a href="#">
                                              <div>Figma 작업파일</div>
-                                             <img src="./assets/icon_arrow_topright.svg" alt="바로가기">
+                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                  xmlns="http://www.w3.org/2000/svg">
+                                                  <path d="M6.4 18L5 16.6L14.6 7H6V5H18V17H16V8.4L6.4 18Z"
+                                                       fill="#F56242" />
+                                             </svg>
                                         </a>
                                    </div>
                               </div>
-                              <img src="./assets/icon_cross.svg" alt="icon">
+                              <img src="./assets/icon_cross.svg" alt="icon" data-aos="fade-up">
                          </div>
                     </article>
 
                     <article class="sns">
                          <div class="email">
-                              <h5>
+                              <button data-aos="fade-right" class="copy-btn" data-clipboard-text="moonqazwsx@naver.com">
+                                   <span class="tooltip">Copy?</span>
                                    Send email to me : <br>
-                                   <span>moonqazwsx@naver.com</span>
-                              </h5>
+                                   moonqazwsx@naver.com
+                              </button>
                          </div>
                          <ul class="snsicon">
-                              <li><a href="#"><img src="./assets/slider_10_github.svg" alt="github"></a></li>
-                              <li><a href="#"><img src="./assets/img_linkedin.svg" alt="linkedin"></a></li>
-                              <li><a href="#"><img src="./assets/img_dribble.svg" alt="dribble"></a></li>
-                              <li><a href="#"><img src="./assets/slider_16_notion.svg" alt="notion"></a></li>
+                              <li><a href="#">
+                                        <svg data-aos="zoom-in" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                                             <path fill-rule="evenodd" clip-rule="evenodd"
+                                                  d="M26 0C40.3598 0 52 11.9338 52 26.6576C52 38.433 44.5588 48.4222 34.2342 51.9504C32.916 52.213 32.448 51.3805 32.448 50.6707C32.448 49.7919 32.4792 46.9216 32.4792 43.3544C32.4792 40.8688 31.6472 39.2466 30.7138 38.4198C36.504 37.7594 42.588 35.505 42.588 25.2662C42.588 22.3542 41.5792 19.9779 39.91 18.1111C40.1804 17.4377 41.0722 14.7263 39.6552 11.0551C39.6552 11.0551 37.4764 10.3408 32.513 13.7884C30.4356 13.1982 28.21 12.9012 26 12.8908C23.79 12.9012 21.567 13.1982 19.4922 13.7884C14.5236 10.3408 12.3396 11.0551 12.3396 11.0551C10.9278 14.7263 11.8196 17.4377 12.0874 18.1111C10.426 19.9779 9.40941 22.3542 9.40941 25.2662C9.40941 35.479 15.4804 37.768 21.255 38.4414C20.5114 39.107 19.838 40.2811 19.604 42.0049C18.122 42.6861 14.3572 43.8651 12.038 39.7909C12.038 39.7909 10.6626 37.2295 8.0522 37.0423C8.0522 37.0423 5.5172 37.0087 7.8754 38.6623C7.8754 38.6623 9.5784 39.4813 10.7614 42.5623C10.7614 42.5623 12.2876 47.3201 19.5208 45.7082C19.5338 47.9363 19.5572 50.0363 19.5572 50.6707C19.5572 51.3753 19.0788 52.2 17.7814 51.953C7.44899 48.43 0 38.4356 0 26.6576C0 11.9338 11.6428 0 26 0Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                   </a></li>
+                              <li><a href="#">
+                                        <svg viewBox="0 0 59 56" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M13.4146 55.9987V18.2142H0.88041V55.9987H13.4159H13.4146ZM7.15014 13.0563C11.5202 13.0563 14.2408 10.1549 14.2408 6.52897C14.159 2.82042 11.5202 0 7.23325 0C2.94338 0 0.141602 2.82042 0.141602 6.52864C0.141602 10.1546 2.86125 13.056 7.06801 13.056H7.14916L7.15014 13.0563ZM20.3525 55.9987H32.8857V34.9004C32.8857 33.7726 32.9675 32.6419 33.2987 31.8364C34.2043 29.5792 36.2667 27.2427 39.73 27.2427C44.2643 27.2427 46.0793 30.7073 46.0793 35.7872V55.9987H58.6122V34.3342C58.6122 22.729 52.4295 17.3284 44.1832 17.3284C37.4223 17.3284 34.453 21.1147 32.8033 23.6935H32.8867V18.2156H20.3532C20.5168 21.7602 20.3522 56 20.3522 56L20.3525 55.9987Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+
+                                   </a></li>
+                              <li><a href="#">
+                                        <svg viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M26 0C11.6402 0 0 11.6402 0 26C0 40.3598 11.6402 52 26 52C40.3598 52 52 40.3598 52 26C52 11.6402 40.3598 0 26 0ZM26 3.7674C31.6641 3.7674 36.8342 5.8864 40.7602 9.373C37.8755 13.1781 33.4932 15.7118 29.1018 17.4265C26.7085 13.0481 23.7614 8.4318 20.7623 4.3875C22.4406 3.9819 24.1943 3.7674 26 3.7674ZM16.5412 5.8747C19.4389 10.2102 22.2469 14.2311 24.8131 18.7824C18.3248 20.4633 10.9954 21.4721 4.22373 21.489C5.65113 14.5626 10.3038 8.8114 16.5412 5.8747ZM43.2263 11.9444C46.3281 15.7391 48.1962 20.579 48.2326 25.8531C43.0898 24.8404 37.9743 24.5739 32.7678 25.0991C32.1815 23.6392 31.473 22.2534 30.7931 20.7571C35.282 18.9462 40.0816 15.847 43.2263 11.9444ZM26.6188 22.2222C27.1752 23.4065 27.82 24.661 28.4245 25.9441C21.1835 29.1369 13.4823 33.4035 9.48352 40.8837C5.93062 36.9434 3.76741 31.7226 3.76741 26C3.76741 25.7829 3.77131 25.5658 3.77781 25.35C11.5323 25.3123 19.1438 24.3425 26.6188 22.2222ZM38.3669 28.2841C41.5987 28.2737 44.9384 28.7248 47.9557 29.5191C46.969 35.7279 43.4096 41.0826 38.4046 44.4522C37.2112 39.0247 36.0737 33.8312 34.0626 28.5948C35.4497 28.3881 36.8979 28.288 38.3669 28.2841ZM29.9481 29.6114C31.9982 34.905 33.6063 40.768 34.6853 46.4737C32.0164 47.6073 29.0823 48.2339 26 48.2339C20.8585 48.2339 16.1239 46.4867 12.3578 43.5552C16.3839 37.0227 22.62 32.0801 29.9481 29.6114Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                   </a></li>
+                              <li><a href="#">
+                                        <svg viewBox="0 0 50 52" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M8.62197 9.1167C10.2432 10.4306 10.8513 10.3304 13.8955 10.1278L42.5952 8.40854C43.2037 8.40854 42.6975 7.80272 42.4948 7.70203L37.7281 4.26441C36.815 3.55706 35.5981 2.74694 33.2662 2.94959L5.47638 4.97173C4.46293 5.07199 4.26047 5.57751 4.66413 5.98276L8.62197 9.1167ZM10.3451 15.7894V45.9155C10.3451 47.5344 11.156 48.1403 12.9814 48.0402L44.5222 46.2194C46.3484 46.1193 46.5518 45.0053 46.5518 43.6903V13.7664C46.5518 12.4532 46.0457 11.7451 44.9275 11.8462L11.9671 13.7664C10.7508 13.8683 10.3451 14.4753 10.3451 15.7894ZM41.4821 17.4054C41.6844 18.3162 41.4821 19.2262 40.5674 19.3285L39.0478 19.6306V41.8715C37.7281 42.579 36.5115 42.9835 35.4977 42.9835C33.8744 42.9835 33.4678 42.4777 32.2519 40.962L22.3113 25.3932V40.4567L25.4569 41.1647C25.4569 41.1647 25.4569 42.9835 22.9191 42.9835L15.9229 43.3883C15.7196 42.9835 15.9229 41.9735 16.6325 41.7709L18.4582 41.2663V21.3498L15.9233 21.1472C15.72 20.2364 16.2263 18.9233 17.6472 18.8213L25.1526 18.3166L35.4977 34.088V20.1361L32.8601 19.8341C32.6576 18.7207 33.4678 17.9122 34.4821 17.8119L41.4821 17.4054ZM3.14308 2.24224L32.049 0.118587C35.5988 -0.18515 36.5119 0.0183084 38.7432 1.63519L47.9699 8.1052C49.4927 9.21781 50 9.52072 50 10.7336V46.2194C50 48.4431 49.188 49.7585 46.3487 49.9596L12.7806 51.9822C10.6493 52.0835 9.635 51.7803 8.51889 50.364L1.72389 41.5687C0.506319 39.9498 0 38.7384 0 37.3213V5.77935C0 3.96066 0.812257 2.44365 3.14308 2.24224Z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+
+                                   </a></li>
                          </ul>
                     </article>
                </section>
@@ -485,6 +543,41 @@
           });
 
 
+          const copyBtn = document.querySelector("button");
+          const tooltip = copyBtn.querySelector(".tooltip");
+
+          let hideTimeout; 
+
+          copyBtn.addEventListener("click", () => {
+               const textToCopy = "moonqazwsx@naver.com";
+
+               navigator.clipboard.writeText(textToCopy).then(() => {
+                    clearTimeout(hideTimeout);
+
+                    tooltip.textContent = "Copied!";
+                    tooltip.classList.add("active"); 
+                    hideTimeout = setTimeout(() => {
+                         tooltip.style.opacity = 0; 
+                         tooltip.classList.remove("active");
+                    }, 2000);
+               });
+          });
+          
+          copyBtn.addEventListener("mouseenter", () => {
+               clearTimeout(hideTimeout);
+               tooltip.classList.remove("active");
+               tooltip.textContent = "Copy?";
+               tooltip.style.opacity = 1;
+               tooltip.style.top = "-4px";
+          });
+
+          // 마우스 떼면 Copied 유지 중이 아니면 숨기기
+          copyBtn.addEventListener("mouseleave", () => {
+               if (!tooltip.classList.contains("active")) {
+                    tooltip.style.opacity = 0;
+                    tooltip.style.top = "10px";
+               }
+          });
      </script>
 </body>
 

@@ -5,6 +5,8 @@ main {
 
   /********** sec01 - about **********/
   #about {
+    overflow: hidden;
+
     .video {
       width: 100%;
       aspect-ratio: 3 / 1.2;
@@ -37,6 +39,7 @@ main {
         flex-direction: column;
         justify-content: space-between;
         gap: $padding-mo-md;
+        overflow: hidden;
 
         .icon_crros {
           display: flex;
@@ -44,7 +47,8 @@ main {
         }
 
         .beliefs_text {
-          @include textstyle-bit-56()
+          @include textstyle-pr-lg-72();
+          line-height: 120%;
         }
       }
     }
@@ -62,6 +66,13 @@ main {
         grid-row: 2 / 3;
         align-self: start;
         justify-self: end;
+        color: $color-white-normal;
+
+        svg {
+          width: 140px;
+          height: auto;
+          display: block;
+        }
       }
 
       h5 {
@@ -69,33 +80,31 @@ main {
         grid-row: 2 / 3;
         align-self: center;
         padding-left: $padding-pc-md;
-        @include textstyle-pr-md-20();
+        @include textstyle-pr-md-32();
         color: $color-white-normal;
-        line-height: 150%;
-
-        span {
-          display: block;
-          @include textstyle-bit-32();
-          color: $color-white-normal;
-          padding-bottom: $padding-pc-xs;
-        }
+        line-height: 144%;
       }
     }
   }
 
 
   /********** sec02 - work **********/
-  #work {}
+  #work {
+    overflow: hidden;
+  }
 
 
   /********** sec03 - skill **********/
   #skill {
+    overflow: hidden;
     @include border();
     border-width: 0 1px 1px 1px;
+
     .article_title {
       @include border();
       border-width: 0 0 1px 0;
     }
+
     .skill_wrapper {
       width: 100%;
       display: grid;
@@ -107,13 +116,13 @@ main {
         @include border();
         border-width: 0 1px 0 0;
       }
-      
+
       .skill_item {
         grid-column: 2;
         @include media-lg-padding();
         @include border();
         border-width: 0 0 1px 0;
-        
+
         .header_area {
           display: flex;
           justify-content: space-between;
@@ -129,8 +138,9 @@ main {
           margin-top: $padding-pc-sm;
           display: none;
         }
+
         &:last-child {
-          border-bottom: none; 
+          border-bottom: none;
         }
       }
     }
@@ -139,6 +149,8 @@ main {
 
   /********** sec04 - contact **********/
   #contact {
+    overflow: hidden;
+
     .contact_warpper {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -161,9 +173,10 @@ main {
 
           .text {
             h6 {
-              @include textstyle-bit-24();
-              margin-bottom: $padding-pc-sm;
+              @include textstyle-pr-xl-24();
+              margin-bottom: $padding-pc-xs;
             }
+
             p {
               @include textstyle-pr-sm-16();
               line-height: 150%;
@@ -171,8 +184,9 @@ main {
           }
 
           img {
-            transform: rotate(90deg);
-            width: 80px;
+            transform: rotate(180deg);
+            width: 100px;
+            height: auto;
           }
         }
       }
@@ -185,7 +199,7 @@ main {
 
         .link_contents {
           .title {
-            @include textstyle-bit-20();
+            @include textstyle-pr-xl-24();
             margin-bottom: $padding-pc-sm;
           }
 
@@ -193,16 +207,33 @@ main {
             display: flex;
             flex-direction: column;
             gap: $padding-pc-xs;
+
             a {
               width: 100%;
               display: flex;
               justify-content: space-between;
               border-bottom: 1px dashed $color-primary-normal;
-              @include textstyle-pr-sm-18();
+              @include textstyle-pr-sm-16();
               padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
+              @include transition-fast();
+
+
+              &:hover {
+                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xs;
+                background-color: $color-primary-normal;
+                color: $color-white-normal;
+
+                svg {
+                  path {
+                    fill: $color-white-normal;
+                    @include iconSpin();
+                  }
+                }
+              }
             }
           }
         }
+
         img {
           grid-column: 1 / -1;
           justify-self: end;
@@ -215,11 +246,70 @@ main {
       grid-template-columns: repeat(2, 1fr);
 
       .email {
-        @include media-lg-padding();
-        @include textstyle-bit-20();
-        line-height: 140%;
+        // @include media-lg-padding();
+        padding: 0 $padding-pc-md 0 $padding-pc-md;
         @include border();
         border-width: 0 1px 0 0;
+        display: grid;
+        align-items: center;
+
+        button {
+          border: none;
+          background-color: $color-white-normal;
+          text-align: left;
+          @include textstyle-pr-lg-20();
+          position: relative;
+          cursor: pointer;
+
+          .tooltip {
+            position: absolute;
+            left: 200px;
+            top: 10px;
+            background-color: $color-primary-normal;
+            @include textstyle-pr-sm-14();
+            color: $color-white-normal;
+            white-space: nowrap;
+            padding: 6px 12px 6px 12px;
+            border-radius: 999px;
+            opacity: 0;
+            @include transition-normal();
+            
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              border-width: 6px;
+              border-style: solid;
+              border-color: $color-primary-normal transparent transparent transparent;
+              @include transition-normal();
+            }
+            
+            &.active {
+              background-color: #008355;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 6px;
+                border-style: solid;
+                border-color: #008355 transparent transparent transparent;
+              }
+              
+            }
+          }
+
+          &:hover {
+            .tooltip {
+              opacity: 1;
+              top: -4px;
+            }
+          }
+        }
+
       }
 
       .snsicon {
@@ -230,6 +320,7 @@ main {
 
         li {
           width: 100%;
+
           a {
             width: 100%;
             display: grid;
@@ -238,9 +329,13 @@ main {
             @include media-lg-padding();
             @include border();
             border-width: 0 1px 0 0;
+            color: $color-primary-normal;
+            @include transition-fast();
 
-            img {
+            svg {
+              width: auto;
               height: 56px;
+              display: block;
             }
 
           }
@@ -253,6 +348,10 @@ main {
 
           &:hover {
             background-color: $color-primary-normal;
+
+            a {
+              color: $color-white-normal;
+            }
           }
         }
       }
