@@ -12,6 +12,10 @@ body {
 
 /***** color *****/
 /***** txet style *****/
+/***** font-weight-xl *****/
+/***** font-weight-lg *****/
+/***** font-weight-md *****/
+/***** font-weight-sm *****/
 /***** padding *****/
 /***** radius *****/
 /****** transition ******/
@@ -24,6 +28,17 @@ body {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes iconSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(405deg);
   }
 }
 /********** header **********/
@@ -194,12 +209,13 @@ main .margin section .article_title {
   padding: 32px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 main .margin section .article_title h3 {
-  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: 800;
   color: #F56242;
 }
 main .margin section .article_title a {

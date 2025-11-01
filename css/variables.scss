@@ -152,6 +152,14 @@ $font-size-14 : 0.875rem;
   color: $color-primary-normal;
 }
 
+@mixin textstyle-pr-lg-32 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-32;
+  font-weight: $font-weight-lg;
+  color: $color-primary-normal;
+}
+
 @mixin textstyle-pr-lg-24 {
   font-family: $font-pretendard;
   line-height: $line-height;
@@ -284,6 +292,9 @@ $transition-time-normal : 0.35s;
 $transition-time-fast : 0.2s;
 $transition-motion : ease-in-out;
 
+@mixin transition-moreslow {
+  transition: all 1s $transition-motion;
+}
 @mixin transition-normal {
   transition: all $transition-time-normal $transition-motion;
 }
@@ -364,7 +375,7 @@ $transition-motion : ease-in-out;
   }
 }
 
-$iconSpin_animation: iconSpin $transition-time-fast ease-in-out forwards;
+$iconSpin_animation: iconSpin $transition-time-normal ease-in-out forwards;
 
 @mixin iconSpin {
   transform-origin: center center;

@@ -89,7 +89,7 @@
                               </svg>
                          </div>
                          <h5 data-aos="fade-left">
-                              날마다 꾸준히 성장하고 있는 문지영입니다. <br>
+                              안녕하세요! 날마다 꾸준히 성장하고 있는 문지영입니다. <br>
                               쉽게 안주하고 포기하지 않는 삶을 지양합니다.<br>
                               매 순간 최선을 다하려고 노력합니다.<br>
                               소통이 잘 되는 동료, 피드백을 수용할 줄 아는 동료가 되겠습니다.<br>
@@ -284,8 +284,8 @@
                          <li class="null"></li>
                          <li class="skill_item">
                               <div class="header_area">
-                                   <div class="title">HTML5 & CSS3 & SCSS</div>
-                                   <img src="./assets/icon_cross.svg" alt="플러스아이콘">
+                                   <div class="title" data-aos="fade-right">HTML5 & CSS3 & SCSS</div>
+                                   <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
                               </div>
                               <div class="contents">
                                    웹 표준과 접근성을 고려한 시멘틱 마트업 <br>
@@ -297,8 +297,8 @@
                          </li>
                          <li class="skill_item">
                               <div class="header_area">
-                                   <div class="title">Javascript & jQuery</div>
-                                   <img src="./assets/icon_cross.svg" alt="플러스아이콘">
+                                   <div class="title" data-aos="fade-right">Javascript & jQuery</div>
+                                   <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
                               </div>
                               <div class="contents">
                                    ES6+ 문법 <br>
@@ -310,8 +310,8 @@
                          </li>
                          <li class="skill_item">
                               <div class="header_area">
-                                   <div class="title">React</div>
-                                   <img src="./assets/icon_cross.svg" alt="플러스아이콘">
+                                   <div class="title" data-aos="fade-right">React</div>
+                                   <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
                               </div>
                               <div class="contents">
                                    React 생성, 배포 <br>
@@ -322,8 +322,8 @@
                          </li>
                          <li class="skill_item">
                               <div class="header_area">
-                                   <div class="title">Git & GitHub & Github Organization</div>
-                                   <img src="./assets/icon_cross.svg" alt="플러스아이콘">
+                                   <div class="title" data-aos="fade-right">Git & GitHub & Github Organization</div>
+                                   <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
                               </div>
                               <div class="contents">
                                    Git Bash를 통해 파일 백업 및 업데이트 <br>
@@ -334,8 +334,8 @@
                          </li>
                          <li class="skill_item">
                               <div class="header_area">
-                                   <div class="title">Adobe Tool & FIGMA</div>
-                                   <img src="./assets/icon_cross.svg" alt="플러스아이콘">
+                                   <div class="title" data-aos="fade-right">Adobe Tool & FIGMA</div>
+                                   <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
                               </div>
                               <div class="contents">
                                    Photoshop를 이용한 사진 편집 <br>
@@ -347,8 +347,8 @@
                          </li>
                          <li class="skill_item">
                               <div class="header_area">
-                                   <div class="title">LICENSE</div>
-                                   <img src="./assets/icon_cross.svg" alt="플러스아이콘">
+                                   <div class="title" data-aos="fade-right">LICENSE</div>
+                                   <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
                               </div>
                               <div class="contents">
                                    웹디자인개발기능사 <br>
@@ -512,14 +512,14 @@
                          if (logo) {
                               setTimeout(() => {
                                    logo.classList.add('aos-animate');
-                              }, 20);
+                              }, 80);
                          }
 
                          const gnbItems = document.querySelectorAll('header .gnb li');
                          gnbItems.forEach((item, i) => {
                               setTimeout(() => {
                                    item.classList.add('aos-animate');
-                              }, 30 + i * 20);
+                              }, 80 + i * 80);
                          });
                     });
 
@@ -546,7 +546,7 @@
           const copyBtn = document.querySelector("button");
           const tooltip = copyBtn.querySelector(".tooltip");
 
-          let hideTimeout; 
+          let hideTimeout;
 
           copyBtn.addEventListener("click", () => {
                const textToCopy = "moonqazwsx@naver.com";
@@ -555,14 +555,14 @@
                     clearTimeout(hideTimeout);
 
                     tooltip.textContent = "Copied!";
-                    tooltip.classList.add("active"); 
+                    tooltip.classList.add("active");
                     hideTimeout = setTimeout(() => {
-                         tooltip.style.opacity = 0; 
+                         tooltip.style.opacity = 0;
                          tooltip.classList.remove("active");
                     }, 2000);
                });
           });
-          
+
           copyBtn.addEventListener("mouseenter", () => {
                clearTimeout(hideTimeout);
                tooltip.classList.remove("active");
@@ -571,13 +571,42 @@
                tooltip.style.top = "-4px";
           });
 
-          // 마우스 떼면 Copied 유지 중이 아니면 숨기기
           copyBtn.addEventListener("mouseleave", () => {
                if (!tooltip.classList.contains("active")) {
                     tooltip.style.opacity = 0;
                     tooltip.style.top = "10px";
                }
           });
+
+
+          const skillItems = document.querySelectorAll('.skill_item');
+
+          function revealOnScroll() {
+               const triggerPoint = window.innerHeight / 2; 
+               let activeItem = null;
+
+               skillItems.forEach(item => {
+                    const itemTop = item.getBoundingClientRect().top;
+                    const itemBottom = item.getBoundingClientRect().bottom;
+
+                  
+                    if (itemTop < triggerPoint && itemBottom > triggerPoint / 2) {
+                         activeItem = item;
+                    }
+               });
+
+      
+               skillItems.forEach(item => {
+                    if (item === activeItem) {
+                         item.classList.add('active');
+                    } else {
+                         item.classList.remove('active');
+                    }
+               });
+          }
+
+          window.addEventListener('scroll', revealOnScroll);
+          revealOnScroll();
      </script>
 </body>
 

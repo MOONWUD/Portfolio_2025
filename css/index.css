@@ -209,12 +209,13 @@ main .margin section .article_title {
   padding: 32px;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 main .margin section .article_title h3 {
-  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 2rem;
-  font-weight: normal;
+  font-weight: 800;
   color: #F56242;
 }
 main .margin section .article_title a {
@@ -498,7 +499,7 @@ main #about .beliefs .beliefs_contents .beliefs_text {
 main #about .introduction {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: 60px 60px 1fr 60px 60px;
   background-color: #F56242;
   width: 100%;
   padding: 32px;
@@ -506,7 +507,7 @@ main #about .introduction {
 }
 main #about .introduction .marksimg {
   grid-column: 1/2;
-  grid-row: 2/3;
+  grid-row: 3/4;
   align-self: start;
   justify-self: end;
   color: #FBF6F3;
@@ -518,7 +519,7 @@ main #about .introduction .marksimg svg {
 }
 main #about .introduction h5 {
   grid-column: 2/5;
-  grid-row: 2/3;
+  grid-row: 3/4;
   align-self: center;
   padding-left: 32px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -562,16 +563,19 @@ main #skill .skill_wrapper .skill_item {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
 }
 main #skill .skill_wrapper .skill_item .header_area {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 main #skill .skill_wrapper .skill_item .header_area .title {
-  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.25rem;
-  font-weight: normal;
+  font-weight: 800;
   color: #F56242;
 }
 main #skill .skill_wrapper .skill_item .contents {
@@ -581,8 +585,31 @@ main #skill .skill_wrapper .skill_item .contents {
   font-weight: 500;
   color: #F56242;
   line-height: 150%;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: all 1s ease-in-out;
+}
+main #skill .skill_wrapper .skill_item.active .contents {
   margin-top: 24px;
-  display: none;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+main #skill .skill_wrapper .skill_item.active .header_area img {
+  transform-origin: center center;
+  animation: iconSpin 0.35s ease-in-out forwards;
+}
+main #skill .skill_wrapper .skill_item:hover .contents {
+  margin-top: 24px;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+}
+main #skill .skill_wrapper .skill_item:hover .header_area img {
+  transform-origin: center center;
+  animation: iconSpin 0.35s ease-in-out forwards;
 }
 main #skill .skill_wrapper .skill_item:last-child {
   border-bottom: none;
@@ -664,18 +691,35 @@ main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a {
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
-  padding: 8px 4px 8px 4px;
+  padding: 8px 8px 8px 4px;
   transition: all 0.2s ease-in-out;
+  position: relative;
+}
+main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #F56242;
+  width: 0;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  transition: 0.1s;
+  z-index: -99;
 }
 main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover {
-  padding: 8px 8px 8px 8px;
+  padding: 8px 8px 8px 12px;
   background-color: #F56242;
   color: #FBF6F3;
+}
+main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover::before {
+  content: "";
+  width: 100%;
 }
 main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg path {
   fill: #FBF6F3;
   transform-origin: center center;
-  animation: iconSpin 0.2s ease-in-out forwards;
+  animation: iconSpin 0.35s ease-in-out forwards;
 }
 main #contact .contact_warpper .link_wrapper img {
   grid-column: 1/-1;
@@ -774,7 +818,7 @@ main #contact .sns .snsicon li a {
 }
 main #contact .sns .snsicon li a svg {
   width: auto;
-  height: 56px;
+  height: 50px;
   display: block;
 }
 main #contact .sns .snsicon li:last-child a {

@@ -56,14 +56,14 @@ main {
     .introduction {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: $padding-mo-xl 1fr $padding-mo-xl;
+      grid-template-rows: $padding-mo-xl $padding-mo-xl 1fr $padding-mo-xl $padding-mo-xl;
       background-color: $color-primary-normal;
       @include media-lg-padding();
       overflow: hidden;
 
       .marksimg {
         grid-column: 1 / 2;
-        grid-row: 2 / 3;
+        grid-row: 3 / 4;
         align-self: start;
         justify-self: end;
         color: $color-white-normal;
@@ -77,7 +77,7 @@ main {
 
       h5 {
         grid-column: 2 / 5;
-        grid-row: 2 / 3;
+        grid-row: 3 / 4;
         align-self: center;
         padding-left: $padding-pc-md;
         @include textstyle-pr-md-32();
@@ -122,21 +122,53 @@ main {
         @include media-lg-padding();
         @include border();
         border-width: 0 0 1px 0;
-
+        overflow: hidden;
+        @include transition-moreslow();
+      
         .header_area {
           display: flex;
           justify-content: space-between;
-
+          align-items: center;
+      
           .title {
-            @include textstyle-bit-20();
+            @include textstyle-pr-lg-20();
           }
         }
-
+      
         .contents {
           @include textstyle-pr-sm-16();
           line-height: 150%;
-          margin-top: $padding-pc-sm;
-          display: none;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          transform: translateY(-10px);
+          @include transition-moreslow();
+        }
+      
+        &.active {
+          .contents {
+            margin-top: $padding-pc-sm;
+            max-height: 400px;
+            opacity: 1;
+            transform: translateY(0);
+          }
+      
+          .header_area img {
+            @include iconSpin();
+          }
+        }
+        
+        &:hover {
+          .contents {
+            margin-top: $padding-pc-sm;
+            max-height: 400px;
+            opacity: 1;
+            transform: translateY(0);
+          }
+      
+          .header_area img {
+            @include iconSpin();
+          }
         }
 
         &:last-child {
@@ -214,14 +246,33 @@ main {
               justify-content: space-between;
               border-bottom: 1px dashed $color-primary-normal;
               @include textstyle-pr-sm-16();
-              padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
+              padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xxs;
               @include transition-fast();
+              position: relative;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $color-primary-normal;
+                width: 0;
+                height: 100%;
+                @include transition-fast();
+                transition: 0.1s;
+                z-index: -99;
+              }
 
 
               &:hover {
-                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xs;
+                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-sm;
                 background-color: $color-primary-normal;
                 color: $color-white-normal;
+
+                &::before {
+                  content: "";
+                  width: 100%;
+                }
 
                 svg {
                   path {
@@ -246,7 +297,6 @@ main {
       grid-template-columns: repeat(2, 1fr);
 
       .email {
-        // @include media-lg-padding();
         padding: 0 $padding-pc-md 0 $padding-pc-md;
         @include border();
         border-width: 0 1px 0 0;
@@ -317,10 +367,10 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        
         li {
           width: 100%;
-
+          
           a {
             width: 100%;
             display: grid;
@@ -334,7 +384,7 @@ main {
 
             svg {
               width: auto;
-              height: 56px;
+              height: 50px;
               display: block;
             }
 

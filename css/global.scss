@@ -147,9 +147,10 @@ main {
         @include media-lg-padding();
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
 
         h3 {
-          @include textstyle-bit-32();
+          @include textstyle-pr-lg-32();
         }
 
         a {
