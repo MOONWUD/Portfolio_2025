@@ -123,9 +123,9 @@
                          </h3>
                     </div>
 
-                    <ul class="skill_wrapper">
+                    <ul id="skillList" class="skill_wrapper">
                          <li class="null"></li>
-                         <li class="skill_item">
+                         <!-- <li class="skill_item">
                               <div class="header_area">
                                    <div class="title" data-aos="fade-right">HTML5 & CSS3 & SCSS</div>
                                    <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
@@ -199,7 +199,7 @@
                                    운전면허 2종 보통 <br>
                                    한국사능력검정시험 1급 <br>
                               </div>
-                         </li>
+                         </li> -->
                     </ul>
                </section>
 
@@ -494,6 +494,42 @@
                     }
                });
           });
+
+
+
+          $(document).ready(function () {
+  $.ajax({
+    url: './data/skillList.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function (data) {
+      const list = $('#skillList');
+      list.find('.skill_item').remove(); // 기존 내용 비우기
+
+      data.forEach(item => {
+        const contentsHTML = item.contents
+          .map(line => `${line} <br>`)
+          .join('');
+
+        const li = `
+          <li class="skill_item">
+            <div class="header_area">
+              <div class="title" data-aos="fade-right">${item.title}</div>
+              <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
+            </div>
+            <div class="contents">
+              ${contentsHTML}
+            </div>
+          </li>
+        `;
+        list.append(li);
+      });
+    },
+    error: function (xhr, status, error) {
+      console.error('데이터 불러오기 실패:', error);
+    }
+  });
+}); 
      </script>
 </body>
 
