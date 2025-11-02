@@ -133,6 +133,10 @@ main {
           .title {
             @include textstyle-pr-lg-20();
           }
+
+          img {
+            @include iconSpinRe();
+          }
         }
       
         .contents {
@@ -153,9 +157,11 @@ main {
             transform: translateY(0);
           }
       
-          .header_area img {
-            @include iconSpin();
-          }
+          .header_area {
+            img {
+              @include iconSpin();
+            }
+          } 
         }
         
         &:hover {
@@ -166,8 +172,10 @@ main {
             transform: translateY(0);
           }
       
-          .header_area img {
-            @include iconSpin();
+          .header_area {
+            img {
+              @include iconSpin();
+            }
           }
         }
 
@@ -262,7 +270,12 @@ main {
                 transition: 0.1s;
                 z-index: -99;
               }
-
+              
+              svg {
+                @include iconSpinRe();
+                path {
+                }
+              }
 
               &:hover {
                 padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-sm;
@@ -275,9 +288,9 @@ main {
                 }
 
                 svg {
+                  @include iconSpin();
                   path {
                     fill: $color-white-normal;
-                    @include iconSpin();
                   }
                 }
               }

@@ -361,23 +361,16 @@ $transition-motion : ease-in-out;
   }
 }
 
-@keyframes iconSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  80% {
-    transform: rotate(360deg);
-  }
-
-  100% {
-    transform: rotate(405deg);
-  }
-}
-
-$iconSpin_animation: iconSpin $transition-time-normal ease-in-out forwards;
 
 @mixin iconSpin {
   transform-origin: center center;
-  animation: $iconSpin_animation;
+  transform: rotate(405deg);
 }
+
+@mixin iconSpinRe {
+  @include transition-normal();
+  transform: rotate(0);
+}
+
+
+

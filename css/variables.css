@@ -29,15 +29,4 @@ body {
   100% {
     transform: translateX(-100%);
   }
-}
-@keyframes iconSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
 }/*# sourceMappingURL=variables.css.map */

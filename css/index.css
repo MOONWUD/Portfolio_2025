@@ -30,17 +30,6 @@ body {
     transform: translateX(-100%);
   }
 }
-@keyframes iconSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  80% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(405deg);
-  }
-}
 /********** header **********/
 header {
   position: fixed;
@@ -227,6 +216,15 @@ main .margin section .article_title a {
   font-size: 1.125rem;
   font-weight: 500;
   color: #F56242;
+  transition: all 0.35s ease-in-out;
+}
+main .margin section .article_title a img {
+  transition: all 0.35s ease-in-out;
+  transform: rotate(0);
+}
+main .margin section .article_title a:hover img {
+  transform-origin: center center;
+  transform: rotate(405deg);
 }
 main .margin #work {
   border-style: solid;
@@ -234,8 +232,7 @@ main .margin #work {
   border-width: 0 1px 1px 1px;
 }
 main .margin #work .work_wrapper {
-  width: 100%;
-  padding: 32px;
+  padding: 0 32px 32px 32px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
@@ -253,37 +250,33 @@ main .margin #work .work_wrapper .work_item a {
   transition: all 0.2s ease-in-out;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim {
-  aspect-ratio: 6/5;
   width: 100%;
+  height: auto;
   z-index: 999;
   grid-column: 1/2;
   grid-row: 1/2;
-  padding: 18px;
   background-color: rgba(245, 99, 66, 0.8);
   backdrop-filter: blur(2px);
+  padding: 18px;
   -webkit-backdrop-filter: blur(2px);
-  display: grid;
-  grid-template-rows: 24px 1fr 24px;
   transition: all 0.2s ease-in-out;
   transform: translateX(-100%);
   opacity: 0;
 }
-main .margin #work .work_wrapper .work_item a .hover_dim .icon_wrapper {
-  display: flex;
-  justify-content: space-between;
-}
 main .margin #work .work_wrapper .work_item a .hover_dim .contents {
-  padding: 24px;
+  aspect-ratio: 6/5;
+  padding: 24px 24px 0 24px;
   color: #FBF6F3;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim .contents .information h6 {
-  font-family: "DNFBitBitv2", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.5rem;
-  font-weight: normal;
+  font-weight: 800;
   color: #F56242;
   color: inherit;
   margin-bottom: 8px;
@@ -304,9 +297,17 @@ main .margin #work .work_wrapper .work_item a .hover_dim .contents .view_btn {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #F56242;
   color: inherit;
+  padding: 24px 0 24px 0;
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .contents .view_btn svg {
+  transition: all 0.35s ease-in-out;
+  transform: rotate(0);
+}
+main .margin #work .work_wrapper .work_item a .hover_dim .contents .view_btn svg path {
+  fill: #FBF6F3;
 }
 main .margin #work .work_wrapper .work_item a .workitem_img {
   grid-column: 1/2;
@@ -321,6 +322,10 @@ main .margin #work .work_wrapper .work_item a .workitem_img img {
 main .margin #work .work_wrapper .work_item a:hover .hover_dim {
   opacity: 1;
   transform: translateX(0);
+}
+main .margin #work .work_wrapper .work_item a:hover .hover_dim .view_btn:hover svg {
+  transform-origin: center center;
+  transform: rotate(405deg);
 }
 
 @media (max-width: 1200px) {
@@ -578,6 +583,10 @@ main #skill .skill_wrapper .skill_item .header_area .title {
   font-weight: 800;
   color: #F56242;
 }
+main #skill .skill_wrapper .skill_item .header_area img {
+  transition: all 0.35s ease-in-out;
+  transform: rotate(0);
+}
 main #skill .skill_wrapper .skill_item .contents {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
@@ -599,7 +608,7 @@ main #skill .skill_wrapper .skill_item.active .contents {
 }
 main #skill .skill_wrapper .skill_item.active .header_area img {
   transform-origin: center center;
-  animation: iconSpin 0.35s ease-in-out forwards;
+  transform: rotate(405deg);
 }
 main #skill .skill_wrapper .skill_item:hover .contents {
   margin-top: 24px;
@@ -609,7 +618,7 @@ main #skill .skill_wrapper .skill_item:hover .contents {
 }
 main #skill .skill_wrapper .skill_item:hover .header_area img {
   transform-origin: center center;
-  animation: iconSpin 0.35s ease-in-out forwards;
+  transform: rotate(405deg);
 }
 main #skill .skill_wrapper .skill_item:last-child {
   border-bottom: none;
@@ -707,6 +716,10 @@ main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a::bef
   transition: 0.1s;
   z-index: -99;
 }
+main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a svg {
+  transition: all 0.35s ease-in-out;
+  transform: rotate(0);
+}
 main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover {
   padding: 8px 8px 8px 12px;
   background-color: #F56242;
@@ -716,10 +729,12 @@ main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hove
   content: "";
   width: 100%;
 }
+main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg {
+  transform-origin: center center;
+  transform: rotate(405deg);
+}
 main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg path {
   fill: #FBF6F3;
-  transform-origin: center center;
-  animation: iconSpin 0.35s ease-in-out forwards;
 }
 main #contact .contact_warpper .link_wrapper img {
   grid-column: 1/-1;
