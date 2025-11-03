@@ -1,0 +1,32 @@
+/***** font *****/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@font-face {
+  font-family: "DNFBitBitv2";
+  font-style: normal;
+  font-weight: 400;
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf") format("opentype");
+}
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/***** color *****/
+/***** txet style *****/
+/***** font-weight-xl *****/
+/***** font-weight-lg *****/
+/***** font-weight-md *****/
+/***** font-weight-sm *****/
+/***** padding *****/
+/***** radius *****/
+/****** transition ******/
+/***** btn *****/
+/***** border *****/
+/***** animation *****/
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=base.css.map */
