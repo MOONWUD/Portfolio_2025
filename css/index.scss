@@ -1,355 +1,343 @@
 @use "./base" as *; 
 
 main {
-
-  /********** sec01 - about **********/
-  #about {
-    overflow: hidden;
-
-    .video {
-      width: 100%;
-      aspect-ratio: 3 / 1.2;
-      @include border();
-      border-width: 0 0 1px 0;
-    }
-
-    .beliefs {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      @include border();
-      border-width: 0 0 1px 0;
-
-      .arrowimg {
-        @include media-lg-padding();
-        align-self: center;
-        justify-self: center;
-
-        img {
-          width: 100%;
-        }
-      }
-
-      .beliefs_contents {
-        @include media-lg-padding();
-        @include border();
-        border-width: 0 0 0 1px;
-        grid-column: 2 / 5;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: $padding-mo-md;
-        overflow: hidden;
-
-        .icon_crros {
-          display: flex;
-          justify-content: space-between;
-        }
-
-        .beliefs_text {
-          @include textstyle-pr-lg-72();
-          line-height: 120%;
-        }
-      }
-    }
-
-    .introduction {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: $padding-mo-xl $padding-mo-xl 1fr $padding-mo-xl $padding-mo-xl;
-      background-color: $color-primary-normal;
-      @include media-lg-padding();
+  .margin {
+    /********** sec01 - about **********/
+    #about {
       overflow: hidden;
-
-      .marksimg {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-        align-self: start;
-        justify-self: end;
-        color: $color-white-normal;
-
-        svg {
-          width: 140px;
-          height: auto;
-          display: block;
-        }
-      }
-
-      h5 {
-        grid-column: 2 / 5;
-        grid-row: 3 / 4;
-        align-self: center;
-        padding-left: $padding-pc-md;
-        @include textstyle-pr-md-32();
-        color: $color-white-normal;
-        line-height: 144%;
-      }
-    }
-  }
-
-
-  /********** sec02 - work **********/
-  #work {
-    overflow: hidden;
-  }
-
-
-  /********** sec03 - skill **********/
-  #skill {
-    overflow: hidden;
-    @include border();
-    border-width: 0 1px 1px 1px;
-
-    .article_title {
-      @include border();
-      border-width: 0 0 1px 0;
-    }
-
-    .skill_wrapper {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 3fr;
-
-      .null {
-        grid-column: 1;
-        grid-row: 1 / 7;
-        @include border();
-        border-width: 0 1px 0 0;
-      }
-
-      .skill_item {
-        grid-column: 2;
-        @include media-lg-padding();
+  
+      .video {
+        width: 100%;
+        aspect-ratio: 3 / 1.2;
         @include border();
         border-width: 0 0 1px 0;
-        overflow: hidden;
-        @include transition-moreslow();
-      
-        .header_area {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-      
-          .title {
-            @include textstyle-pr-lg-20();
-          }
-
+      }
+  
+      .beliefs {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include border();
+        border-width: 0 0 1px 0;
+  
+        .arrowimg {
+          @include media-lg-padding();
+          align-self: center;
+          justify-self: center;
+  
           img {
-            @include iconSpinRe();
+            width: 100%;
           }
         }
-      
-        .contents {
-          @include textstyle-pr-sm-16();
-          line-height: 150%;
-          max-height: 0;
-          opacity: 0;
+  
+        .beliefs_contents {
+          @include media-lg-padding();
+          @include border();
+          border-width: 0 0 0 1px;
+          grid-column: 2 / 5;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: $padding-mo-md;
           overflow: hidden;
-          transform: translateY(-10px);
-          @include transition-moreslow();
-        }
-      
-        &.active {
-          .contents {
-            margin-top: $padding-pc-sm;
-            max-height: 400px;
-            opacity: 1;
-            transform: translateY(0);
+  
+          .icon_crros {
+            display: flex;
+            justify-content: space-between;
           }
-      
-          .header_area {
-            img {
-              @include iconSpin();
-            }
-          } 
-        }
-        
-        &:hover {
-          .contents {
-            margin-top: $padding-pc-sm;
-            max-height: 400px;
-            opacity: 1;
-            transform: translateY(0);
-          }
-      
-          .header_area {
-            img {
-              @include iconSpin();
-            }
+  
+          .beliefs_text {
+            @include textstyle-pr-lg-72();
+            line-height: 120%;
           }
         }
-
-        &:last-child {
-          border-bottom: none;
+      }
+  
+      .introduction {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: $padding-mo-xl $padding-mo-xl 1fr $padding-mo-xl $padding-mo-xl;
+        background-color: $color-primary-normal;
+        @include media-lg-padding();
+        overflow: hidden;
+  
+        .marksimg {
+          grid-column: 1 / 2;
+          grid-row: 3 / 4;
+          align-self: start;
+          justify-self: end;
+          color: $color-white-normal;
+  
+          svg {
+            width: 140px;
+            height: auto;
+            display: block;
+          }
+        }
+  
+        h5 {
+          grid-column: 2 / 5;
+          grid-row: 3 / 4;
+          align-self: center;
+          padding-left: $padding-pc-md;
+          @include textstyle-pr-md-32();
+          color: $color-white-normal;
+          line-height: 144%;
         }
       }
     }
-  }
-
-
-  /********** sec04 - contact **********/
-  #contact {
-    overflow: hidden;
-
-    .contact_warpper {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+  
+  
+    /********** sec02 - work **********/
+    #work {
+      overflow: hidden;
       @include border();
-      border-width: 0 0 1px 0;
-
-      .contact_message {
-        @include media-lg-padding();
-        display: grid;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      border-width: 0 1px 1px 1px;
+    }
+  
+  
+    /********** sec03 - skill **********/
+    #skill {
+      overflow: hidden;
+      @include border();
+      border-width: 0 1px 1px 1px;
+  
+      .article_title {
         @include border();
-        border-width: 0 1px 0 0;
-
-        .header {
-          display: flex;
-          justify-content: space-between;
-          align-items: start;
-
-          .text {
-            h6 {
-              @include textstyle-pr-xl-24();
-              margin-bottom: $padding-pc-xs;
+        border-width: 0 0 1px 0;
+      }
+  
+      .skill_wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+  
+        .null {
+          grid-column: 1;
+          grid-row: 1 / 7;
+          @include border();
+          border-width: 0 1px 0 0;
+        }
+  
+        .skill_item {
+          grid-column: 2;
+          @include media-lg-padding();
+          @include border();
+          border-width: 0 0 1px 0;
+          overflow: hidden;
+          @include transition-moreslow();
+        
+          .header_area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            .title {
+              @include textstyle-pr-lg-20();
             }
-
-            p {
-              @include textstyle-pr-sm-16();
-              line-height: 150%;
+  
+            img {
+              @include iconSpinRe();
             }
           }
-
-          img {
-            transform: rotate(180deg);
-            width: 100px;
-            height: auto;
+        
+          .contents {
+            @include textstyle-pr-sm-16();
+            line-height: 150%;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(-10px);
+            @include transition-moreslow();
+          }
+        
+          &.active {
+            .contents {
+              margin-top: $padding-pc-sm;
+              max-height: 400px;
+              opacity: 1;
+              transform: translateY(0);
+            }
+        
+            .header_area {
+              img {
+                @include iconSpin();
+              }
+            } 
+          }
+          
+          &:hover {
+            .contents {
+              margin-top: $padding-pc-sm;
+              max-height: 400px;
+              opacity: 1;
+              transform: translateY(0);
+            }
+        
+            .header_area {
+              img {
+                @include iconSpin();
+              }
+            }
+          }
+  
+          &:last-child {
+            border-bottom: none;
           }
         }
       }
-
-      .link_wrapper {
+    }
+  
+  
+    /********** sec04 - contact **********/
+    #contact {
+      overflow: hidden;
+  
+      .contact_warpper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        @include media-lg-padding();
-        gap: $padding-pc-md;
-
-        .link_contents {
-          .title {
-            @include textstyle-pr-xl-24();
-            margin-bottom: $padding-pc-sm;
-          }
-
-          .list_wrapper {
+        @include border();
+        border-width: 0 0 1px 0;
+  
+        .contact_message {
+          @include media-lg-padding();
+          display: grid;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          @include border();
+          border-width: 0 1px 0 0;
+  
+          .header {
             display: flex;
-            flex-direction: column;
-            gap: $padding-pc-xs;
-
-            a {
-              width: 100%;
+            justify-content: space-between;
+            align-items: start;
+  
+            .text {
+              h6 {
+                @include textstyle-pr-xl-24();
+                margin-bottom: $padding-pc-xs;
+              }
+  
+              p {
+                @include textstyle-pr-sm-16();
+                line-height: 150%;
+              }
+            }
+  
+            img {
+              transform: rotate(180deg);
+              width: 100px;
+              height: auto;
+            }
+          }
+        }
+  
+        .link_wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          @include media-lg-padding();
+          gap: $padding-pc-md;
+  
+          .link_contents {
+            .title {
+              @include textstyle-pr-xl-24();
+              margin-bottom: $padding-pc-sm;
+            }
+  
+            .list_wrapper {
               display: flex;
-              justify-content: space-between;
-              border-bottom: 1px dashed $color-primary-normal;
-              @include textstyle-pr-sm-16();
-              padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xxs;
-              @include transition-fast();
-              position: relative;
-
-              &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                background-color: $color-primary-normal;
-                width: 0;
-                height: 100%;
+              flex-direction: column;
+              gap: $padding-pc-xs;
+  
+              a {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dashed $color-primary-normal;
+                @include textstyle-pr-sm-16();
+                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xxs;
                 @include transition-fast();
-                transition: 0.1s;
-                z-index: -99;
-              }
-              
-              svg {
-                @include iconSpinRe();
-                path {
-                }
-              }
-
-              &:hover {
-                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-sm;
-                background-color: $color-primary-normal;
-                color: $color-white-normal;
-
+                position: relative;
+  
                 &::before {
                   content: "";
-                  width: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: $color-primary-normal;
+                  width: 0;
+                  height: 100%;
+                  @include transition-fast();
+                  transition: 0.1s;
+                  z-index: -99;
                 }
-
+                
                 svg {
-                  @include iconSpin();
+                  @include iconSpinRe();
                   path {
-                    fill: $color-white-normal;
+                  }
+                }
+  
+                &:hover {
+                  padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-sm;
+                  background-color: $color-primary-normal;
+                  color: $color-white-normal;
+  
+                  &::before {
+                    content: "";
+                    width: 100%;
+                  }
+  
+                  svg {
+                    @include iconSpin();
+                    path {
+                      fill: $color-white-normal;
+                    }
                   }
                 }
               }
             }
           }
-        }
-
-        img {
-          grid-column: 1 / -1;
-          justify-self: end;
+  
+          img {
+            grid-column: 1 / -1;
+            justify-self: end;
+          }
         }
       }
-    }
-
-    .sns {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
-      .email {
-        padding: 0 $padding-pc-md 0 $padding-pc-md;
-        @include border();
-        border-width: 0 1px 0 0;
+  
+      .sns {
         display: grid;
-        align-items: center;
-
-        button {
-          border: none;
-          background-color: $color-white-normal;
-          text-align: left;
-          @include textstyle-pr-lg-20();
-          position: relative;
-          cursor: pointer;
-
-          .tooltip {
-            position: absolute;
-            left: 200px;
-            top: 10px;
-            background-color: $color-primary-normal;
-            @include textstyle-pr-sm-14();
-            color: $color-white-normal;
-            white-space: nowrap;
-            padding: 6px 12px 6px 12px;
-            border-radius: 999px;
-            opacity: 0;
-            @include transition-normal();
-            
-            &::after {
-              content: "";
+        grid-template-columns: repeat(2, 1fr);
+  
+        .email {
+          padding: 0 $padding-pc-md 0 $padding-pc-md;
+          @include border();
+          border-width: 0 1px 0 0;
+          display: grid;
+          align-items: center;
+  
+          button {
+            border: none;
+            background-color: $color-white-normal;
+            text-align: left;
+            @include textstyle-pr-lg-20();
+            position: relative;
+            cursor: pointer;
+  
+            .tooltip {
               position: absolute;
-              top: 100%;
-              left: 50%;
-              transform: translateX(-50%);
-              border-width: 6px;
-              border-style: solid;
-              border-color: $color-primary-normal transparent transparent transparent;
+              left: 200px;
+              top: 10px;
+              background-color: $color-primary-normal;
+              @include textstyle-pr-sm-14();
+              color: $color-white-normal;
+              white-space: nowrap;
+              padding: 6px 12px 6px 12px;
+              border-radius: 999px;
+              opacity: 0;
               @include transition-normal();
-            }
-            
-            &.active {
-              background-color: #008355;
+              
               &::after {
                 content: "";
                 position: absolute;
@@ -358,65 +346,80 @@ main {
                 transform: translateX(-50%);
                 border-width: 6px;
                 border-style: solid;
-                border-color: #008355 transparent transparent transparent;
+                border-color: $color-primary-normal transparent transparent transparent;
+                @include transition-normal();
               }
               
+              &.active {
+                background-color: #008355;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  border-width: 6px;
+                  border-style: solid;
+                  border-color: #008355 transparent transparent transparent;
+                }
+                
+              }
+            }
+  
+            &:hover {
+              .tooltip {
+                opacity: 1;
+                top: -4px;
+              }
             }
           }
-
-          &:hover {
-            .tooltip {
-              opacity: 1;
-              top: -4px;
-            }
-          }
+  
         }
-
-      }
-
-      .snsicon {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-        li {
+  
+        .snsicon {
           width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
           
-          a {
+          li {
             width: 100%;
-            display: grid;
-            align-items: center;
-            justify-content: center;
-            @include media-lg-padding();
-            @include border();
-            border-width: 0 1px 0 0;
-            color: $color-primary-normal;
-            @include transition-fast();
-
-            svg {
-              width: auto;
-              height: 50px;
-              display: block;
-            }
-
-          }
-
-          &:last-child {
+            
             a {
-              border-right: none;
+              width: 100%;
+              display: grid;
+              align-items: center;
+              justify-content: center;
+              @include media-lg-padding();
+              @include border();
+              border-width: 0 1px 0 0;
+              color: $color-primary-normal;
+              @include transition-fast();
+  
+              svg {
+                width: auto;
+                height: 50px;
+                display: block;
+              }
+  
             }
-          }
-
-          &:hover {
-            background-color: $color-primary-normal;
-
-            a {
-              color: $color-white-normal;
+  
+            &:last-child {
+              a {
+                border-right: none;
+              }
+            }
+  
+            &:hover {
+              background-color: $color-primary-normal;
+  
+              a {
+                color: $color-white-normal;
+              }
             }
           }
         }
       }
     }
-  }
+  } 
 }

@@ -30,39 +30,39 @@ body {
     transform: translateX(-100%);
   }
 }
-main {
+main .margin {
   /********** sec01 - about **********/
   /********** sec02 - work **********/
   /********** sec03 - skill **********/
   /********** sec04 - contact **********/
 }
-main #about {
+main .margin #about {
   overflow: hidden;
 }
-main #about .video {
+main .margin #about .video {
   width: 100%;
   aspect-ratio: 3/1.2;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
 }
-main #about .beliefs {
+main .margin #about .beliefs {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
 }
-main #about .beliefs .arrowimg {
+main .margin #about .beliefs .arrowimg {
   width: 100%;
   padding: 32px;
   align-self: center;
   justify-self: center;
 }
-main #about .beliefs .arrowimg img {
+main .margin #about .beliefs .arrowimg img {
   width: 100%;
 }
-main #about .beliefs .beliefs_contents {
+main .margin #about .beliefs .beliefs_contents {
   width: 100%;
   padding: 32px;
   border-style: solid;
@@ -75,11 +75,11 @@ main #about .beliefs .beliefs_contents {
   gap: 20px;
   overflow: hidden;
 }
-main #about .beliefs .beliefs_contents .icon_crros {
+main .margin #about .beliefs .beliefs_contents .icon_crros {
   display: flex;
   justify-content: space-between;
 }
-main #about .beliefs .beliefs_contents .beliefs_text {
+main .margin #about .beliefs .beliefs_contents .beliefs_text {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 4.5rem;
@@ -87,7 +87,7 @@ main #about .beliefs .beliefs_contents .beliefs_text {
   color: #F56242;
   line-height: 120%;
 }
-main #about .introduction {
+main .margin #about .introduction {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 60px 60px 1fr 60px 60px;
@@ -96,19 +96,19 @@ main #about .introduction {
   padding: 32px;
   overflow: hidden;
 }
-main #about .introduction .marksimg {
+main .margin #about .introduction .marksimg {
   grid-column: 1/2;
   grid-row: 3/4;
   align-self: start;
   justify-self: end;
   color: #FBF6F3;
 }
-main #about .introduction .marksimg svg {
+main .margin #about .introduction .marksimg svg {
   width: 140px;
   height: auto;
   display: block;
 }
-main #about .introduction h5 {
+main .margin #about .introduction h5 {
   grid-column: 2/5;
   grid-row: 3/4;
   align-self: center;
@@ -121,33 +121,36 @@ main #about .introduction h5 {
   color: #FBF6F3;
   line-height: 144%;
 }
-main #work {
-  overflow: hidden;
-}
-main #skill {
+main .margin #work {
   overflow: hidden;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
 }
-main #skill .article_title {
+main .margin #skill {
+  overflow: hidden;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 1px 1px;
+}
+main .margin #skill .article_title {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
 }
-main #skill .skill_wrapper {
+main .margin #skill .skill_wrapper {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
-main #skill .skill_wrapper .null {
+main .margin #skill .skill_wrapper .null {
   grid-column: 1;
   grid-row: 1/7;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 0 0;
 }
-main #skill .skill_wrapper .skill_item {
+main .margin #skill .skill_wrapper .skill_item {
   grid-column: 2;
   width: 100%;
   padding: 32px;
@@ -157,23 +160,23 @@ main #skill .skill_wrapper .skill_item {
   overflow: hidden;
   transition: all 1s ease-in-out;
 }
-main #skill .skill_wrapper .skill_item .header_area {
+main .margin #skill .skill_wrapper .skill_item .header_area {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main #skill .skill_wrapper .skill_item .header_area .title {
+main .margin #skill .skill_wrapper .skill_item .header_area .title {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.25rem;
   font-weight: 800;
   color: #F56242;
 }
-main #skill .skill_wrapper .skill_item .header_area img {
+main .margin #skill .skill_wrapper .skill_item .header_area img {
   transition: all 0.35s ease-in-out;
   transform: rotate(0);
 }
-main #skill .skill_wrapper .skill_item .contents {
+main .margin #skill .skill_wrapper .skill_item .contents {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1rem;
@@ -186,40 +189,40 @@ main #skill .skill_wrapper .skill_item .contents {
   transform: translateY(-10px);
   transition: all 1s ease-in-out;
 }
-main #skill .skill_wrapper .skill_item.active .contents {
+main .margin #skill .skill_wrapper .skill_item.active .contents {
   margin-top: 24px;
   max-height: 400px;
   opacity: 1;
   transform: translateY(0);
 }
-main #skill .skill_wrapper .skill_item.active .header_area img {
+main .margin #skill .skill_wrapper .skill_item.active .header_area img {
   transform-origin: center center;
   transform: rotate(405deg);
 }
-main #skill .skill_wrapper .skill_item:hover .contents {
+main .margin #skill .skill_wrapper .skill_item:hover .contents {
   margin-top: 24px;
   max-height: 400px;
   opacity: 1;
   transform: translateY(0);
 }
-main #skill .skill_wrapper .skill_item:hover .header_area img {
+main .margin #skill .skill_wrapper .skill_item:hover .header_area img {
   transform-origin: center center;
   transform: rotate(405deg);
 }
-main #skill .skill_wrapper .skill_item:last-child {
+main .margin #skill .skill_wrapper .skill_item:last-child {
   border-bottom: none;
 }
-main #contact {
+main .margin #contact {
   overflow: hidden;
 }
-main #contact .contact_warpper {
+main .margin #contact .contact_warpper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
 }
-main #contact .contact_warpper .contact_message {
+main .margin #contact .contact_warpper .contact_message {
   width: 100%;
   padding: 32px;
   display: grid;
@@ -230,12 +233,12 @@ main #contact .contact_warpper .contact_message {
   border-color: #F56242;
   border-width: 0 1px 0 0;
 }
-main #contact .contact_warpper .contact_message .header {
+main .margin #contact .contact_warpper .contact_message .header {
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
-main #contact .contact_warpper .contact_message .header .text h6 {
+main .margin #contact .contact_warpper .contact_message .header .text h6 {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.5rem;
@@ -243,7 +246,7 @@ main #contact .contact_warpper .contact_message .header .text h6 {
   color: #F56242;
   margin-bottom: 18px;
 }
-main #contact .contact_warpper .contact_message .header .text p {
+main .margin #contact .contact_warpper .contact_message .header .text p {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1rem;
@@ -251,19 +254,19 @@ main #contact .contact_warpper .contact_message .header .text p {
   color: #F56242;
   line-height: 150%;
 }
-main #contact .contact_warpper .contact_message .header img {
+main .margin #contact .contact_warpper .contact_message .header img {
   transform: rotate(180deg);
   width: 100px;
   height: auto;
 }
-main #contact .contact_warpper .link_wrapper {
+main .margin #contact .contact_warpper .link_wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   padding: 32px;
   gap: 32px;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .title {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .title {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.5rem;
@@ -271,12 +274,12 @@ main #contact .contact_warpper .link_wrapper .link_contents .title {
   color: #F56242;
   margin-bottom: 24px;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -290,7 +293,7 @@ main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a {
   transition: all 0.2s ease-in-out;
   position: relative;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a::before {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a::before {
   content: "";
   position: absolute;
   top: 0;
@@ -302,35 +305,35 @@ main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a::bef
   transition: 0.1s;
   z-index: -99;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a svg {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a svg {
   transition: all 0.35s ease-in-out;
   transform: rotate(0);
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover {
   padding: 8px 8px 8px 12px;
   background-color: #F56242;
   color: #FBF6F3;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover::before {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover::before {
   content: "";
   width: 100%;
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg {
   transform-origin: center center;
   transform: rotate(405deg);
 }
-main #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg path {
+main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg path {
   fill: #FBF6F3;
 }
-main #contact .contact_warpper .link_wrapper img {
+main .margin #contact .contact_warpper .link_wrapper img {
   grid-column: 1/-1;
   justify-self: end;
 }
-main #contact .sns {
+main .margin #contact .sns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-main #contact .sns .email {
+main .margin #contact .sns .email {
   padding: 0 32px 0 32px;
   border-style: solid;
   border-color: #F56242;
@@ -338,7 +341,7 @@ main #contact .sns .email {
   display: grid;
   align-items: center;
 }
-main #contact .sns .email button {
+main .margin #contact .sns .email button {
   border: none;
   background-color: #FBF6F3;
   text-align: left;
@@ -350,7 +353,7 @@ main #contact .sns .email button {
   position: relative;
   cursor: pointer;
 }
-main #contact .sns .email button .tooltip {
+main .margin #contact .sns .email button .tooltip {
   position: absolute;
   left: 200px;
   top: 10px;
@@ -367,7 +370,7 @@ main #contact .sns .email button .tooltip {
   opacity: 0;
   transition: all 0.35s ease-in-out;
 }
-main #contact .sns .email button .tooltip::after {
+main .margin #contact .sns .email button .tooltip::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -378,10 +381,10 @@ main #contact .sns .email button .tooltip::after {
   border-color: #F56242 transparent transparent transparent;
   transition: all 0.35s ease-in-out;
 }
-main #contact .sns .email button .tooltip.active {
+main .margin #contact .sns .email button .tooltip.active {
   background-color: #008355;
 }
-main #contact .sns .email button .tooltip.active::after {
+main .margin #contact .sns .email button .tooltip.active::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -391,20 +394,20 @@ main #contact .sns .email button .tooltip.active::after {
   border-style: solid;
   border-color: #008355 transparent transparent transparent;
 }
-main #contact .sns .email button:hover .tooltip {
+main .margin #contact .sns .email button:hover .tooltip {
   opacity: 1;
   top: -4px;
 }
-main #contact .sns .snsicon {
+main .margin #contact .sns .snsicon {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main #contact .sns .snsicon li {
+main .margin #contact .sns .snsicon li {
   width: 100%;
 }
-main #contact .sns .snsicon li a {
+main .margin #contact .sns .snsicon li a {
   width: 100%;
   display: grid;
   align-items: center;
@@ -417,17 +420,17 @@ main #contact .sns .snsicon li a {
   color: #F56242;
   transition: all 0.2s ease-in-out;
 }
-main #contact .sns .snsicon li a svg {
+main .margin #contact .sns .snsicon li a svg {
   width: auto;
   height: 50px;
   display: block;
 }
-main #contact .sns .snsicon li:last-child a {
+main .margin #contact .sns .snsicon li:last-child a {
   border-right: none;
 }
-main #contact .sns .snsicon li:hover {
+main .margin #contact .sns .snsicon li:hover {
   background-color: #F56242;
 }
-main #contact .sns .snsicon li:hover a {
+main .margin #contact .sns .snsicon li:hover a {
   color: #FBF6F3;
 }/*# sourceMappingURL=index.css.map */
