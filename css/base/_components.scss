@@ -1,0 +1,39 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+/***** ghost button *****/
+@mixin ghost-btn {
+  height: 36px;
+  padding: 0 $padding-pc-xs;
+  display: grid;
+  place-items: center;
+  border: 1px solid $color-white-normal;
+  @include textstyle-pr-sm-16;
+  @include transition-normal;
+
+  &:hover {
+    border-color: $color-primary-normal;
+    border-radius: $radius;
+  }
+}
+
+/***** normal button *****/
+@mixin normal-btn {
+  height: 36px;
+  padding: 0 $padding-pc-xs;
+  display: grid;
+  place-items: center;
+  background-color: $color-primary-normal;
+  border: 1px solid $color-primary-normal;
+  border-radius: $radius;
+  @include textstyle-pr-sm-16;
+  color: $color-white-normal;
+  @include transition-normal;
+
+  &:hover {
+    border-color: $color-primary-normal;
+    background-color: $color-white-normal;
+    color: $color-primary-normal;
+  }
+}

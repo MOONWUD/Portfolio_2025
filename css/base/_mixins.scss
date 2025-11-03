@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+
+/***** padding *****/
+@mixin media-lg-margin {
+  width: 100%;
+  padding: 0 $padding-pc-md;
+}
+
+@mixin media-lg-padding {
+  width: 100%;
+  padding: $padding-pc-md;
+}
+
+@mixin media-md-margin {
+  width: 100%;
+  padding: 0 $padding-pc-sm;
+}
+
+@mixin media-md-padding {
+  width: 100%;
+  padding: $padding-pc-sm;
+}
+
+@mixin media-sm-margin {
+  width: 100%;
+  padding: 0;
+}
+
+/***** transition *****/
+@mixin transition-moreslow {
+  transition: all 1s $transition-motion;
+}
+@mixin transition-normal {
+  transition: all $transition-time-normal $transition-motion;
+}
+
+@mixin transition-slow {
+  transition: all $transition-time-slow $transition-motion;
+}
+
+@mixin transition-fast {
+  transition: all $transition-time-fast $transition-motion;
+}
+
+/***** border *****/
+@mixin border {
+  border-style: solid;
+  border-color: $color-primary-normal;
+}
