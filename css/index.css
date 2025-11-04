@@ -127,6 +127,9 @@ main .margin #work {
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
 }
+main .margin #work .work_wrapper > *:nth-child(n+7) {
+  display: none;
+}
 main .margin #skill {
   overflow: hidden;
   border-style: solid;
