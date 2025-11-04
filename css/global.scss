@@ -283,6 +283,239 @@ main {
         }
       }
     }
+
+    #contact {
+      overflow: hidden;
+  
+      .contact_warpper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include border();
+        border-width: 0 0 1px 0;
+  
+        .contact_message {
+          @include media-lg-padding();
+          display: grid;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          @include border();
+          border-width: 0 1px 0 0;
+  
+          .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+  
+            .text {
+              h6 {
+                @include textstyle-pr-xl-24();
+                margin-bottom: $padding-pc-xs;
+              }
+  
+              p {
+                @include textstyle-pr-sm-16();
+                line-height: 150%;
+              }
+            }
+  
+            img {
+              transform: rotate(180deg);
+              width: 100px;
+              height: auto;
+            }
+          }
+        }
+  
+        .link_wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          @include media-lg-padding();
+          gap: $padding-pc-md;
+  
+          .link_contents {
+            .title {
+              @include textstyle-pr-xl-24();
+              margin-bottom: $padding-pc-sm;
+            }
+  
+            .list_wrapper {
+              display: flex;
+              flex-direction: column;
+              gap: $padding-pc-xs;
+  
+              a {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px dashed $color-primary-normal;
+                @include textstyle-pr-sm-16();
+                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xxs;
+                @include transition-fast();
+                position: relative;
+  
+                &::before {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  background-color: $color-primary-normal;
+                  width: 0;
+                  height: 100%;
+                  @include transition-fast();
+                  transition: 0.1s;
+                  z-index: -99;
+                }
+                
+                svg {
+                  @include iconSpinRe();
+                  path {
+                  }
+                }
+  
+                &:hover {
+                  padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-sm;
+                  background-color: $color-primary-normal;
+                  color: $color-white-normal;
+  
+                  &::before {
+                    content: "";
+                    width: 100%;
+                  }
+  
+                  svg {
+                    @include iconSpin();
+                    path {
+                      fill: $color-white-normal;
+                    }
+                  }
+                }
+              }
+            }
+          }
+  
+          img {
+            grid-column: 1 / -1;
+            justify-self: end;
+          }
+        }
+      }
+  
+      .sns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+  
+        .email {
+          padding: 0 $padding-pc-md 0 $padding-pc-md;
+          @include border();
+          border-width: 0 1px 0 0;
+          display: grid;
+          align-items: center;
+  
+          button {
+            border: none;
+            background-color: $color-white-normal;
+            text-align: left;
+            @include textstyle-pr-lg-20();
+            position: relative;
+            cursor: pointer;
+  
+            .tooltip {
+              position: absolute;
+              left: 200px;
+              top: 10px;
+              background-color: $color-primary-normal;
+              @include textstyle-pr-sm-14();
+              color: $color-white-normal;
+              white-space: nowrap;
+              padding: 6px 12px 6px 12px;
+              border-radius: 999px;
+              opacity: 0;
+              @include transition-normal();
+              
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 6px;
+                border-style: solid;
+                border-color: $color-primary-normal transparent transparent transparent;
+                @include transition-normal();
+              }
+              
+              &.active {
+                background-color: #008355;
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  border-width: 6px;
+                  border-style: solid;
+                  border-color: #008355 transparent transparent transparent;
+                }
+                
+              }
+            }
+  
+            &:hover {
+              .tooltip {
+                opacity: 1;
+                top: -4px;
+              }
+            }
+          }
+  
+        }
+  
+        .snsicon {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          li {
+            width: 100%;
+            
+            a {
+              width: 100%;
+              display: grid;
+              align-items: center;
+              justify-content: center;
+              @include media-lg-padding();
+              @include border();
+              border-width: 0 1px 0 0;
+              color: $color-primary-normal;
+              @include transition-fast();
+  
+              svg {
+                width: auto;
+                height: 50px;
+                display: block;
+              }
+  
+            }
+  
+            &:last-child {
+              a {
+                border-right: none;
+              }
+            }
+  
+            &:hover {
+              background-color: $color-primary-normal;
+  
+              a {
+                color: $color-white-normal;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
