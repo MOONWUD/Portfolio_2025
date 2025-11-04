@@ -245,7 +245,7 @@ main .margin #work .work_wrapper .work_item {
 main .margin #work .work_wrapper .work_item a {
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 6/5;
+  aspect-ratio: 6/4;
   display: grid;
   transition: all 0.2s ease-in-out;
 }
@@ -264,7 +264,7 @@ main .margin #work .work_wrapper .work_item a .hover_dim {
   opacity: 0;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim .contents {
-  aspect-ratio: 6/5;
+  aspect-ratio: 6/4;
   padding: 24px 24px 0 24px;
   color: #FBF6F3;
   height: auto;

@@ -193,7 +193,7 @@ main {
           a {
             overflow: hidden;
             width: 100%;
-            aspect-ratio: 6 / 5;
+            aspect-ratio: 6 / 4;
             display: grid;
             @include transition-fast();
 
@@ -212,7 +212,7 @@ main {
               opacity: 0;
 
               .contents {
-                aspect-ratio: 6 / 5;
+                aspect-ratio: 6 / 4;
                 padding: $padding-pc-sm $padding-pc-sm 0 $padding-pc-sm;
                 color: $color-white-normal;
                 height: auto;
