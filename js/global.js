@@ -36,20 +36,4 @@ $(document).ready(function () {
     });
     AOS.refresh();
   });
-
-  
-  // /* ===== contact 불러오기 ===== */
-  // $.get('./component/contact.html', function (html) {
-  //   $('.contact_wrapper').each(function () {
-  //     $(this).html(html);
-  //   });
-  //   AOS.refresh();
-  // });
-
-  // $.get('./component/sns.html', function (html) {
-  //   $('.sns').each(function () {
-  //     $(this).html(html);
-  //   });
-  //   AOS.refresh();
-  // });
 });

@@ -17,11 +17,19 @@ main {
         grid-column: 1 / 2;
 
         .keyword_wrapper {
+          position: relative;
+          height: 2.5rem;
           width: 100%;
+          overflow: hidden;
+
           .keyword_item {
+            position: absolute;
+            right: 0;
             width: 100%;
-            display: inline-block;
             text-align: right;
+            opacity: 0;
+            transform: translateY(100%);
+            @include transition-moreslow();
             @include textstyle-pr-lg-32();
           }
           

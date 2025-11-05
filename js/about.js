@@ -1,4 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  /* ===== Keyword Section ===== */
+  fetch('./data/about_keyword.json')
+    .then(response => response.json())
+    .then(data => {
+      const keywordWrapper = document.querySelector('.keyword_wrapper');
+      if (!keywordWrapper) return;
+
+
+      data.keywords.forEach(word => {
+        const listItem = document.createElement('li');
+        listItem.classList.add('keyword_item');
+        listItem.textContent = word;
+        keywordWrapper.appendChild(listItem);
+      });
+
+      let currentIndex = 0;
+      const keywordItems = keywordWrapper.querySelectorAll('.keyword_item');
+      const total = keywordItems.length;
+
+      keywordItems.forEach((el, i) => {
+        el.style.opacity = i === 0 ? '1' : '0';
+        el.style.transform = i === 0 ? 'translateY(0)' : 'translateY(100%)';
+      });
+
+
+      setInterval(() => {
+        const current = keywordItems[currentIndex];
+        const nextIndex = (currentIndex + 1) % total;
+        const next = keywordItems[nextIndex];
+
+
+        current.style.transition = 'transform 0.8s ease, opacity 0.8s ease';
+        current.style.transform = 'translateY(-100%)';
+        current.style.opacity = '0';
+
+
+        next.style.transition = 'none';
+        next.style.transform = 'translateY(100%)';
+        next.style.opacity = '0';
+
+
+        void next.offsetWidth;
+
+        next.style.transition = 'transform 0.8s ease, opacity 0.8s ease';
+        next.style.transform = 'translateY(0)';
+        next.style.opacity = '1';
+
+        currentIndex = nextIndex;
+      }, 2000); 
+
+      if (window.AOS) AOS.refresh();
+    })
+    .catch(error => console.error('❌ keyword 데이터 불러오기 실패:', error));
+
+
+
   /* ===== Skill Section ===== */
   fetch('./data/about_skill.json')
     .then(response => response.json())
@@ -22,10 +79,11 @@ document.addEventListener('DOMContentLoaded', () => {
         skillWrapper.appendChild(listItem);
       });
 
-      // AOS 새로고침
       if (window.AOS) AOS.refresh();
     })
     .catch(error => console.error('❌ skill 데이터 불러오기 실패:', error));
+
+
 
   /* ===== History Section ===== */
   fetch('./data/about_history.json')
@@ -47,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         historyWrapper.appendChild(listItem);
       });
 
-      // AOS 새로고침
       if (window.AOS) AOS.refresh();
     })
     .catch(error => console.error('❌ history 데이터 불러오기 실패:', error));

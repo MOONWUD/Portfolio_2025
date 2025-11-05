@@ -52,12 +52,19 @@ main .margin #profile .keyword {
   grid-column: 1/2;
 }
 main .margin #profile .keyword .keyword_wrapper {
+  position: relative;
+  height: 2.5rem;
   width: 100%;
+  overflow: hidden;
 }
 main .margin #profile .keyword .keyword_wrapper .keyword_item {
+  position: absolute;
+  right: 0;
   width: 100%;
-  display: inline-block;
   text-align: right;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1s ease-in-out;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 2rem;
