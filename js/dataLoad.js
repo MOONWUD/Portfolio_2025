@@ -10,7 +10,7 @@ $(document).ready(function () {
 
       data.forEach(item => {
         const li = `
-          <li class="work_item">
+          <li class="work_item" data-aos="fade-up">
             <a href="${item.link}">
               <div class="hover_dim">
                 <ul class="contents">

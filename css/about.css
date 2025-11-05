@@ -34,6 +34,7 @@ main .margin {
   /****** profile ******/
   /****** introduction ******/
   /****** skill ******/
+  /****** history ******/
 }
 main .margin #profile {
   display: grid;
@@ -42,6 +43,7 @@ main .margin #profile {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
+  overflow: hidden;
 }
 main .margin #profile .keyword {
   width: 100%;
@@ -87,6 +89,7 @@ main .margin #introduction {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
+  overflow: hidden;
 }
 main .margin #introduction .null {
   grid-column: 1/2;

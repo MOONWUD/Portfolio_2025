@@ -1,0 +1,57 @@
+{
+  "skills": [
+    {
+      "number": "01",
+      "title": "HTML5 & CSS3 & SCSS",
+      "text": [
+        "웹 표준과 접근성을 고려한 시멘틱 마크업",
+        "Flex, Grid, Position을 이용한 레이아웃 구현",
+        "CSS Animation을 활용한 모션 구현",
+        "미디어 쿼리를 이용한 반응형 웹 제작",
+        "유지보수가 편한 SCSS를 활용 스타일 구현"
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Javascript & jQuery",
+      "text": [
+        "ES6+ 문법",
+        "jQuery를 이용한 DOM 제어",
+        "마우스, 스크롤, 포인터 등의 이벤트 활용",
+        "비동기 함수 SetTimeout(), SetInterval() 사용",
+        "GSAP 등 플러그인 사용을 통한 이벤트"
+      ]
+    },
+    {
+      "number": "03",
+      "title": "React",
+      "text": [
+        "React 생성, 배포",
+        "React Life Cycle에 대한 이해",
+        "Components 분리 및 관리",
+        "Styled-Components를 이용한 스타일 구현"
+      ]
+    },
+    {
+      "number": "04",
+      "title": "Git & GitHub & Github Organization",
+      "text": [
+        "Git Bash를 통해 파일 백업 및 업데이트",
+        "GitHub와 연동 및 repository 관리",
+        "GitHub organization을 이용한 협업",
+        "branch를 활용한 버전 관리 및 충돌 해결"
+      ]
+    },
+    {
+      "number": "05",
+      "title": "Adobe Tool & FIGMA",
+      "text": [
+        "Photoshop를 이용한 사진 편집",
+        "Illustrator를 이용한 백터 기반 로고/아이콘/일러스트 제작",
+        "Premiere Pro를 이용한 영상편집",
+        "After Effects를 이용한 모션 그래픽",
+        "Figma를 이용한 UI/UX 디자인, 프로토타입 제작, 컴포넌트 제작"
+      ]
+    }
+  ]
+}

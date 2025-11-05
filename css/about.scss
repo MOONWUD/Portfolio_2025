@@ -9,12 +9,13 @@ main {
       align-items: center;
       @include border(); 
       border-width: 0 1px 1px 1px;
+      overflow: hidden;
       
       .keyword {
         @include media-lg-padding ();
         padding-right: 0;
         grid-column: 1 / 2;
-        
+
         .keyword_wrapper {
           width: 100%;
           .keyword_item {
@@ -32,7 +33,7 @@ main {
         padding-bottom: 0;
         grid-column: 2 / 3;
         display: grid;
-        justify-content: center
+        justify-content: center;
       }
       
       .name {
@@ -43,12 +44,14 @@ main {
       }
     }
 
+
     /****** introduction ******/
     #introduction {
       display: grid;
       grid-template-columns: 1fr 3fr;
       @include border();
       border-width: 0 1px 1px 1px;
+      overflow: hidden;
 
       .null {
         grid-column: 1 / 2;
@@ -64,7 +67,7 @@ main {
     }
 
 
-    /****** skill ******/
+   /****** skill ******/
     #skill {
       .article_title {
         h3 {
@@ -113,6 +116,8 @@ main {
       }
     }
 
+
+   /****** history ******/
     #history {
       .history_grid {
         @include border();
