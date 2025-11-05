@@ -246,7 +246,7 @@ main .margin #work .work_wrapper .work_item {
 main .margin #work .work_wrapper .work_item a {
   overflow: hidden;
   width: 100%;
-  aspect-ratio: 6/4;
+  aspect-ratio: 6/4.5;
   display: grid;
   transition: all 0.2s ease-in-out;
 }
@@ -330,6 +330,7 @@ main .margin #work .work_wrapper .work_item a:hover .hover_dim .view_btn:hover s
 }
 main .margin #contact {
   overflow: hidden;
+  height: auto;
 }
 main .margin #contact .contact_warpper {
   display: grid;

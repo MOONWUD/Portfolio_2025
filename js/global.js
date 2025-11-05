@@ -9,7 +9,7 @@ $(document).ready(function () {
   });
 
   /* ===== header 불러오기 ===== */
-  $.get('header.html', function (html) {
+  $.get('./component/header.html', function (html) {
     $('header').html(html);
     AOS.refresh();
 
@@ -24,16 +24,32 @@ $(document).ready(function () {
   });
 
   /* ===== footer 불러오기 ===== */
-  $.get('footer.html', function (html) {
+  $.get('./component/footer.html', function (html) {
     $('footer').html(html);
     AOS.refresh();
   });
-
+  
   /* ===== slider 불러오기 ===== */
-  $.get('slider.html', function (html) {
+  $.get('./component/slider.html', function (html) {
     $('.slider').each(function () {
       $(this).html(html);
     });
     AOS.refresh();
   });
+
+  
+  // /* ===== contact 불러오기 ===== */
+  // $.get('./component/contact.html', function (html) {
+  //   $('.contact_wrapper').each(function () {
+  //     $(this).html(html);
+  //   });
+  //   AOS.refresh();
+  // });
+
+  // $.get('./component/sns.html', function (html) {
+  //   $('.sns').each(function () {
+  //     $(this).html(html);
+  //   });
+  //   AOS.refresh();
+  // });
 });
