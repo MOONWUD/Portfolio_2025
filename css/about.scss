@@ -1,0 +1,150 @@
+@use 'base' as *;
+
+main {
+  .margin {
+    /****** profile ******/
+    #profile {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      align-items: center;
+      @include border(); 
+      border-width: 0 1px 1px 1px;
+      
+      .keyword {
+        @include media-lg-padding ();
+        padding-right: 0;
+        grid-column: 1 / 2;
+        
+        .keyword_wrapper {
+          width: 100%;
+          .keyword_item {
+            width: 100%;
+            display: inline-block;
+            text-align: right;
+            @include textstyle-pr-lg-32();
+          }
+          
+        } 
+      }
+      
+      .profile_img {
+        @include media-lg-padding ();
+        padding-bottom: 0;
+        grid-column: 2 / 3;
+        display: grid;
+        justify-content: center
+      }
+      
+      .name {
+        @include media-lg-padding ();
+        padding-left: 0;
+        grid-column: 3 / 4;
+        @include textstyle-pr-lg-32();
+      }
+    }
+
+    /****** introduction ******/
+    #introduction {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      @include border();
+      border-width: 0 1px 1px 1px;
+
+      .null {
+        grid-column: 1 / 2;
+        @include border();
+        border-width: 0 1px 0 0;
+      }
+
+      .introduction_text {
+        @include textstyle-pr-sm-20 ();
+        padding: $padding-mo-xl $padding-mo-xl $padding-mo-xl $padding-pc-md ;
+        line-height: 150%;
+      }
+    }
+
+
+    /****** skill ******/
+    #skill {
+      .article_title {
+        h3 {
+          color: $color-white-normal;
+        }
+      }
+      background-color: $color-primary-normal;
+      .skill_grid {
+        @include border();
+        border-width: 0 0 1px 0;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        padding: 0 0 $padding-mo-xl 0;
+        color: $color-white-normal;
+
+        .skill_wrapper {
+          padding: 0 $padding-mo-xl 0 $padding-pc-md;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: $padding-mo-xl $padding-pc-lg;
+          .skill_item {
+            .number {
+              @include textstyle-pr-md-24();
+              padding-bottom: $padding-mo-xxs;
+              @include border();
+              border-width: 0 0 1px 0;
+              border-style: dashed;
+              color: inherit;
+              border-color: $color-white-normal;
+            }
+            
+            .title {
+              padding: $padding-pc-xs 0 $padding-mo-xs;
+              @include textstyle-pr-md-24();
+              color: inherit;
+            }
+            
+            .text {
+              @include textstyle-pr-sm-16();
+              color: inherit;
+              line-height: 150%;
+            }
+          }
+        }
+      }
+    }
+
+    #history {
+      .history_grid {
+        @include border();
+        border-width: 0 0 1px 0;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        
+        .history_wrapper {
+          padding: 0 $padding-mo-xl $padding-mo-xl $padding-pc-md;
+          display: flex;
+          flex-direction: column;
+          gap: $padding-pc-sm;
+
+          .history_item {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: $padding-mo-xs;
+            @include border();
+            border-width: 0 0 1px 0;
+            border-style: dashed;
+            
+            .title {
+              @include textstyle-pr-md-18();
+            }
+            
+            .date {
+              @include textstyle-pr-sm-18();
+            }
+          }
+        }
+      }
+    }
+  }
+}
