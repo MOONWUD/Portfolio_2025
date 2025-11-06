@@ -68,7 +68,7 @@ main {
       }
 
       .introduction_text {
-        @include textstyle-pr-sm-20 ();
+        @include textstyle-pr-xs-18 ();
         padding: $padding-mo-xl $padding-mo-xl $padding-mo-xl $padding-pc-md ;
         line-height: 150%;
       }
@@ -99,7 +99,7 @@ main {
           gap: $padding-mo-xl $padding-pc-lg;
           .skill_item {
             .number {
-              @include textstyle-pr-md-24();
+              @include textstyle-pr-md-16();
               padding-bottom: $padding-mo-xxs;
               @include border();
               border-width: 0 0 1px 0;
@@ -110,12 +110,12 @@ main {
             
             .title {
               padding: $padding-pc-xs 0 $padding-mo-xs;
-              @include textstyle-pr-md-24();
+              @include textstyle-pr-lg-24();
               color: inherit;
             }
             
             .text {
-              @include textstyle-pr-sm-16();
+              @include textstyle-pr-xs-16();
               color: inherit;
               line-height: 150%;
             }
@@ -149,11 +149,11 @@ main {
             border-style: dashed;
             
             .title {
-              @include textstyle-pr-md-18();
+              @include textstyle-pr-lg-18();
             }
             
             .date {
-              @include textstyle-pr-sm-18();
+              @include textstyle-pr-xs-18();
             }
           }
         }

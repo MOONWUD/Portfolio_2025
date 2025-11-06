@@ -471,8 +471,8 @@ main .margin #contact .sns .email button em {
 }
 main .margin #contact .sns .email button .tooltip {
   position: absolute;
-  left: 200px;
-  top: 10px;
+  left: 160px;
+  top: 4px;
   background-color: #F56242;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;

@@ -1,11 +1,5 @@
 /***** font *****/
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-@font-face {
-  font-family: "DNFBitBitv2";
-  font-style: normal;
-  font-weight: 400;
-  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf") format("opentype");
-}
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -15,6 +9,7 @@ body {
 /***** font-weight-xl *****/
 /***** font-weight-lg *****/
 /***** font-weight-md *****/
+/***** font-weight-sm *****/
 /***** font-weight-sm *****/
 /***** padding *****/
 /***** radius *****/
@@ -70,6 +65,7 @@ main .margin #profile .keyword .keyword_wrapper .keyword_item {
   font-size: 2rem;
   font-weight: 800;
   color: #F56242;
+  font-style: normal;
 }
 main .margin #profile .profile_img {
   width: 100%;
@@ -89,6 +85,7 @@ main .margin #profile .name {
   font-size: 2rem;
   font-weight: 800;
   color: #F56242;
+  font-style: normal;
 }
 main .margin #introduction {
   display: grid;
@@ -107,9 +104,10 @@ main .margin #introduction .null {
 main .margin #introduction .introduction_text {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.125rem;
+  font-weight: 400;
   color: #F56242;
+  font-style: normal;
   padding: 60px 60px 60px 32px;
   line-height: 150%;
 }
@@ -138,9 +136,10 @@ main .margin #skill .skill_grid .skill_wrapper {
 main .margin #skill .skill_grid .skill_wrapper .skill_item .number {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #F56242;
+  font-style: normal;
   padding-bottom: 4px;
   border-style: solid;
   border-color: #F56242;
@@ -154,16 +153,18 @@ main .margin #skill .skill_grid .skill_wrapper .skill_item .title {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #F56242;
+  font-style: normal;
   color: inherit;
 }
 main .margin #skill .skill_grid .skill_wrapper .skill_item .text {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #F56242;
+  font-style: normal;
   color: inherit;
   line-height: 150%;
 }
@@ -194,13 +195,15 @@ main .margin #history .history_grid .history_wrapper .history_item .title {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 800;
   color: #F56242;
+  font-style: normal;
 }
 main .margin #history .history_grid .history_wrapper .history_item .date {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #F56242;
+  font-style: normal;
 }/*# sourceMappingURL=about.css.map */

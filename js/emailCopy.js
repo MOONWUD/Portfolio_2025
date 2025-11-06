@@ -18,12 +18,12 @@ $(document).ready(function () {
 
   $copyBtn.on('mouseenter', function () {
     clearTimeout(hideTimeout);
-    $tooltip.removeClass("active").text("Copy?").css({ opacity: 1, top: "-4px" });
+    $tooltip.removeClass("active").text("Copy?").css({ opacity: 1, top: "-10px" });
   });
 
   $copyBtn.on('mouseleave', function () {
     if (!$tooltip.hasClass("active")) {
-      $tooltip.css({ opacity: 0, top: "10px" });
+      $tooltip.css({ opacity: 0, top: "4px" });
     }
   });
 });

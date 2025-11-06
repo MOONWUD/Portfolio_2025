@@ -407,8 +407,8 @@ main {
             }
             .tooltip {
               position: absolute;
-              left: 200px;
-              top: 10px;
+              left: 160px;
+              top: 4px;
               background-color: $color-primary-normal;
               @include textstyle-pr-sm-14();
               color: $color-white-normal;
