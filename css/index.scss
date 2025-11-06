@@ -48,6 +48,7 @@ main {
           .beliefs_text {
             @include textstyle-pr-lg-72();
             line-height: 120%;
+            padding: 0 $padding-pc-md 0 $padding-pc-md;
           }
         }
       }
@@ -150,17 +151,16 @@ main {
             @include textstyle-pr-sm-16();
             line-height: 150%;
             max-height: 0;
-            opacity: 0;
+            opacity: 1;
             overflow: hidden;
             transform: translateY(-10px);
-            @include transition-moreslow();
+            @include transition-slow();
           }
         
           &.active {
             .contents {
               margin-top: $padding-pc-sm;
               max-height: 400px;
-              opacity: 1;
               transform: translateY(0);
             }
         

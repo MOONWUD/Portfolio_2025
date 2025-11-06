@@ -1,13 +1,5 @@
 
 /***** font *****/
-// 던파 비트체 
-@font-face {
-  font-family: 'DNFBitBitv2';
-  font-style: normal;
-  font-weight: 400;
-  src: url('//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf')format('opentype')
-}
-
 // pretendard
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
@@ -36,21 +28,6 @@ $color-black-alpha50 : rgba(17, 18, 16, 0.5);
 $color-black-alpha20 : rgba(17, 18, 16, 0.2);
 
 /***** txet style *****/
-$font-dntbit : 'DNFBitBitv2',
--apple-system,
-BlinkMacSystemFont,
-system-ui,
-Roboto,
-"Helvetica Neue",
-"Segoe UI",
-"Apple SD Gothic Neo",
-"Noto Sans KR",
-"Malgun Gothic",
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-sans-serif;
-
 $font-pretendard : "Pretendard Variable",
 Pretendard,
 -apple-system,
@@ -69,6 +46,7 @@ sans-serif;
 
 $line-height : 1.4;
 
+$font-weight-xs : 400;
 $font-weight-sm : 500;
 $font-weight-md : 700;
 $font-weight-lg : 800;
@@ -84,45 +62,6 @@ $font-size-18 : 1.125rem;
 $font-size-16 : 1rem;
 $font-size-14 : 0.875rem;
 
-@mixin textstyle-bit-56 {
-  font-family: $font-dntbit;
-  line-height: $line-height;
-  font-size: $font-size-56;
-  font-weight: normal;
-  color: $color-primary-normal;
-}
-
-@mixin textstyle-bit-32 {
-  font-family: $font-dntbit;
-  line-height: $line-height;
-  font-size: $font-size-32;
-  font-weight: normal;
-  color: $color-primary-normal;
-}
-
-@mixin textstyle-bit-24 {
-  font-family: $font-dntbit;
-  line-height: $line-height;
-  font-size: $font-size-24;
-  font-weight: normal;
-  color: $color-primary-normal;
-}
-
-@mixin textstyle-bit-20 {
-  font-family: $font-dntbit;
-  line-height: $line-height;
-  font-size: $font-size-20;
-  font-weight: normal;
-  color: $color-primary-normal;
-}
-
-@mixin textstyle-bit-18 {
-  font-family: $font-dntbit;
-  line-height: $line-height;
-  font-size: $font-size-18;
-  font-weight: normal;
-  color: $color-primary-normal;
-}
 
 /***** font-weight-xl *****/
 @mixin textstyle-pr-xl-36 {
@@ -131,6 +70,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-36;
   font-weight: $font-weight-xl;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-xl-24 {
@@ -139,6 +79,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-24;
   font-weight: $font-weight-xl;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 /***** font-weight-lg *****/
@@ -148,6 +89,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-72;
   font-weight: $font-weight-lg;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-lg-32 {
@@ -156,6 +98,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-32;
   font-weight: $font-weight-lg;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-lg-24 {
@@ -164,6 +107,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-24;
   font-weight: $font-weight-lg;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-lg-20 {
@@ -172,6 +116,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-20;
   font-weight: $font-weight-lg;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-lg-18 {
@@ -180,6 +125,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-18;
   font-weight: $font-weight-lg;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 /***** font-weight-md *****/
@@ -189,6 +135,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-36;
   font-weight: $font-weight-md;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-md-32 {
@@ -197,6 +144,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-32;
   font-weight: $font-weight-md;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-md-24 {
@@ -205,6 +153,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-24;
   font-weight: $font-weight-md;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-md-20 {
@@ -213,6 +162,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-20;
   font-weight: $font-weight-md;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-md-18 {
@@ -221,6 +171,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-18;
   font-weight: $font-weight-md;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-md-16 {
@@ -229,6 +180,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-16;
   font-weight: $font-weight-md;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 /***** font-weight-sm *****/
@@ -238,6 +190,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-24;
   font-weight: $font-weight-sm;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-sm-20 {
@@ -246,6 +199,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-20;
   font-weight: $font-weight-sm;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-sm-18 {
@@ -254,6 +208,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-18;
   font-weight: $font-weight-sm;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-sm-16 {
@@ -262,6 +217,7 @@ $font-size-14 : 0.875rem;
   font-size: $font-size-16;
   font-weight: $font-weight-sm;
   color: $color-primary-normal;
+  font-style: normal;
 }
 
 @mixin textstyle-pr-sm-14 {
@@ -269,6 +225,52 @@ $font-size-14 : 0.875rem;
   line-height: $line-height;
   font-size: $font-size-14;
   font-weight: $font-weight-sm;
+  color: $color-primary-normal;
+}
+
+
+/***** font-weight-sm *****/
+@mixin textstyle-pr-xs-24 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-24;
+  font-weight: $font-weight-xs;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
+@mixin textstyle-pr-xs-20 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-20;
+  font-weight: $font-weight-xs;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
+@mixin textstyle-pr-xs-18 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-18;
+  font-weight: $font-weight-xs;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
+@mixin textstyle-pr-xs-16 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-16;
+  font-weight: $font-weight-xs;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
+@mixin textstyle-pr-xs-14 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-14;
+  font-weight: $font-weight-xs;
   color: $color-primary-normal;
 }
 

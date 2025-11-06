@@ -1,11 +1,5 @@
 /***** font *****/
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-@font-face {
-  font-family: "DNFBitBitv2";
-  font-style: normal;
-  font-weight: 400;
-  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBitv2.otf") format("opentype");
-}
 body {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
@@ -15,6 +9,7 @@ body {
 /***** font-weight-xl *****/
 /***** font-weight-lg *****/
 /***** font-weight-md *****/
+/***** font-weight-sm *****/
 /***** font-weight-sm *****/
 /***** padding *****/
 /***** radius *****/
@@ -79,6 +74,7 @@ header nav .gnb .ghostbtn {
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
+  font-style: normal;
   transition: all 0.35s ease-in-out;
 }
 header nav .gnb .ghostbtn:hover {
@@ -99,6 +95,7 @@ header nav .gnb .normalbtn {
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
+  font-style: normal;
   color: #FBF6F3;
   transition: all 0.35s ease-in-out;
 }
@@ -207,6 +204,7 @@ main .margin section .article_title h3 {
   font-size: 2rem;
   font-weight: 800;
   color: #F56242;
+  font-style: normal;
 }
 main .margin section .article_title a {
   display: flex;
@@ -217,6 +215,7 @@ main .margin section .article_title a {
   font-size: 1.125rem;
   font-weight: 500;
   color: #F56242;
+  font-style: normal;
   transition: all 0.35s ease-in-out;
 }
 main .margin section .article_title a img {
@@ -265,7 +264,7 @@ main .margin #work .work_wrapper .work_item a .hover_dim {
   opacity: 0;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim .contents {
-  aspect-ratio: 6/4;
+  aspect-ratio: 6/4.5;
   padding: 24px 24px 0 24px;
   color: #FBF6F3;
   height: auto;
@@ -279,6 +278,7 @@ main .margin #work .work_wrapper .work_item a .hover_dim .contents .information 
   font-size: 1.5rem;
   font-weight: 800;
   color: #F56242;
+  font-style: normal;
   color: inherit;
   margin-bottom: 8px;
 }
@@ -288,6 +288,7 @@ main .margin #work .work_wrapper .work_item a .hover_dim .contents .information 
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
+  font-style: normal;
   color: inherit;
 }
 main .margin #work .work_wrapper .work_item a .hover_dim .contents .view_btn {
@@ -300,6 +301,7 @@ main .margin #work .work_wrapper .work_item a .hover_dim .contents .view_btn {
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
+  font-style: normal;
   color: inherit;
   padding: 24px 0 24px 0;
 }
@@ -361,6 +363,7 @@ main .margin #contact .contact_warpper .contact_message .header .text h6 {
   font-size: 1.5rem;
   font-weight: 900;
   color: #F56242;
+  font-style: normal;
   margin-bottom: 18px;
 }
 main .margin #contact .contact_warpper .contact_message .header .text p {
@@ -369,6 +372,7 @@ main .margin #contact .contact_warpper .contact_message .header .text p {
   font-size: 1rem;
   font-weight: 500;
   color: #F56242;
+  font-style: normal;
   line-height: 150%;
 }
 main .margin #contact .contact_warpper .contact_message .header img {
@@ -389,6 +393,7 @@ main .margin #contact .contact_warpper .link_wrapper .link_contents .title {
   font-size: 1.5rem;
   font-weight: 900;
   color: #F56242;
+  font-style: normal;
   margin-bottom: 24px;
 }
 main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper {
@@ -404,23 +409,12 @@ main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrappe
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #F56242;
+  font-style: normal;
   padding: 8px 8px 8px 4px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.35s ease-in-out;
   position: relative;
-}
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #F56242;
-  width: 0;
-  height: 100%;
-  transition: all 0.2s ease-in-out;
-  transition: 0.1s;
-  z-index: -99;
 }
 main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a svg {
   transition: all 0.35s ease-in-out;
@@ -430,10 +424,6 @@ main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrappe
   padding: 8px 8px 8px 12px;
   background-color: #F56242;
   color: #FBF6F3;
-}
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover::before {
-  content: "";
-  width: 100%;
 }
 main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg {
   transform-origin: center center;
@@ -464,11 +454,20 @@ main .margin #contact .sns .email button {
   text-align: left;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F56242;
+  font-style: normal;
+  position: relative;
+  cursor: pointer;
+}
+main .margin #contact .sns .email button em {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
   font-size: 1.25rem;
   font-weight: 800;
   color: #F56242;
-  position: relative;
-  cursor: pointer;
+  font-style: normal;
 }
 main .margin #contact .sns .email button .tooltip {
   position: absolute;
