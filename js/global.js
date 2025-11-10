@@ -15,11 +15,11 @@ $(document).ready(function () {
 
     const $logo = $('header .logo');
     if ($logo.length) {
-      setTimeout(() => $logo.addClass('aos-animate'), 80);
+      setTimeout(() => $logo.addClass('aos-animate'), 400);
     }
 
     $('header .gnb li').each(function (i) {
-      setTimeout(() => $(this).addClass('aos-animate'), 80 + i * 80);
+      setTimeout(() => $(this).addClass('aos-animate'), 400 + i * 400);
     });
   });
 

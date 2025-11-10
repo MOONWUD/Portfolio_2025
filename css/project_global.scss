@@ -7,6 +7,7 @@ main {
       grid-template-columns: 1fr 3fr;
       @include border();
       border-width: 0 1px 1px 1px;
+      overflow: hidden;
 
       div {
         @include media-lg-padding();
@@ -30,7 +31,7 @@ main {
     .layout {
       display: grid;
       grid-template-columns: 1fr 3fr;
-  
+      overflow: hidden;
       .sectionTitle {
         @include textstyle-pr-lg-24();
         padding: $padding-mo-xl $padding-pc-md  $padding-mo-xl $padding-pc-md;
