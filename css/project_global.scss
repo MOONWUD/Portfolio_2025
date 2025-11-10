@@ -1,0 +1,295 @@
+@use "./base" as *; 
+
+main {
+  .margin {
+    #projectHeader {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      @include border();
+      border-width: 0 1px 1px 1px;
+
+      div {
+        @include media-lg-padding();
+
+        p {
+          @include textstyle-pr-xs-18();
+        }
+
+        h4 {
+          @include textstyle-pr-lg-24();
+        }
+      }
+
+      .projectType {
+        @include border();
+        border-width: 0 1px 0 0;
+      }
+    }
+
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+  
+      .sectionTitle {
+        @include textstyle-pr-lg-24();
+        padding: $padding-mo-xl $padding-pc-md  $padding-mo-xl $padding-pc-md;
+      }
+      
+      .contents {
+        padding: $padding-mo-xl $padding-mo-xl $padding-mo-xl $padding-pc-md;
+      }
+
+    }
+
+
+    #projectOverview {
+      .contents {
+        display: flex;
+        flex-direction: column;
+        gap: $padding-mo-xl;
+
+        .objective {
+          @include textstyle-pr-xs-20();
+          line-height: 160%;
+
+
+          span {
+            @include textstyle-pr-lg-20();
+          }
+        }
+
+        .details_wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: $padding-pc-xs;
+
+         .details_item {
+          display: flex;
+          justify-content: space-between;
+          padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
+          @include border();
+          border-width: 0 0 1px 0;
+          border-style: dashed;
+          @include textstyle-pr-sm-18;
+         } 
+        }
+
+        .link_wrapper {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: $padding-pc-md;
+
+          .link_item {
+            a {
+              display: flex;
+              justify-content: space-between;
+              padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
+              @include border();
+              border-width: 0 0 1px 0;
+              border-style: dashed;
+              @include textstyle-pr-sm-18;
+              @include transition-normal();
+
+              svg {
+                @include iconSpinRe();
+              }
+
+              &:hover {
+                padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-sm;
+                background-color: $color-primary-normal;
+                color: $color-white-normal;
+
+                svg {
+                  @include iconSpin();
+                  path {
+                    fill: $color-white-normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    #projectImg {
+      @include border();
+      border-width: 0 1px 1px 1px;
+    }
+
+
+
+    #projectReviwe {
+      @include border();
+      border-width: 0 1px 1px 1px;
+
+      .contents {
+        display: flex;
+        flex-direction: column;
+        gap: $padding-mo-xl;
+        .category {
+          .title {
+            @include textstyle-pr-xs-16();
+            margin-bottom: $padding-pc-xs;
+          }
+          .text_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: $padding-mo-sm;
+            p {
+              @include textstyle-pr-xs-18();
+              line-height: 160%;
+              
+              span {
+                @include textstyle-pr-lg-18();
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    #moreProject {
+      border-width: 0 1px 1px 1px;
+      .header {
+        @include media-lg-padding();
+        display: flex;
+        justify-content: space-between;
+        
+        h3 {
+          @include textstyle-pr-lg-24();
+        }
+
+        a {
+          display: flex;
+          gap: $padding-pc-xxs;
+          align-items: center;
+          @include textstyle-pr-sm-18();
+          @include transition-normal();
+          gap: $padding-mo-xs;
+
+          img {
+            @include iconSpinRe();
+          }
+
+          &:hover {
+            img {
+              @include iconSpin();
+            }
+          }
+        }
+      }
+
+      .work_wrapper {
+        padding: 0 $padding-pc-md $padding-pc-md $padding-pc-md;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: auto;
+        grid-auto-flow: row;
+        gap: $padding-pc-sm;
+
+        > *:nth-child(n+4) {
+          display: none;
+        }
+
+        .work_item {
+          width: 100%;
+
+          a {
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 6 / 4.5;
+            display: grid;
+            @include transition-fast();
+
+            .hover_dim {
+              width: 100%;
+              height: auto;
+              z-index: 999;
+              grid-column: 1 / 2;
+              grid-row: 1 / 2;
+              background-color: $color-primary-alpha80;
+              backdrop-filter: blur(2px);
+              padding: $padding-pc-xs;
+              -webkit-backdrop-filter: blur(2px);
+              @include transition-fast();
+              transform: translateX(-100%);
+              opacity: 0;
+
+              .contents {
+                aspect-ratio: 6 / 4.5;
+                padding: $padding-pc-sm $padding-pc-sm 0 $padding-pc-sm;
+                color: $color-white-normal;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .information {
+                  h6 {
+                    @include textstyle-pr-lg-24();
+                    color: inherit;
+                    margin-bottom: $padding-mo-xs;
+                  }
+
+                  div {
+                    @include textstyle-pr-sm-16();
+                    color: inherit;
+                  }
+                }
+
+                .view_btn {
+                  width: 100%;
+                  display: flex;
+                  align-self: center;
+                  justify-content: space-between;
+                  @include textstyle-pr-sm-16();
+                  color: inherit;
+                  padding: $padding-pc-sm 0 $padding-pc-sm 0;
+
+                  svg {
+                    @include iconSpinRe();
+
+                    path {
+                      fill: $color-white-normal;
+                    }
+                  }
+                }
+              }
+            }
+
+            .workitem_img {
+              grid-column: 1 / 2;
+              grid-row: 1 / 2;
+              display: grid;
+              align-items: center;
+              justify-content: center;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            &:hover {
+              .hover_dim {
+                opacity: 1;
+                transform: translateX(0);
+
+                .view_btn {
+                  &:hover {
+                    svg {
+                      @include iconSpin();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

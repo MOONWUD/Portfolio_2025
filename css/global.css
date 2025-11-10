@@ -196,6 +196,7 @@ main .margin section .article_title {
   padding: 32px;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   overflow: hidden;
 }
 main .margin section .article_title h3 {
@@ -414,7 +415,6 @@ main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrappe
   font-style: normal;
   padding: 8px 8px 8px 4px;
   transition: all 0.35s ease-in-out;
-  position: relative;
 }
 main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a svg {
   transition: all 0.35s ease-in-out;

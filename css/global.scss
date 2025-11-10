@@ -148,6 +148,7 @@ main {
         @include media-lg-padding();
         display: flex;
         justify-content: space-between;
+        gap: $padding-mo-xs;
         overflow: hidden;
 
         h3 {
@@ -170,8 +171,6 @@ main {
               @include iconSpin();
             }
           }
-
-
         }
       }
     }
@@ -354,7 +353,6 @@ main {
                 @include textstyle-pr-xs-16();
                 padding: $padding-mo-xs $padding-mo-xs $padding-mo-xs $padding-mo-xxs;
                 @include transition-normal();
-                position: relative;
                 
                 svg {
                   @include iconSpinRe();
