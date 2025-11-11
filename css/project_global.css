@@ -32,6 +32,7 @@ main .margin #projectHeader {
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
   overflow: hidden;
+  height: auto;
 }
 main .margin #projectHeader div {
   width: 100%;

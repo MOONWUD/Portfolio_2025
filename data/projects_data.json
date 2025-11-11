@@ -1,0 +1,65 @@
+{
+  "projects": {
+    "budding": {
+      "header": {
+        "typeLabel": "Project Type:",
+        "type": "Personal Project",
+        "nameLabel": "APP UIUX Design:",
+        "name": "Budding!"
+      },
+      "overview": {
+        "objective": [
+          "<span>빠르고 효율적인 주차장 예약 경험을 제공</span>하여 에버랜드 주차 스트레스 해소",
+          "사용자 니즈와 행동을 고려한 <span>사용자 중심 디자인</span>에 대한 이해도 성장",
+          "다수와 함께하는 프로젝트로 <span>원활한 소통</span> 능력 성장"
+        ],
+        "details": [
+          { "label": "제작기간", "value": "2025.08 - 2025.12.01" },
+          { "label": "기여도", "value": "100%" }
+        ],
+        "links": [
+          {
+            "label": "Prototype",
+            "url": "https://www.figma.com/proto/XtXXgq0zPTh7H9Og6u0i9e/애버파킹?node-id=1-4286&t=e44DBrQnoL83flEm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5390",
+            "external": true
+          },
+          {
+            "label": "작업 파일",
+            "url": "#",
+            "external": true
+          },
+          {
+            "label": "발표 자료",
+            "url": "https://drive.google.com/file/d/1XDoDUEhI3k2BlujQrcVav53s40M61lCC/view?usp=sharing",
+            "external": true
+          }
+        ]
+      },
+      "review": {
+        "reviews": [
+          {
+            "category": "Good",
+            "texts": [
+              "<span>일지를 작성한 것</span>은 프로젝트를 마무리할 때 큰 도움이 되었다.",
+              "팀원 모두 적극적으로 참여하고 <span>문제가 발생했을 때 외면하지 않았다.</span>"
+            ]
+          },
+          {
+            "category": "Bad",
+            "texts": [
+              "<span>팀 프로젝트 경험이 부족</span>하여 협업 도구 사용이 미숙했다.",
+              "<span>명확한 역할 분담</span>이 없어 중복 수정이 있었다."
+            ]
+          },
+          {
+            "category": "Takeaway",
+            "texts": [
+              "함께한다는 것은 엄청난 시너지였다.",
+              "<span>UIUX는 통계와 경험의 산물</span>이라는 것을 배웠다."
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

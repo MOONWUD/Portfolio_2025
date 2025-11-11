@@ -8,6 +8,7 @@ main {
       @include border();
       border-width: 0 1px 1px 1px;
       overflow: hidden;
+      height: auto;
 
       div {
         @include media-lg-padding();

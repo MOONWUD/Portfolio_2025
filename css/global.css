@@ -38,6 +38,7 @@ header {
   border-width: 0 0 1px 0;
   transition: all 0.35s ease-in-out;
   overflow: hidden;
+  height: auto;
 }
 header nav {
   overflow: hidden;
@@ -139,6 +140,7 @@ main .margin section {
   border-width: 0 1px 0 1px;
   transition: all 0.35s ease-in-out;
   overflow: hidden;
+  /* ===== Keyframes ===== */
 }
 main .margin section .slider {
   overflow: hidden;
@@ -190,6 +192,14 @@ main .margin section .slider .slider_aera .slider_wrapper li {
 main .margin section .slider .slider_aera .slider_wrapper img {
   height: 100%;
   display: block;
+}
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 main .margin section .article_title {
   width: 100%;
@@ -335,14 +345,15 @@ main .margin #contact {
   overflow: hidden;
   height: auto;
 }
-main .margin #contact .contact_warpper {
+main .margin #contact .contact_wrapper {
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
 }
-main .margin #contact .contact_warpper .contact_message {
+main .margin #contact .contact_wrapper .contact_message {
   width: 100%;
   padding: 32px;
   display: grid;
@@ -353,12 +364,12 @@ main .margin #contact .contact_warpper .contact_message {
   border-color: #F56242;
   border-width: 0 1px 0 0;
 }
-main .margin #contact .contact_warpper .contact_message .header {
+main .margin #contact .contact_wrapper .contact_message .header {
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
-main .margin #contact .contact_warpper .contact_message .header .text h6 {
+main .margin #contact .contact_wrapper .contact_message .header .text h6 {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.5rem;
@@ -367,7 +378,7 @@ main .margin #contact .contact_warpper .contact_message .header .text h6 {
   font-style: normal;
   margin-bottom: 18px;
 }
-main .margin #contact .contact_warpper .contact_message .header .text p {
+main .margin #contact .contact_wrapper .contact_message .header .text p {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1rem;
@@ -376,19 +387,19 @@ main .margin #contact .contact_warpper .contact_message .header .text p {
   font-style: normal;
   line-height: 150%;
 }
-main .margin #contact .contact_warpper .contact_message .header img {
+main .margin #contact .contact_wrapper .contact_message .header img {
   transform: rotate(180deg);
   width: 100px;
   height: auto;
 }
-main .margin #contact .contact_warpper .link_wrapper {
+main .margin #contact .contact_wrapper .link_wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   padding: 32px;
   gap: 32px;
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .title {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .title {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 1.5rem;
@@ -397,12 +408,12 @@ main .margin #contact .contact_warpper .link_wrapper .link_contents .title {
   font-style: normal;
   margin-bottom: 24px;
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -416,27 +427,28 @@ main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrappe
   padding: 8px 8px 8px 4px;
   transition: all 0.35s ease-in-out;
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a svg {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a svg {
   transition: all 0.35s ease-in-out;
   transform: rotate(0);
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a:hover {
   padding: 8px 8px 8px 12px;
   background-color: #F56242;
   color: #FBF6F3;
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a:hover svg {
   transform-origin: center center;
   transform: rotate(405deg);
 }
-main .margin #contact .contact_warpper .link_wrapper .link_contents .list_wrapper a:hover svg path {
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a:hover svg path {
   fill: #FBF6F3;
 }
-main .margin #contact .contact_warpper .link_wrapper img {
+main .margin #contact .contact_wrapper .link_wrapper img {
   grid-column: 1/-1;
   justify-self: end;
 }
 main .margin #contact .sns {
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
