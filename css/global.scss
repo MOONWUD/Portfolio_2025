@@ -124,14 +124,16 @@ main {
           justify-self: center;
           width: 100%;
           display: flex;
-          gap: $padding-mo-xl;
+          // gap: $padding-mo-xl;
 
           .slider_wrapper {
             display: flex;
             gap: $padding-mo-xl;
             height: 50px;
             flex-shrink: 0;
-            animation: slideMove 25s linear infinite;
+            // animation: slideMove 25s linear infinite;
+            will-change: transform;
+            transform: translateZ(0);
 
             li {
               flex-shrink: 0;

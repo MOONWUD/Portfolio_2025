@@ -32,6 +32,9 @@
      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      <!--=== copy ===-->
      <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+     <!--=== gsap ===-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 
      <!--===== js - custom =====-->
      <script src="./js/global.js"></script>
@@ -39,7 +42,7 @@
      <script src="./js/skillScroll.js"></script>
      <script src="./js/dataLoad.js"></script>
      
-</head>
+</head>   
 
 <body>
      <header data-aos="fade-down" data-aos-duration="480">
@@ -52,23 +55,23 @@
                     <article class="video">
                     </article>
 
-                    <article class="beliefs" data-aos="fade-down" data-aos-duration="250">
-                         <div class="arrowimg" data-aos="fade-right" data-aos-delay="200">
+                    <article class="beliefs" data-aos="fade-down" data-aos-duration="250" data-aos-delay="150">
+                         <div class="arrowimg" data-aos="fade-right" data-aos-delay="250">
                               <img src="./assets/img_arrow.svg" alt="화살표 ->">
                          </div>
                          <ul class="beliefs_contents">
                               <li class="icon_crros">
-                                   <img data-aos="fade-down-right" data-aos-delay="200" src="./assets/icon_cross.svg"
+                                   <img data-aos="fade-down-right" data-aos-delay="300" src="./assets/icon_cross.svg"
                                         alt="별아이콘">
-                                   <img data-aos="fade-down-left" data-aos-delay="200" src="./assets/icon_cross.svg"
+                                   <img data-aos="fade-down-left" data-aos-delay="300" src="./assets/icon_cross.svg"
                                         alt="별아이콘">
                               </li>
-                              <li class="beliefs_text" data-aos="fade-up" data-aos-delay="200">
+                              <li class="beliefs_text" data-aos="fade-up" data-aos-delay="350">
                                    Success is the sum <br>
                                    of small efforts, <br>
                                    repeated day in and day out.
                               </li>
-                              <li class="icon_crros" data-aos="fade-up" data-aos-delay="200">
+                              <li class="icon_crros">
                                    <img data-aos="fade-up-right" data-aos-delay="200" src="./assets/icon_cross.svg"
                                         alt="별아이콘">
                                    <img data-aos="fade-up-left" data-aos-delay="200" src="./assets/icon_cross.svg"
@@ -77,7 +80,7 @@
                          </ul>
                     </article>
 
-                    <article class="slider">
+                    <article class="slider" data-aos="none">
                     </article>
 
                     <article class="introduction">
@@ -129,7 +132,7 @@
 
 
                <section id="contact">
-                    <article class="slider">
+                    <article class="slider" data-aos="none">
                     </article>
 
                     <article class="contact_wrapper">

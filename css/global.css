@@ -22,7 +22,7 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-10%);
   }
 }
 /********** header **********/
@@ -177,14 +177,14 @@ main .margin section .slider .slider_aera {
   justify-self: center;
   width: 100%;
   display: flex;
-  gap: 60px;
 }
 main .margin section .slider .slider_aera .slider_wrapper {
   display: flex;
   gap: 60px;
   height: 50px;
   flex-shrink: 0;
-  animation: slideMove 25s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 main .margin section .slider .slider_aera .slider_wrapper li {
   flex-shrink: 0;
