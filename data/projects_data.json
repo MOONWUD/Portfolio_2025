@@ -1,65 +1,86 @@
 {
-  "projects": {
-    "budding": {
-      "header": {
-        "typeLabel": "Project Type:",
-        "type": "Personal Project",
-        "nameLabel": "APP UIUX Design:",
-        "name": "Budding!"
+  "projects": [
+    {
+      "id": "ever_parking",
+      "type": "Team Project",
+      "category": "APP UIUX Design",
+      "name": "EVER PARKING",
+      "objective": [
+        "빠르고 효율적인 주차장 예약 경험을 제공하여 에버랜드 주차 스트레스 해소",
+        "사용자 니즈와 행동을 고려한 사용자 중심 디자인에 대한 이해도 성장",
+        "다수와 함께하는 프로젝트로 원활한 소통 능력 성장"
+      ],
+      "details": {
+        "period": "2024.04.05",
+        "contribution": "40%"
       },
-      "overview": {
-        "objective": [
-          "<span>빠르고 효율적인 주차장 예약 경험을 제공</span>하여 에버랜드 주차 스트레스 해소",
-          "사용자 니즈와 행동을 고려한 <span>사용자 중심 디자인</span>에 대한 이해도 성장",
-          "다수와 함께하는 프로젝트로 <span>원활한 소통</span> 능력 성장"
-        ],
-        "details": [
-          { "label": "제작기간", "value": "2025.08 - 2025.12.01" },
-          { "label": "기여도", "value": "100%" }
-        ],
-        "links": [
-          {
-            "label": "Prototype",
-            "url": "https://www.figma.com/proto/XtXXgq0zPTh7H9Og6u0i9e/애버파킹?node-id=1-4286&t=e44DBrQnoL83flEm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5390",
-            "external": true
-          },
-          {
-            "label": "작업 파일",
-            "url": "#",
-            "external": true
-          },
-          {
-            "label": "발표 자료",
-            "url": "https://drive.google.com/file/d/1XDoDUEhI3k2BlujQrcVav53s40M61lCC/view?usp=sharing",
-            "external": true
-          }
-        ]
-      },
+      "links": [
+        {
+          "title": "Prototype",
+          "url": "https://www.figma.com/proto/XtXXgq0zPTh7H9Og6u0i9e/애버파킹?node-id=1-4286&t=e44DBrQnoL83flEm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5390"
+        },
+        { "title": "작업 파일", "url": "#" },
+        {
+          "title": "발표 자료",
+          "url": "https://drive.google.com/file/d/1XDoDUEhI3k2BlujQrcVav53s40M61lCC/view?usp=sharing"
+        }
+      ],
+      "mainImg": "./assets/mainMockup.png",
       "review": {
-        "reviews": [
-          {
-            "category": "Good",
-            "texts": [
-              "<span>일지를 작성한 것</span>은 프로젝트를 마무리할 때 큰 도움이 되었다.",
-              "팀원 모두 적극적으로 참여하고 <span>문제가 발생했을 때 외면하지 않았다.</span>"
-            ]
-          },
-          {
-            "category": "Bad",
-            "texts": [
-              "<span>팀 프로젝트 경험이 부족</span>하여 협업 도구 사용이 미숙했다.",
-              "<span>명확한 역할 분담</span>이 없어 중복 수정이 있었다."
-            ]
-          },
-          {
-            "category": "Takeaway",
-            "texts": [
-              "함께한다는 것은 엄청난 시너지였다.",
-              "<span>UIUX는 통계와 경험의 산물</span>이라는 것을 배웠다."
-            ]
-          }
+        "Good": [
+          "일지를 작성한 것은 프로젝트를 마무리할 때 큰 도움이 되었다. 처음에는 긴가민가했지만, 3주가 모여 큰 성과를 이루었다. 사소한 것이 모여 소중한 아카이브가 된다는 것을 느꼈다.",
+          "팀원 모두 적극적으로 참여하고 의견을 냈다. 문제가 발생했을 때 외면하지 않고 모두가 해결을 위해 최선을 다했다. 비교적 순탄하게 진행된 팀 프로젝트라 생각한다."
+        ],
+        "Bad": [
+          "팀 프로젝트 경험이 부족해 함께 소통하며 진행하는 부분이 미숙했다. 단순한 대화뿐 아니라 자료 공유와 협업 툴 숙련이 소통의 핵심임을 느꼈다.",
+          "명확한 역할 분담이 없어 같은 부분을 수정하거나 수정되지 않은 부분이 발생했다. 역할을 명확히 나누었다면 더 효율적인 결과를 얻을 수 있었을 것이다."
+        ],
+        "Takeaway": [
+          "함께한다는 것은 엄청난 시너지라고 느꼈다. 혼자였다면 이룰 수 없었던 만족스러운 결과물이 나왔다. 함께 하는 것의 값짐을 배웠다.",
+          "UIUX란 단순히 보기 좋은 디자인이 아니라 통계학과 데이터 기반의 학문임을 깨달았다. 수많은 경험과 실패가 만들어낸 결과라는 것을 알게 되었다."
+        ]
+      }
+    },
+    {
+      "id": "budding",
+      "type": "Personal Project",
+      "category": "APP UIUX Design",
+      "name": "Budding!",
+      "objective": [
+        "빠르고 효율적인 주차장 예약 경험을 제공하여 에버랜드 주차 스트레스 해소",
+        "사용자 니즈와 행동을 고려한 사용자 중심 디자인에 대한 이해도 성장",
+        "다수와 함께하는 프로젝트로 원활한 소통 능력 성장"
+      ],
+      "details": {
+        "period": "2025.08 - 2025.12.01",
+        "contribution": "100%"
+      },
+      "links": [
+        {
+          "title": "Prototype",
+          "url": "https://www.figma.com/proto/XtXXgq0zPTh7H9Og6u0i9e/애버파킹?node-id=1-4286&t=e44DBrQnoL83flEm-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A5390"
+        },
+        { "title": "작업 파일", "url": "#" },
+        {
+          "title": "발표 자료",
+          "url": "https://drive.google.com/file/d/1XDoDUEhI3k2BlujQrcVav53s40M61lCC/view?usp=sharing"
+        }
+      ],
+      "mainImg": "./assets/mainMoc.png",
+      "review": {
+        "Good": [
+          "일지를 작성한 것은 프로젝트를 마무리할 때 큰 도움이 되었다. 처음에는 긴가민가했지만, 3주가 모여 큰 성과를 이루었다. 사소한 것이 모여 소중한 아카이브가 된다는 것을 느꼈다.",
+          "팀원 모두 적극적으로 참여하고 의견을 냈다. 문제가 발생했을 때 외면하지 않고 모두가 해결을 위해 최선을 다했다. 비교적 순탄하게 진행된 팀 프로젝트라 생각한다."
+        ],
+        "Bad": [
+          "팀 프로젝트 경험이 부족해 함께 소통하며 진행하는 부분이 미숙했다. 단순한 대화뿐 아니라 자료 공유와 협업 툴 숙련이 소통의 핵심임을 느꼈다.",
+          "명확한 역할 분담이 없어 같은 부분을 수정하거나 수정되지 않은 부분이 발생했다. 역할을 명확히 나누었다면 더 효율적인 결과를 얻을 수 있었을 것이다."
+        ],
+        "Takeaway": [
+          "함께한다는 것은 엄청난 시너지라고 느꼈다. 혼자였다면 이룰 수 없었던 만족스러운 결과물이 나왔다. 함께 하는 것의 값짐을 배웠다.",
+          "UIUX란 단순히 보기 좋은 디자인이 아니라 통계학과 데이터 기반의 학문임을 깨달았다. 수많은 경험과 실패가 만들어낸 결과라는 것을 알게 되었다."
         ]
       }
     }
-  }
+  ]
 }
