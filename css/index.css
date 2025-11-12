@@ -47,6 +47,7 @@ main .margin #about .beliefs {
   border-style: solid;
   border-color: #F56242;
   border-width: 0 0 1px 0;
+  overflow: hidden;
 }
 main .margin #about .beliefs .arrowimg {
   width: 100%;

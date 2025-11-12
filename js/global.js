@@ -3,24 +3,15 @@ $(function () {
   AOS.init({
     startEvent: 'DOMContentLoaded',
     once: false,
-    duration: 400,
+    duration: 700,
     easing: 'ease-in-out',
-    offset: 116,
+    // offset: 116,
   });
 
   /* ===== header 불러오기 ===== */
   $.get('./component/header.html', function (html) {
     $('header').html(html);
     AOS.refresh();
-
-    const $logo = $('header .logo');
-    if ($logo.length) {
-      setTimeout(() => $logo.addClass('aos-animate'), 400);
-    }
-
-    $('header .gnb li').each(function (i) {
-      setTimeout(() => $(this).addClass('aos-animate'), 400 + i * 400);
-    });
   });
 
   /* ===== footer 불러오기 ===== */

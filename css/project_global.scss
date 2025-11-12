@@ -5,13 +5,13 @@ main {
     #projectHeader {
       display: grid;
       grid-template-columns: 1fr 3fr;
-      @include border();
-      border-width: 0 1px 1px 1px;
       overflow: hidden;
       height: auto;
 
       div {
         @include media-lg-padding();
+        @include border();
+        border-width: 0 0 1px 0;
 
         p {
           @include textstyle-pr-xs-18();
@@ -24,7 +24,7 @@ main {
 
       .projectType {
         @include border();
-        border-width: 0 1px 0 0;
+        border-width: 0 1px 1px 0;
       }
     }
 

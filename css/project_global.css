@@ -28,15 +28,15 @@ body {
 main .margin #projectHeader {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  border-style: solid;
-  border-color: #F56242;
-  border-width: 0 1px 1px 1px;
   overflow: hidden;
   height: auto;
 }
 main .margin #projectHeader div {
   width: 100%;
   padding: 32px;
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
 }
 main .margin #projectHeader div p {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -57,7 +57,7 @@ main .margin #projectHeader div h4 {
 main .margin #projectHeader .projectType {
   border-style: solid;
   border-color: #F56242;
-  border-width: 0 1px 0 0;
+  border-width: 0 1px 1px 0;
 }
 main .margin .layout {
   display: grid;
