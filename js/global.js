@@ -1,32 +1,20 @@
 $(function () {
-  /* ===== AOS 초기화 ===== */
-  AOS.init({
-    startEvent: 'DOMContentLoaded',
-    once: false,
-    duration: 700,
-    easing: 'ease-in-out',
-    // offset: 116,
-  });
-
   /* ===== header 불러오기 ===== */
-  $.get('./component/header.html', function (html) {
+  const headerLoad = $.get('./component/header.html', function (html) {
     $('header').html(html);
-    AOS.refresh();
   });
 
   /* ===== footer 불러오기 ===== */
-  $.get('./component/footer.html', function (html) {
+  const footerLoad = $.get('./component/footer.html', function (html) {
     $('footer').html(html);
-    AOS.refresh();
   });
 
   /* ===== slider 불러오기 ===== */
-  $.get('./component/slider.html', function (html) {
+  const sliderLoad = $.get('./component/slider.html', function (html) {
     const $slider = $('.slider');
     $slider.html(html);
-    AOS.refresh();
 
-    // 이미지 로드가 끝난 뒤에 루프 초기화 (폭 계산 정확도 ↑)
+    // 이미지 로드 완료 후 슬라이더 초기화
     const $imgs = $slider.find('img');
     if ($imgs.length) {
       let loaded = 0;
@@ -34,13 +22,23 @@ $(function () {
         loaded++;
         if (loaded === $imgs.length) initSliderLoop();
       });
-      // 캐시된 이미지 강제 load 트리거
       $imgs.each(function () {
         if (this.complete) $(this).trigger('load');
       });
     } else {
       initSliderLoop();
     }
+  });
+
+  /* ===== 모든 ajax 완료 후 AOS 초기화 ===== */
+  $.when(headerLoad, footerLoad, sliderLoad).done(function () {
+    AOS.init({
+      startEvent: 'DOMContentLoaded',
+      once: false,
+      duration: 700,
+      easing: 'ease-in-out',
+      offset: 116,
+    });
   });
 
   /* ===== GSAP Horizontal Loop 초기화 함수 ===== */
@@ -64,7 +62,7 @@ $(function () {
           repeat: config.repeat,
           paused: config.paused,
           defaults: { ease: "none" },
-          onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)
+          onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100),
         }),
         length = items.length,
         startX = items[0].offsetLeft,
@@ -84,7 +82,7 @@ $(function () {
               gsap.getProperty(el, "xPercent")
           );
           return xPercents[i];
-        }
+        },
       });
 
       gsap.set(items, { x: 0 });
@@ -102,35 +100,32 @@ $(function () {
         distanceToStart = item.offsetLeft + curX - startX;
         distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
 
-        tl.to(item, {
-          xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-          duration: distanceToLoop / pixelsPerSecond
-        }, 0)
-          .fromTo(item, {
-            xPercent: snap(((curX - distanceToLoop + totalWidth) / widths[i]) * 100)
-          }, {
-            xPercent: xPercents[i],
-            duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
-            immediateRender: false
-          }, distanceToLoop / pixelsPerSecond)
+        tl.to(
+          item,
+          {
+            xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+            duration: distanceToLoop / pixelsPerSecond,
+          },
+          0
+        )
+          .fromTo(
+            item,
+            {
+              xPercent: snap(
+                ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
+              ),
+            },
+            {
+              xPercent: xPercents[i],
+              duration:
+                (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond,
+              immediateRender: false,
+            },
+            distanceToLoop / pixelsPerSecond
+          )
           .add("label" + i, distanceToStart / pixelsPerSecond);
 
         times[i] = distanceToStart / pixelsPerSecond;
-      }
-
-      function toIndex(index, vars) {
-        vars = vars || {};
-        Math.abs(index - curIndex) > length / 2 &&
-          (index += index > curIndex ? -length : length);
-        let newIndex = gsap.utils.wrap(0, length, index),
-          time = times[newIndex];
-        if (time > tl.time() !== index > curIndex) {
-          vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
-          time += tl.duration() * (index > curIndex ? 1 : -1);
-        }
-        curIndex = newIndex;
-        vars.overwrite = true;
-        return tl.tweenTo(time, vars);
       }
 
       tl.next = (vars) => toIndex(curIndex + 1, vars);
@@ -147,12 +142,10 @@ $(function () {
       return tl;
     }
 
-    // 루프 시작 (속도/반복 설정)
     window.__sliderLoop = horizontalLoop(".slider_item", {
       repeat: -1,
       speed: 0.7,
-      paddingRight: 60
+      paddingRight: 60,
     });
-    // console.log(document.querySelector('.slider_wrapper').scrollWidth);
   }
 });
