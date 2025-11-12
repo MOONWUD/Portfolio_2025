@@ -149,14 +149,14 @@ main {
 
       
       /* ===== Keyframes ===== */
-      @keyframes slideMove {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
+      // @keyframes slideMove {
+      //   0% {
+      //     transform: translateX(0);
+      //   }
+      //   100% {
+      //     transform: translateX(-50%);
+      //   }
+      // }
 
       .article_title {
         @include media-lg-padding();

@@ -192,14 +192,6 @@ main .margin section .slider .slider_aera .slider_wrapper img {
   height: 100%;
   display: block;
 }
-@keyframes slideMove {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
 main .margin section .article_title {
   width: 100%;
   padding: 32px;
