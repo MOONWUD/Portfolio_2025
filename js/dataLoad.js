@@ -54,9 +54,9 @@ $(document).ready(function () {
         const contentsHTML = item.contents.map(line => `${line} <br>`).join('');
         const li = `
           <li class="skill_item">
-            <div class="header_area">
-              <div class="title" data-aos="fade-right">${item.title}</div>
-              <img data-aos="fade-left" src="./assets/icon_cross.svg" alt="플러스아이콘">
+            <div class="header_area" data-aos="fade-down">
+              <div class="title" >${item.title}</div>
+              <img src="./assets/icon_cross.svg" alt="플러스아이콘">
             </div>
             <div class="contents">${contentsHTML}</div>
           </li>

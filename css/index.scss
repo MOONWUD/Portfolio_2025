@@ -132,7 +132,6 @@ main {
           @include border();
           border-width: 0 0 1px 0;
           overflow: hidden;
-          @include transition-moreslow();
         
           .header_area {
             display: flex;
@@ -150,34 +149,17 @@ main {
         
           .contents {
             @include textstyle-pr-sm-16();
-            line-height: 150%;
+            line-height: 160%;
             max-height: 0;
-            opacity: 1;
             overflow: hidden;
-            transform: translateY(-10px);
             @include transition-slow();
           }
         
-          &.active {
-            .contents {
-              margin-top: $padding-pc-sm;
-              max-height: 400px;
-              transform: translateY(0);
-            }
-        
-            .header_area {
-              img {
-                @include iconSpin();
-              }
-            } 
-          }
           
           &:hover {
             .contents {
               margin-top: $padding-pc-sm;
               max-height: 400px;
-              opacity: 1;
-              transform: translateY(0);
             }
         
             .header_area {

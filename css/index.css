@@ -160,7 +160,6 @@ main .margin #skill .skill_wrapper .skill_item {
   border-color: #F56242;
   border-width: 0 0 1px 0;
   overflow: hidden;
-  transition: all 1s ease-in-out;
 }
 main .margin #skill .skill_wrapper .skill_item .header_area {
   display: flex;
@@ -186,27 +185,14 @@ main .margin #skill .skill_wrapper .skill_item .contents {
   font-weight: 500;
   color: #F56242;
   font-style: normal;
-  line-height: 150%;
+  line-height: 160%;
   max-height: 0;
-  opacity: 1;
   overflow: hidden;
-  transform: translateY(-10px);
   transition: all 0.5s ease-in-out;
-}
-main .margin #skill .skill_wrapper .skill_item.active .contents {
-  margin-top: 24px;
-  max-height: 400px;
-  transform: translateY(0);
-}
-main .margin #skill .skill_wrapper .skill_item.active .header_area img {
-  transform-origin: center center;
-  transform: rotate(405deg);
 }
 main .margin #skill .skill_wrapper .skill_item:hover .contents {
   margin-top: 24px;
   max-height: 400px;
-  opacity: 1;
-  transform: translateY(0);
 }
 main .margin #skill .skill_wrapper .skill_item:hover .header_area img {
   transform-origin: center center;
