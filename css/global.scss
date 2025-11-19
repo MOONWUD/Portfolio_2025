@@ -191,7 +191,7 @@ main {
 
     #work {
       @include border();
-      border-width: 0 1px 0 1px;
+      border-width: 0 1px 1px 1px;
 
       .work_wrapper {
         padding: 0 $padding-pc-md $padding-pc-md $padding-pc-md;

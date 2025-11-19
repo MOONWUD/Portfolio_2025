@@ -231,7 +231,7 @@ main .margin section .article_title a:hover img {
 main .margin #work {
   border-style: solid;
   border-color: #F56242;
-  border-width: 0 1px 0 1px;
+  border-width: 0 1px 1px 1px;
 }
 main .margin #work .work_wrapper {
   padding: 0 32px 32px 32px;
