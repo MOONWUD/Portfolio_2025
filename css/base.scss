@@ -54,6 +54,7 @@ $font-weight-xl : 900;
 
 $font-size-72 : 4.5rem;
 $font-size-56 : 3.5rem;
+$font-size-40 : 2.5rem;
 $font-size-36 : 2.25rem;
 $font-size-32 : 2rem;
 $font-size-24 : 1.5rem;
@@ -138,6 +139,15 @@ $font-size-14 : 0.875rem;
 }
 
 /***** font-weight-md *****/
+@mixin textstyle-pr-md-40 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-40;
+  font-weight: $font-weight-md;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
 @mixin textstyle-pr-md-36 {
   font-family: $font-pretendard;
   line-height: $line-height;
@@ -284,6 +294,7 @@ $font-size-14 : 0.875rem;
 }
 
 /***** padding *****/
+$padding-pc-xl : 80px;
 $padding-pc-lg : 36px;
 $padding-pc-md : 32px;
 $padding-pc-sm : 24px;

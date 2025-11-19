@@ -1,0 +1,112 @@
+@use "./base" as *;
+
+main {
+  .margin {
+    .contactlayout {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+
+      .sectitle {
+        padding: $padding-pc-xl $padding-pc-md $padding-pc-xl $padding-pc-md;
+        @include textstyle-pr-sm-24();
+      }
+      
+      .contents {
+        padding: $padding-pc-xl $padding-mo-xl $padding-pc-xl $padding-pc-md;
+
+      }
+    }
+
+    #getin {
+      .contents {
+        p {
+          @include textstyle-pr-md-40(); 
+          margin-bottom: $padding-pc-lg;
+          line-height: 160%;
+        }
+        
+        .emailCopy {
+          @include textstyle-pr-lg-72();
+        }
+      }
+    }
+    
+    #elsewheret {
+      background-color: $color-primary-normal;
+      color: $color-white-normal;
+      .sectitle {
+        color: inherit;
+      }
+      .contents {
+        h4 {
+          @include textstyle-pr-md-40();
+          color: inherit;
+        }
+        
+        .link_wrapper {
+          padding-top: $padding-pc-xl;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: $padding-pc-lg;
+
+          li { 
+            a {
+              display: flex;
+              justify-content: space-between;
+              padding: $padding-mo-sm $padding-mo-xs $padding-mo-sm $padding-mo-xxs;
+              border-bottom:  1px dashed $color-white-normal;
+              @include transition-normal();
+              
+              div {
+                display: flex;
+                align-items: center;
+                gap: $padding-pc-sm; 
+                height: $padding-pc-sm;
+                @include textstyle-pr-sm-20();
+                color: inherit;
+                
+                svg {
+                  height: 100%;
+                  width: auto;
+                  path {
+                    color: inherit;
+                  }
+                }
+              }
+              
+              .arrow {
+                @include iconSpinRe();
+                path {
+                  color: inherit;
+                }
+              }
+
+              &:hover {
+                background-color: $color-white-normal;
+                color:  $color-primary-normal;
+                padding: $padding-mo-sm $padding-mo-xs $padding-mo-sm $padding-mo-sm;
+
+                div {
+                  color: inherit;
+  
+                  svg {
+                    path {
+                      color: inherit;
+                    }
+                  }
+                }
+                
+                .arrow {
+                  path {
+                    fill: $color-primary-normal;
+                  }
+                  @include iconSpin();
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

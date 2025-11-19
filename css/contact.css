@@ -1,0 +1,135 @@
+/***** font *****/
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/***** color *****/
+/***** txet style *****/
+/***** font-weight-xl *****/
+/***** font-weight-lg *****/
+/***** font-weight-md *****/
+/***** font-weight-sm *****/
+/***** font-weight-sm *****/
+/***** padding *****/
+/***** radius *****/
+/****** transition ******/
+/***** btn *****/
+/***** border *****/
+/***** animation *****/
+@keyframes slideMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+main .margin .contactlayout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+main .margin .contactlayout .sectitle {
+  padding: 80px 32px 80px 32px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #F56242;
+  font-style: normal;
+}
+main .margin .contactlayout .contents {
+  padding: 80px 60px 80px 32px;
+}
+main .margin #getin .contents p {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #F56242;
+  font-style: normal;
+  margin-bottom: 36px;
+  line-height: 160%;
+}
+main .margin #getin .contents .emailCopy {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: #F56242;
+  font-style: normal;
+}
+main .margin #elsewheret {
+  background-color: #F56242;
+  color: #FBF6F3;
+}
+main .margin #elsewheret .sectitle {
+  color: inherit;
+}
+main .margin #elsewheret .contents h4 {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #F56242;
+  font-style: normal;
+  color: inherit;
+}
+main .margin #elsewheret .contents .link_wrapper {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 36px;
+}
+main .margin #elsewheret .contents .link_wrapper li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 8px 12px 4px;
+  border-bottom: 1px dashed #FBF6F3;
+  transition: all 0.35s ease-in-out;
+}
+main .margin #elsewheret .contents .link_wrapper li a div {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 24px;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F56242;
+  font-style: normal;
+  color: inherit;
+}
+main .margin #elsewheret .contents .link_wrapper li a div svg {
+  height: 100%;
+  width: auto;
+}
+main .margin #elsewheret .contents .link_wrapper li a div svg path {
+  color: inherit;
+}
+main .margin #elsewheret .contents .link_wrapper li a .arrow {
+  transition: all 0.35s ease-in-out;
+  transform: rotate(0);
+}
+main .margin #elsewheret .contents .link_wrapper li a .arrow path {
+  color: inherit;
+}
+main .margin #elsewheret .contents .link_wrapper li a:hover {
+  background-color: #FBF6F3;
+  color: #F56242;
+  padding: 12px 8px 12px 12px;
+}
+main .margin #elsewheret .contents .link_wrapper li a:hover div {
+  color: inherit;
+}
+main .margin #elsewheret .contents .link_wrapper li a:hover div svg path {
+  color: inherit;
+}
+main .margin #elsewheret .contents .link_wrapper li a:hover .arrow {
+  transform-origin: center center;
+  transform: rotate(405deg);
+}
+main .margin #elsewheret .contents .link_wrapper li a:hover .arrow path {
+  fill: #F56242;
+}/*# sourceMappingURL=contact.css.map */

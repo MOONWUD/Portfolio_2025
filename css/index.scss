@@ -57,14 +57,14 @@ main {
       .introduction {
         display: grid;
         grid-template-columns: 1fr 3fr;
-        grid-template-rows: $padding-mo-xl 1fr $padding-mo-xl;
+        grid-template-rows: $padding-pc-xl 1fr $padding-pc-xl;
         background-color: $color-primary-normal;
         @include media-lg-padding();
         overflow: hidden;
   
         .marksimg {
           grid-column: 1 / 2;
-          grid-row: 2 / 3;
+          grid-row: 1 / 3;
           align-self: start;
           justify-self: end;
           color: $color-white-normal;
@@ -76,21 +76,23 @@ main {
             display: block;
           }
         }
-  
-        h5 {
+        .textWrapper {
           grid-column: 2 / 3;
           grid-row: 2 / 3;
           align-self: center;
           padding-left: $padding-pc-md;
-          @include textstyle-pr-sm-20();
-          line-height: 165%;
-          color: $color-white-normal;
-          
-          span {
+          p {
+            @include textstyle-pr-sm-20();
+            color: $color-white-normal;
+            line-height: 165%;
+          }
+
+          h5 {
             @include textstyle-pr-lg-36();
             color: $color-white-normal;
-            margin-top: $padding-pc-md;
+            margin-bottom: $padding-pc-md;
             display: block;
+
           }
         }
       }
