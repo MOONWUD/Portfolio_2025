@@ -87,8 +87,8 @@ main .margin #about .beliefs .beliefs_contents .beliefs_text {
 }
 main .margin #about .introduction {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 60px 60px 1fr 60px 60px;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 60px 1fr 60px;
   background-color: #F56242;
   width: 100%;
   padding: 32px;
@@ -96,10 +96,11 @@ main .margin #about .introduction {
 }
 main .margin #about .introduction .marksimg {
   grid-column: 1/2;
-  grid-row: 3/4;
+  grid-row: 2/3;
   align-self: start;
   justify-self: end;
   color: #FBF6F3;
+  margin-right: 36px;
 }
 main .margin #about .introduction .marksimg svg {
   width: 140px;
@@ -107,18 +108,29 @@ main .margin #about .introduction .marksimg svg {
   display: block;
 }
 main .margin #about .introduction h5 {
-  grid-column: 2/5;
-  grid-row: 3/4;
+  grid-column: 2/3;
+  grid-row: 2/3;
   align-self: center;
   padding-left: 32px;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F56242;
+  font-style: normal;
+  line-height: 165%;
+  color: #FBF6F3;
+}
+main .margin #about .introduction h5 span {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 2.25rem;
+  font-weight: 800;
   color: #F56242;
   font-style: normal;
   color: #FBF6F3;
-  line-height: 144%;
+  margin-top: 32px;
+  display: block;
 }
 main .margin #work {
   overflow: hidden;

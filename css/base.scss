@@ -92,6 +92,15 @@ $font-size-14 : 0.875rem;
   font-style: normal;
 }
 
+@mixin textstyle-pr-lg-36 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-36;
+  font-weight: $font-weight-lg;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
 @mixin textstyle-pr-lg-32 {
   font-family: $font-pretendard;
   line-height: $line-height;
