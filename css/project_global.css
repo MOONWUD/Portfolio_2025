@@ -84,16 +84,16 @@ main .margin #projectOverview .contents {
 main .margin #projectOverview .contents .objective {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: #F56242;
   font-style: normal;
-  line-height: 160%;
+  line-height: 165%;
 }
 main .margin #projectOverview .contents .objective span {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 800;
   color: #F56242;
   font-style: normal;
@@ -182,7 +182,7 @@ main .margin #projectReviwe .contents .category .title {
 main .margin #projectReviwe .contents .category .text_wrapper {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 36px;
 }
 main .margin #projectReviwe .contents .category .text_wrapper p {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -191,7 +191,7 @@ main .margin #projectReviwe .contents .category .text_wrapper p {
   font-weight: 400;
   color: #F56242;
   font-style: normal;
-  line-height: 160%;
+  line-height: 165%;
 }
 main .margin #projectReviwe .contents .category .text_wrapper p span {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;

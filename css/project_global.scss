@@ -52,12 +52,14 @@ main {
         gap: $padding-mo-xl;
 
         .objective {
-          @include textstyle-pr-xs-20();
-          line-height: 160%;
-
-
+          // @include textstyle-pr-xs-20();
+          @include textstyle-pr-xs-18();
+          line-height: 165%;
+          
+          
           span {
-            @include textstyle-pr-lg-20();
+            // @include textstyle-pr-lg-20();
+            @include textstyle-pr-lg-18();
           }
         }
 
@@ -139,10 +141,10 @@ main {
           .text_wrapper {
             display: flex;
             flex-direction: column;
-            gap: $padding-mo-sm;
+            gap: $padding-pc-lg;
             p {
               @include textstyle-pr-xs-18();
-              line-height: 160%;
+              line-height: 165%;
               
               span {
                 @include textstyle-pr-lg-18();
