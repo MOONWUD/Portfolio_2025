@@ -76,6 +76,9 @@ main .margin .layout .sectionTitle {
 main .margin .layout .contents {
   padding: 60px 60px 60px 32px;
 }
+main .margin #projectOverview {
+  padding-bottom: 80px;
+}
 main .margin #projectOverview .contents {
   display: flex;
   flex-direction: column;
@@ -156,9 +159,19 @@ main .margin #projectOverview .contents .link_wrapper .link_item a:hover svg pat
   fill: #FBF6F3;
 }
 main .margin #projectImg {
+  width: 100%;
+  padding: 32px;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
+  width: 100%;
+  height: auto;
+}
+main .margin #projectImg img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .margin #projectReviwe {
   border-style: solid;
