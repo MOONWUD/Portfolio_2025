@@ -77,7 +77,7 @@ main .margin .layout .contents {
   padding: 60px 60px 60px 32px;
 }
 main .margin #projectOverview {
-  padding-bottom: 80px;
+  padding-bottom: 60px;
 }
 main .margin #projectOverview .contents {
   display: flex;
@@ -161,6 +161,7 @@ main .margin #projectOverview .contents .link_wrapper .link_item a:hover svg pat
 main .margin #projectImg {
   width: 100%;
   padding: 32px;
+  padding-top: 0;
   border-style: solid;
   border-color: #F56242;
   border-width: 0 1px 1px 1px;
