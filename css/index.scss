@@ -59,7 +59,7 @@ main {
         grid-template-columns: 1fr 3fr;
         grid-template-rows: $padding-pc-xl 1fr $padding-pc-xl;
         background-color: $color-primary-normal;
-        @include media-lg-padding();
+        padding:  $padding-mo-xl $padding-mo-xl $padding-mo-xl $padding-pc-md;
         overflow: hidden;
   
         .marksimg {
@@ -82,7 +82,7 @@ main {
           align-self: center;
           padding-left: $padding-pc-md;
           p {
-            @include textstyle-pr-sm-20();
+            @include textstyle-pr-sm-24();
             color: $color-white-normal;
             line-height: 165%;
           }
