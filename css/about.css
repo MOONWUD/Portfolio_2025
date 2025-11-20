@@ -179,7 +179,7 @@ main .margin #history .history_grid .history_wrapper {
   padding: 0 60px 60px 32px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 main .margin #history .history_grid .history_wrapper .history_item {
   width: 100%;
