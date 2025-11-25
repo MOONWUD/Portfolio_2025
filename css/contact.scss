@@ -19,6 +19,7 @@ main {
 
     #getin {
       .contents {
+
         h4 {
           @include textstyle-pr-md-40(); 
           margin-bottom: $padding-pc-lg;
@@ -30,7 +31,8 @@ main {
           background-color: $color-white-normal;
           position: relative;
           cursor: pointer;
-
+          padding: 0;
+          
           em {
             @include textstyle-pr-lg-72();
           }
