@@ -406,6 +406,7 @@ main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrappe
   display: flex;
   flex-direction: column;
   gap: 18px;
+  position: relative;
 }
 main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a {
   width: 100%;
@@ -436,6 +437,40 @@ main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrappe
 }
 main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper a:hover svg path {
   fill: #FBF6F3;
+}
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper .tooltip {
+  position: absolute;
+  bottom: -48px;
+  left: -30%;
+  background-color: rgba(245, 99, 66, 0.8);
+  white-space: nowrap;
+  padding: 6px 16px 6px 16px;
+  border-radius: 999px;
+  transition: all 0.35s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper .tooltip p {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #F56242;
+  color: #FBF6F3;
+}
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper .tooltip svg {
+  cursor: pointer;
+}
+main .margin #contact .contact_wrapper .link_wrapper .link_contents .list_wrapper .tooltip::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  right: 50%;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent rgba(245, 99, 66, 0.8) transparent;
 }
 main .margin #contact .contact_wrapper .link_wrapper img {
   grid-column: 1/-1;

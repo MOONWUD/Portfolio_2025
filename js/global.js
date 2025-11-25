@@ -147,5 +147,9 @@ $(function () {
       speed: 0.7,
       paddingRight: 60,
     });
-  }
+  };
+
+  $(document).on('click', '.tooltip svg', function () {
+    $(this).closest('.tooltip').fadeOut(300); 
+  });
 });

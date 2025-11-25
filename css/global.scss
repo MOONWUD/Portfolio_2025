@@ -361,6 +361,7 @@ main {
               display: flex;
               flex-direction: column;
               gap: $padding-pc-xs;
+              position: relative;
   
               a {
                 width: 100%;
@@ -387,6 +388,41 @@ main {
                     }
                   }
                 }
+              }
+
+              .tooltip {
+                position: absolute;
+                bottom: -48px;
+                left: -30%;
+                background-color: $color-primary-alpha80;
+                white-space: nowrap;
+                padding: 6px 16px 6px 16px;
+                border-radius: 999px;
+                @include transition-normal();
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: $padding-mo-xs;
+
+                p {
+                  @include textstyle-pr-xs-14();
+                  color: $color-white-normal;
+                }
+                svg { 
+                  cursor: pointer;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: -12px; 
+                  right: 50%;
+                  border-width: 6px;
+                  border-style: solid;
+                  border-color: transparent transparent $color-primary-alpha80 transparent; 
+                }
+                
+
               }
             }
           }
