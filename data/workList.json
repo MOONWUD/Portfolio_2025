@@ -12,12 +12,6 @@
     "link": "https://moonwud.github.io/Portfolio_2025/project_everparking.html"
   },
   {
-    "title": "Laughing Charlie",
-    "description": "Web UIUX Design / Publishing",
-    "image": "./assets/laughingCharlie_project01.jpg",
-    "link": "https://moonwud.github.io/Portfolio_2025/project_laughingCharlie.html"
-  },
-  {
     "title": "LIGNE-ROSET",
     "description": "Web UIUX Design / Publishing",
     "image": "./assets/ligne-roset_project01.jpg",
@@ -30,6 +24,18 @@
     "link": "https://moonwud.github.io/Portfolio_2025/project_adererror.html"
   },
   {
+    "title": "Laughing Charlie",
+    "description": "Web UIUX Design / Publishing",
+    "image": "./assets/laughingCharlie_project01.jpg",
+    "link": "https://moonwud.github.io/Portfolio_2025/project_laughingCharlie.html"
+  },
+  {
+    "title": "경기일보 이벤트 랜딩 사이트",
+    "description": "Web UIUX Design / Publishing",
+    "image": "./assets/kyeonggiEvent_project01.jpg",
+    "link": "https://moonwud.github.io/Portfolio_2025/project_kyeonggiEvent.html"
+  },
+  {
     "title": "연탄 딜레마",
     "description": "Interactive News UIUX Design",
     "image": "./assets/kyeonggiDilemma_project01.jpg",
@@ -40,12 +46,6 @@
     "description": "Web UIUX Design",
     "image": "./assets/work2.jpeg",
     "link": "https://moonwud.github.io/Portfolio_2025/project_kyeonggiElection.html"
-  },
-  {
-    "title": "경기일보 이벤트 랜딩 사이트",
-    "description": "Web UIUX Design / Publishing",
-    "image": "./assets/kyeonggiEvent_project01.jpg",
-    "link": "https://moonwud.github.io/Portfolio_2025/project_kyeonggiEvent.html"
   },
   {
     "title": "경기일보 회사소개 사이트",
