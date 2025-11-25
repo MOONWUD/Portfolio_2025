@@ -41,7 +41,7 @@ main .margin .contactlayout .sectitle {
 main .margin .contactlayout .contents {
   padding: 80px 60px 80px 32px;
 }
-main .margin #getin .contents p {
+main .margin #getin .contents h4 {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 2.5rem;
@@ -51,13 +51,65 @@ main .margin #getin .contents p {
   margin-bottom: 36px;
   line-height: 160%;
 }
-main .margin #getin .contents .emailCopy {
+main .margin #getin .contents .copy-btn {
+  border: none;
+  background-color: #FBF6F3;
+  position: relative;
+  cursor: pointer;
+}
+main .margin #getin .contents .copy-btn em {
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   line-height: 1.4;
   font-size: 4.5rem;
   font-weight: 800;
   color: #F56242;
   font-style: normal;
+}
+main .margin #getin .contents .copy-btn .tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #F56242;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #F56242;
+  font-style: normal;
+  color: #FBF6F3;
+  white-space: nowrap;
+  padding: 6px 16px 6px 16px;
+  border-radius: 999px;
+  opacity: 0;
+  transition: all 0.35s ease-in-out;
+}
+main .margin #getin .contents .copy-btn .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #F56242 transparent transparent transparent;
+  transition: all 0.35s ease-in-out;
+}
+main .margin #getin .contents .copy-btn .tooltip.active {
+  background-color: #8D47E9;
+}
+main .margin #getin .contents .copy-btn .tooltip.active::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #8D47E9 transparent transparent transparent;
+}
+main .margin #getin .contents .copy-btn:hover .tooltip {
+  opacity: 1;
+  top: -4px;
 }
 main .margin #elsewheret {
   background-color: #F56242;

@@ -19,14 +19,69 @@ main {
 
     #getin {
       .contents {
-        p {
+        h4 {
           @include textstyle-pr-md-40(); 
           margin-bottom: $padding-pc-lg;
           line-height: 160%;
         }
         
-        .emailCopy {
-          @include textstyle-pr-lg-72();
+        .copy-btn {
+          border: none;
+          background-color: $color-white-normal;
+          position: relative;
+          cursor: pointer;
+
+          em {
+            @include textstyle-pr-lg-72();
+          }
+
+          .tooltip {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $color-primary-normal;
+            @include textstyle-pr-sm-18();
+            color: $color-white-normal;
+            white-space: nowrap;
+            padding: 6px 16px 6px 16px;
+            border-radius: 999px;
+            opacity: 0;
+            @include transition-normal();
+            
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              border-width: 6px;
+              border-style: solid;
+              border-color: $color-primary-normal transparent transparent transparent;
+              @include transition-normal();
+            }
+            
+            &.active {
+              background-color: #8D47E9;
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-width: 6px;
+                border-style: solid;
+                border-color: #8D47E9 transparent transparent transparent;
+              }
+              
+            }
+          }
+
+          &:hover {
+            .tooltip {
+              opacity: 1;
+              top: -4px;
+            }
+          }
         }
       }
     }
