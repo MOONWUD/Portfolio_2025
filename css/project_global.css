@@ -123,7 +123,8 @@ main .margin #projectOverview .contents .details_wrapper .details_item {
 }
 main .margin #projectOverview .contents .link_wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   gap: 32px;
 }
 main .margin #projectOverview .contents .link_wrapper .link_item a {
