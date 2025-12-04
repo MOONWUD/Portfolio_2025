@@ -142,6 +142,7 @@ main {
           @include border();
           border-width: 0 0 1px 0;
           overflow: hidden;
+          cursor: pointer;
         
           .header_area {
             display: flex;
@@ -165,12 +166,14 @@ main {
             @include transition-slow();
           }
         
-          
-          &:hover {
+          &.active {
             .contents {
               margin-top: $padding-pc-sm;
               max-height: 400px;
             }
+          }
+
+          &:hover {
         
             .header_area {
               img {

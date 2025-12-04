@@ -1,28 +1,17 @@
 $(document).ready(function () {
-  const $skills = $('.skill_item');
+  // skill_item 클릭 이벤트 - 이벤트 위임
+  $(document).on('click', '.skill_item', function () {
 
-  function revealOnScroll() {
-    const triggerPoint = $(window).height() / 2;
-    let $activeItem = null;
+    const $item = $(this);
 
-    $skills.each(function () {
-      const top = this.getBoundingClientRect().top;
-      const bottom = this.getBoundingClientRect().bottom;
-
-      if (top < triggerPoint && bottom > triggerPoint / 2) {
-        $activeItem = $(this);
-      }
-    });
-
-    $skills.each(function () {
-      if ($(this).is($activeItem)) {
-        $(this).addClass('active');
-      } else {
-        $(this).removeClass('active');
-      }
-    });
-  }
-
-  $(window).on('scroll', revealOnScroll);
-  revealOnScroll();
+    // 이미 열려 있는 아이템을 다시 클릭하면 닫기
+    if ($item.hasClass('active')) {
+      $item.removeClass('active');
+    } else {
+      // 다른 아이템들 active 제거
+      $('.skill_item').removeClass('active');
+      // 클릭한 아이템만 active 추가
+      $item.addClass('active');
+    }
+  });
 });
