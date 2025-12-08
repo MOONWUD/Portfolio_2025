@@ -175,6 +175,62 @@ main .margin #projectImg img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+main .margin #problemSolution {
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 1px 1px 1px;
+  width: 100%;
+  height: auto;
+}
+main .margin #problemSolution .contents ul {
+  width: 100%;
+  height: auto;
+}
+main .margin #problemSolution .contents ul .problemSolutionItem {
+  border-style: solid;
+  border-color: #F56242;
+  border-width: 0 0 1px 0;
+  border-style: dashed;
+  width: 100%;
+  height: auto;
+  padding: 32px 4px 24px 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+main .margin #problemSolution .contents ul .problemSolutionItem .problem {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #F56242;
+  font-style: normal;
+}
+main .margin #problemSolution .contents ul .problemSolutionItem .problem svg {
+  transition: all 0.35s ease-in-out;
+  transform: rotate(0);
+}
+main .margin #problemSolution .contents ul .problemSolutionItem .solution {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.4;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #F56242;
+  font-style: normal;
+  line-height: 160%;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s ease-in-out;
+}
+main .margin #problemSolution .contents ul .problemSolutionItem:hover .problem svg {
+  transform-origin: center center;
+  transform: rotate(405deg);
+}
+main .margin #problemSolution .contents ul .problemSolutionItem:hover .solution {
+  padding-top: 18px;
+  max-height: 400px;
+}
 main .margin #projectReviwe {
   border-style: solid;
   border-color: #F56242;

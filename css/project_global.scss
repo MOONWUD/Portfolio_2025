@@ -136,6 +136,63 @@ main {
     }
 
 
+    #problemSolution {
+      @include border();
+      border-width: 0 1px 1px 1px;
+        width: 100%;
+        height: auto;
+        
+        .contents {
+          ul {
+            width: 100%;
+            height: auto;
+
+            .problemSolutionItem {
+              @include border();
+              border-width: 0 0 1px 0;
+              border-style: dashed;
+              width: 100%;
+              height: auto;
+              padding: $padding-pc-md $padding-mo-xxs $padding-pc-sm $padding-mo-xxs; 
+              overflow: hidden;
+              cursor: pointer;
+
+            .problem {
+              display: flex;
+              justify-content: space-between;
+              @include textstyle-pr-lg-18;
+
+              svg {
+                @include iconSpinRe();
+              }
+            }
+
+            .solution {
+              @include textstyle-pr-xs-18;
+              line-height: 160%;
+              max-height: 0;
+              overflow: hidden;
+              @include transition-normal();
+            }
+
+            &:hover {
+              .problem {
+                svg {
+                  @include iconSpin();
+                }
+              }
+
+              .solution {
+                padding-top: $padding-pc-xs;
+                max-height: 400px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
     #projectReviwe {
       @include border();
       border-width: 0 1px 1px 1px;
