@@ -153,14 +153,14 @@ main {
               border-style: dashed;
               width: 100%;
               height: auto;
-              padding: $padding-pc-md $padding-mo-xxs $padding-pc-sm $padding-mo-xxs; 
+              padding: $padding-pc-sm $padding-mo-xxs $padding-pc-sm $padding-mo-xxs; 
               overflow: hidden;
               cursor: pointer;
 
             .problem {
               display: flex;
               justify-content: space-between;
-              @include textstyle-pr-lg-18;
+              @include textstyle-pr-md-18;
 
               svg {
                 @include iconSpinRe();
@@ -169,6 +169,8 @@ main {
 
             .solution {
               @include textstyle-pr-xs-18;
+              padding-left: $padding-mo-xs;
+              padding: 0  $padding-pc-lg 0 $padding-mo-xs ;
               line-height: 160%;
               max-height: 0;
               overflow: hidden;
