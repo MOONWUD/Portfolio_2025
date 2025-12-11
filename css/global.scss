@@ -1,5 +1,7 @@
 @use "./base" as *;
 
+
+::selection {background-color: $color-primary-alpha20;}
 /********** header **********/
 header {
   position: fixed;

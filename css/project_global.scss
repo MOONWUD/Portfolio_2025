@@ -169,7 +169,6 @@ main {
 
             .solution {
               @include textstyle-pr-xs-18;
-              padding-left: $padding-mo-xs;
               padding: 0  $padding-pc-lg 0 $padding-mo-xs ;
               line-height: 160%;
               max-height: 0;
@@ -185,7 +184,7 @@ main {
               }
 
               .solution {
-                padding-top: $padding-pc-xs;
+                padding-top: $padding-pc-sm;
                 max-height: 400px;
               }
             }

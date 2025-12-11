@@ -218,7 +218,6 @@ main .margin #problemSolution .contents ul .problemSolutionItem .solution {
   font-weight: 400;
   color: #F56242;
   font-style: normal;
-  padding-left: 8px;
   padding: 0 36px 0 8px;
   line-height: 160%;
   max-height: 0;
@@ -230,7 +229,7 @@ main .margin #problemSolution .contents ul .problemSolutionItem:hover .problem s
   transform: rotate(405deg);
 }
 main .margin #problemSolution .contents ul .problemSolutionItem:hover .solution {
-  padding-top: 18px;
+  padding-top: 24px;
   max-height: 400px;
 }
 main .margin #projectReviwe {

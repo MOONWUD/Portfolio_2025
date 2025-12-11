@@ -25,6 +25,13 @@ body {
     transform: translateX(-10%);
   }
 }
+::-moz-selection {
+  background-color: rgba(245, 99, 66, 0.2);
+}
+::selection {
+  background-color: rgba(245, 99, 66, 0.2);
+}
+
 /********** header **********/
 header {
   position: fixed;
