@@ -144,7 +144,7 @@ $(function () {
 
     window.__sliderLoop = horizontalLoop(".slider_item", {
       repeat: -1,
-      speed: 0.7,
+      speed: 0.5,
       paddingRight: 60,
     });
   };
