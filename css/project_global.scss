@@ -1,4 +1,4 @@
-@use "./base" as *; 
+@use "./base" as *;
 
 main {
   .margin {
@@ -33,11 +33,12 @@ main {
       display: grid;
       grid-template-columns: 1fr 3fr;
       overflow: hidden;
+
       .sectionTitle {
         @include textstyle-pr-lg-24();
-        padding: $padding-mo-xl $padding-pc-md  $padding-mo-xl $padding-pc-md;
+        padding: $padding-mo-xl $padding-pc-md $padding-mo-xl $padding-pc-md;
       }
-      
+
       .contents {
         padding: $padding-mo-xl $padding-mo-xl $padding-mo-xl $padding-pc-md;
       }
@@ -47,6 +48,7 @@ main {
 
     #projectOverview {
       padding-bottom: $padding-mo-xl;
+
       .contents {
         display: flex;
         flex-direction: column;
@@ -56,8 +58,8 @@ main {
           // @include textstyle-pr-xs-20();
           @include textstyle-pr-xs-18();
           line-height: 165%;
-          
-          
+
+
           span {
             // @include textstyle-pr-lg-20();
             @include textstyle-pr-lg-18();
@@ -69,15 +71,15 @@ main {
           flex-direction: column;
           gap: $padding-pc-xs;
 
-         .details_item {
-          display: flex;
-          justify-content: space-between;
-          padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
-          @include border();
-          border-width: 0 0 1px 0;
-          border-style: dashed;
-          @include textstyle-pr-sm-18;
-         } 
+          .details_item {
+            display: flex;
+            justify-content: space-between;
+            padding: $padding-mo-xs $padding-mo-xxs $padding-mo-xs $padding-mo-xxs;
+            @include border();
+            border-width: 0 0 1px 0;
+            border-style: dashed;
+            @include textstyle-pr-sm-18;
+          }
         }
 
         .link_wrapper {
@@ -108,6 +110,7 @@ main {
 
                 svg {
                   @include iconSpin();
+
                   path {
                     fill: $color-white-normal;
                   }
@@ -125,37 +128,38 @@ main {
       padding-top: 0;
       @include border();
       border-width: 0 1px 1px 1px;
+      width: 100%;
+      height: auto;
+
+      img {
         width: 100%;
         height: auto;
-        img {
-          width: 100%;
-          height: auto;
-          object-fit: contain;
+        object-fit: contain;
 
-        }
+      }
     }
 
 
     #problemSolution {
       @include border();
       border-width: 0 1px 1px 1px;
-        width: 100%;
-        height: auto;
-        
-        .contents {
-          ul {
+      width: 100%;
+      height: auto;
+
+      .contents {
+        ul {
+          width: 100%;
+          height: auto;
+
+          .problemSolutionItem {
+            @include border();
+            border-width: 0 0 1px 0;
+            border-style: dashed;
             width: 100%;
             height: auto;
-
-            .problemSolutionItem {
-              @include border();
-              border-width: 0 0 1px 0;
-              border-style: dashed;
-              width: 100%;
-              height: auto;
-              padding: $padding-pc-sm $padding-mo-xxs $padding-pc-sm $padding-mo-xxs; 
-              overflow: hidden;
-              cursor: pointer;
+            padding: $padding-pc-sm $padding-mo-xxs $padding-pc-sm $padding-mo-xxs;
+            overflow: hidden;
+            cursor: pointer;
 
             .problem {
               display: flex;
@@ -169,11 +173,17 @@ main {
 
             .solution {
               @include textstyle-pr-xs-18;
-              padding: 0  $padding-pc-lg 0 $padding-mo-xs ;
+              padding: 0 $padding-pc-lg 0 $padding-mo-xs ;
               line-height: 160%;
               max-height: 0;
               overflow: hidden;
               @include transition-normal();
+              
+              .code {
+                width: 100%;
+                background-color: $color-primary-normal;
+                @include textstyle-pr-xs-16;
+                color: $color-white-normal;
             }
 
             &:hover {
@@ -202,19 +212,22 @@ main {
         display: flex;
         flex-direction: column;
         gap: $padding-mo-xl;
+
         .category {
           .title {
             @include textstyle-pr-xs-16();
             margin-bottom: $padding-pc-xs;
           }
+
           .text_wrapper {
             display: flex;
             flex-direction: column;
             gap: $padding-pc-lg;
+
             p {
               @include textstyle-pr-xs-18();
               line-height: 165%;
-              
+
               span {
                 @include textstyle-pr-lg-18();
               }
@@ -227,11 +240,12 @@ main {
 
     #moreProject {
       border-width: 0 1px 1px 1px;
+
       .header {
         @include media-lg-padding();
         display: flex;
         justify-content: space-between;
-        
+
         h3 {
           @include textstyle-pr-lg-24();
         }
@@ -264,7 +278,7 @@ main {
         grid-auto-flow: row;
         gap: $padding-pc-sm;
 
-        > *:nth-child(n+4) {
+        >*:nth-child(n+4) {
           display: none;
         }
 

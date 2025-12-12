@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+  //document.querySelectorAll('.js-code code').forEach(code => {
+  //  code.textContent = code.textContent.trim();
+  //});
+
   $.ajax({
     url: './data/workList.json',
     type: 'GET',
