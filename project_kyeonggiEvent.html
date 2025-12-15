@@ -142,7 +142,7 @@
                                    <div class="solution">
                                         드래그 된 x좌표를 기반으로 scroll을 통제하는 코드를 넣어 드래그 움직임과 스크롤이 일치하도록 구현
                                         <pre class="code js-code">
-                                             <code>
+<code>
 const st = scrollTrigger.scrollTrigger;
 draggable = Draggable.create(container, {
 type: "x",
@@ -150,19 +150,36 @@ inertia: true,
 edgeResistance: 0.8,
 bounds: { minX: -totalScroll, maxX: 0 },
 
-// 드래그 중
+<span class="note">// 드래그 중</span>
 onDrag: function () {
 const progress = Math.abs(this.x) / totalScroll;
-st.scroll(st.start + progress * (st.end - st.start)); // scroll 위치를 직접 조정
+st.scroll(st.start + progress * (st.end - st.start)); <span class="note">// scroll 위치를 직접 조정</span>
 	},
 
-// 드래그 후 튕길 때
+<span class="note">// 드래그 후 튕길 때</span>
 onThrowUpdate: function () {
 const progress = Math.abs(this.x) / totalScroll;
 st.scroll(st.start + progress * (st.end - st.start));
 }
-})[0];
-                                             </code>
+})[0];</code>
+                                             </pre>
+                                   </div>
+                              </li>
+                              <li class="problemSolutionItem">
+                                   <div class="problem">
+                                        <p>리사이징 했을 때, 가로 스크롤 영역이 사라짐</p>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M11 16.175L11 4L13 4L13 16.175L18.6 10.575L20 12L12 20L4 12L5.4 10.575L11 16.175Z"
+                                                  fill="currentColor" />
+                                        </svg>
+                                   </div>
+                                   <div class="solution">
+                                        리사이징에 대응하도록 구현
+                                        <pre class="code js-code">
+<code>
+window.addEventListener("resize", update);       
+window.addEventListener("load", update);</code>
                                              </pre>
                                    </div>
                               </li>

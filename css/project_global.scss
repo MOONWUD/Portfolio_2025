@@ -180,10 +180,18 @@ main {
               @include transition-normal();
               
               .code {
+                margin-top: $padding-mo-xs;
+                padding: 0 $padding-mo-sm 0 $padding-mo-sm;
                 width: 100%;
                 background-color: $color-primary-normal;
-                @include textstyle-pr-xs-16;
+                @include textstyle-pr-xs-14;
                 color: $color-white-normal;
+                box-sizing: border-box;
+
+                .note {
+                  color: $color-white-alpha80;
+                }
+              }
             }
 
             &:hover {
@@ -194,8 +202,8 @@ main {
               }
 
               .solution {
-                padding-top: $padding-pc-sm;
-                max-height: 400px;
+                padding-top: $padding-pc-xs;
+                max-height: 1000px;
               }
             }
           }
