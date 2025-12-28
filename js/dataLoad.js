@@ -11,7 +11,7 @@ $(document).ready(function () {
       data.forEach(item => {
         const li = `
           <li class="work_item" data-aos="fade-up" data-aos-delay="250">
-            <a href="${item.link}" target="_blank">
+            <a href="${item.link}">
               <div class="hover_dim">
                 <ul class="contents">
                   <li class="information">
