@@ -88,7 +88,7 @@ main {
           align-self: center;
           padding-left: $padding-pc-md;
           p {
-            @include textstyle-pr-sm-24();
+            @include textstyle-pr-xs-24();
             color: $color-white-normal;
             line-height: 165%;
           }

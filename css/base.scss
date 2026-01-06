@@ -248,7 +248,16 @@ $font-size-14 : 0.875rem;
 }
 
 
-/***** font-weight-sm *****/
+/***** font-weight-xs *****/
+@mixin textstyle-pr-xs-36 {
+  font-family: $font-pretendard;
+  line-height: $line-height;
+  font-size: $font-size-36;
+  font-weight: $font-weight-xs;
+  color: $color-primary-normal;
+  font-style: normal;
+}
+
 @mixin textstyle-pr-xs-24 {
   font-family: $font-pretendard;
   line-height: $line-height;

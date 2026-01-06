@@ -35,7 +35,7 @@ $(function () {
     AOS.init({
       startEvent: 'DOMContentLoaded',
       once: false,
-      duration: 600,
+      duration: 500,
       easing: 'ease-in-out',
       offset: 116,
     });

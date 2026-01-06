@@ -10,7 +10,7 @@ $(document).ready(function () {
 
       data.forEach(item => {
         const li = `
-          <li class="work_item" data-aos="fade-up" data-aos-delay="250">
+          <li class="work_item" data-aos="fade-up" data-aos-delay="100">
             <a href="${item.link}">
               <div class="hover_dim">
                 <ul class="contents">
@@ -54,7 +54,7 @@ $(document).ready(function () {
         const contentsHTML = item.contents.map(line => `${line} <br>`).join('');
         const li = `
           <li class="skill_item">
-            <div class="header_area" data-aos="fade-down">
+            <div class="header_area" data-aos="fade-up">
               <div class="title" >${item.title}</div>
               <img src="./assets/icon_cross.svg" alt="플러스아이콘">
             </div>
