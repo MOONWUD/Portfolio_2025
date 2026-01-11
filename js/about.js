@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         next.style.opacity = '1';
 
         currentIndex = nextIndex;
-      }, 2000); 
+      }, 1600); 
 
       if (window.AOS) AOS.refresh();
     })
