@@ -13,7 +13,7 @@ main {
       
       .keyword {
         @include media-lg-padding ();
-        padding-right: 0;
+        // padding-right: 0;
         grid-column: 1 / 2;
 
         .keyword_wrapper {
@@ -38,15 +38,21 @@ main {
       
       .profile_img {
         @include media-lg-padding ();
+        padding-left: 0;
+        padding-right: 0;
         padding-bottom: 0;
         grid-column: 2 / 3;
         display: grid;
         justify-content: center;
+
+        img {
+          width: 100%;
+        }
       }
       
       .name {
         @include media-lg-padding ();
-        padding-left: 0;
+        // padding-left: 0;
         grid-column: 3 / 4;
         @include textstyle-pr-lg-32();
       }
